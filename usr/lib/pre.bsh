@@ -1,0 +1,182 @@
+#!/bin/bash
+
+## This file is part of Whonix.
+## Copyright (C) 2012 - 2014 Patrick Schleizer <adrelanos@riseup.net>
+## See the file COPYING for copying conditions.
+
+## Error log:
+## - implement trap ERR if function error_handler_general does not exist
+## - run silent by default
+## - write xtrace to temporary log
+## - show full xtrace on unexpected non-zero exit code
+## - show exit code on unexpected non-zero exit code
+##
+## DEBDEBUG:
+## - enable xtrace (-x) for maintainer script when DEBDEBUG environment
+##   variable is set to 1
+##
+## SKIP_SCRIPTS
+## - SKIP_SCRIPTS environment variable to skip scripts by name
+##
+## Colorful output:
+## - provide color function
+##
+## Pipefail:
+## - enable pipefail
+
+## {{{ pre.bsh 0.3
+
+## bash script fragment
+
+TEMP_DIR="$(mktemp --directory)"
+
+[ -o xtrace ]
+## returns:
+## - 0, if xtrace (-x) is set
+## - 1, if xtrace (-x) is not set
+XTRACE="$?"
+
+set -o pipefail
+
+## {{ Colors
+
+## Thanks to:
+## http://mywiki.wooledge.org/BashFAQ/037
+## Variables for terminal requests.
+[[ -t 2 ]] && {
+    alt=$(      tput smcup  || tput ti      ) # Start alt display
+    ealt=$(     tput rmcup  || tput te      ) # End   alt display
+    hide=$(     tput civis  || tput vi      ) # Hide cursor
+    show=$(     tput cnorm  || tput ve      ) # Show cursor
+    save=$(     tput sc                     ) # Save cursor
+    load=$(     tput rc                     ) # Load cursor
+    bold=$(     tput bold   || tput md      ) # Start bold
+    stout=$(    tput smso   || tput so      ) # Start stand-out
+    estout=$(   tput rmso   || tput se      ) # End stand-out
+    under=$(    tput smul   || tput us      ) # Start underline
+    eunder=$(   tput rmul   || tput ue      ) # End   underline
+    reset=$(    tput sgr0   || tput me      ) # Reset cursor
+    blink=$(    tput blink  || tput mb      ) # Start blinking
+    italic=$(   tput sitm   || tput ZH      ) # Start italic
+    eitalic=$(  tput ritm   || tput ZR      ) # End   italic
+[[ $TERM != *-m ]] && {
+    red=$(      tput setaf 1|| tput AF 1    )
+    green=$(    tput setaf 2|| tput AF 2    )
+    yellow=$(   tput setaf 3|| tput AF 3    )
+    blue=$(     tput setaf 4|| tput AF 4    )
+    magenta=$(  tput setaf 5|| tput AF 5    )
+    cyan=$(     tput setaf 6|| tput AF 6    )
+}
+    white=$(    tput setaf 7|| tput AF 7    )
+    default=$(  tput op                     )
+    eed=$(      tput ed     || tput cd      )   # Erase to end of display
+    eel=$(      tput el     || tput ce      )   # Erase to end of line
+    ebl=$(      tput el1    || tput cb      )   # Erase to beginning of line
+    ewl=$eel$ebl                                # Erase whole line
+    draw=$(     tput -S <<< '   enacs
+                                smacs
+                                acsc
+                                rmacs' || { \
+                tput eA; tput as;
+                tput ac; tput ae;         } )   # Drawing characters
+    back=$'\b'
+} 2>/dev/null ||:
+
+## }}
+
+disable_echo() {
+   exec 5>&1 1>> "$TEMP_DIR/output"
+   exec 6>&2 2>> "$TEMP_DIR/output"
+}
+
+enable_echo() {
+   exec 1>&5
+   exec 2>&6
+}
+
+if [ "$XTRACE" = "0" ]; then
+   true "INFO: Setting DEBDEBUG to 1, because xtrace (-x) is set."
+   DEBDEBUG="1"
+fi
+
+if [ "$DEBDEBUG" = "1" ]; then
+   set -x
+else
+   disable_echo
+fi
+
+force_echo() {
+   if [ ! "$DEBDEBUG" = "1" ]; then
+      enable_echo
+   fi
+
+   if [ ! "$DEBDEBUG" = "1" ]; then
+      echo "$@"
+   fi
+   ## No need to use "true" or "echo" in case DEBDEBUG is set to 1,
+   ## because in that case we saw the output anyway, because set xtrace (-x) was set.
+
+   if [ ! "$DEBDEBUG" = "1" ]; then
+      disable_echo
+   fi
+}
+
+error_handler_pre() {
+   local exit_code="$?"
+   local last_err="$BASH_COMMAND"
+
+   if [ ! "$DEBDEBUG" = "1" ]; then
+      local output
+      output="$(cat "$TEMP_DIR/output")"
+   fi
+
+   if [ "$output" = "" ]; then
+      output="## See above."
+   fi
+
+   if [ ! "$DEBDEBUG" = "1" ]; then
+      exec 1>&5
+      exec 2>&6
+   fi
+
+   force_echo "
+####################################################################
+## ${red}${bold}BEGIN ERROR in $0 detected!${reset}
+##
+## ${under}ERROR LOG${reset}:
+$output
+##
+## ${under}BASH_COMMAND${reset}: $BASH_COMMAND
+## ${under}EXIT_CODE${reset}: $exit_code
+##
+## ${red}${bold}END ERROR in $0 detected!${reset}
+## ${red}${bold}Please report this bug!${reset}
+####################################################################
+" 1>&2
+
+   exit 1
+}
+
+## {{ Set up error handler.
+if [ "$(type -t error_handler_general)" = "function" ]; then
+   ## Function error_handler_general exists (declared in
+   ## help-steps/pre). Prefer to use the more feature rich version of the error
+   ## handler.
+   trap "error_handler_general" ERR
+else
+   ## Function error_handler_general does not exist.
+   ## Fall back to a simpler error handler.
+   trap "error_handler_pre" ERR
+fi
+## }}
+
+own_filename="$(basename $0)"
+for skip_script in $SKIP_SCRIPTS; do
+   if [ "$skip_script" = "$own_filename" ]; then
+      force_echo "INFO: Skipping $own_filename, because SKIP_SCRIPTS includes it."
+      exit 0
+   fi
+done
+unset skip_script
+
+## }}}

@@ -1,0 +1,117 @@
+#!/bin/bash
+
+## This file is part of Whonix.
+## Copyright (C) 2012 - 2014 Patrick Schleizer <adrelanos@riseup.net>
+## See the file COPYING for copying conditions.
+
+if [ -f /usr/lib/pre.bsh ]; then
+   source /usr/lib/pre.bsh
+fi
+
+set -e
+
+true "
+####################################################################
+## INFO: Begin $DPKG_MAINTSCRIPT_NAME $DPKG_MAINTSCRIPT_PACKAGE...
+####################################################################
+"
+
+case "$1" in
+   configure)
+      true "INFO: Configuring $DPKG_MAINTSCRIPT_PACKAGE..."
+
+      ## 20_hostname {{
+
+      if [ "$BARE_METAL" = "1" ] || [ "$CI" = "true" ]; then
+         ## Working around: "sudo: unable to resolve host host"
+         my_host_name="$(cat "/etc/hostname")"
+         echo "INFO $0: Running \"hostname $my_host_name\"."
+         hostname "$my_host_name"
+      else
+        echo "INFO $0: Skipping, because neither BARE_METAL is not set to 1, nor CI is set to true, ok."
+      fi
+
+      ## 20_hostname }}
+
+      ## 30_adduser_user {{
+
+      ## Check if user "user" already exist.
+
+      ret="0"
+      id user || { ret="$?" ; true; };
+
+      if [ ! "$ret" = "0" ]; then
+         echo 'INFO: Creating user "user"...'
+         ## setting password of user user to changeme
+         ##
+         ## How this password was created:
+         ## sudo apt-get install whois
+         ## mkpasswd
+         ## changeme
+         ## Resulted in: aTayYxVyw5kDo
+         useradd --password aTayYxVyw5kDo --user-group --create-home --shell /bin/bash user
+
+         #chown --recursive user:user /home/user
+      else
+         echo 'Not creating user "user", because it user already exists.'
+      fi
+
+      usermod --append --groups adm,cdrom,audio,dip,sudo,plugdev user || true
+
+      ## Debugging CI.
+      if [ "$CI" = "true" ]; then
+         true "UWT_DEV_PASSTHROUGH: $UWT_DEV_PASSTHROUGH"
+         ls -la "/etc/resolv.conf" || true
+         cat "/etc/resolv.conf" || true
+         ls -la "/etc/hostname" || true
+         cat "/etc/hostname" || true
+         ls -la "/etc/hosts" || true
+         cat "/etc/hosts" || true
+         hostname || true
+         hostname --all-fqdns || true
+         hostname --long || true
+
+         ## Sanity test.
+         sudo -u user echo "INFO $0: Test echo as user."
+      fi
+
+      ## 30_adduser_user }}
+
+      ## 32_sanity_checks {{
+
+      true 'INFO: Benchmarking "sudo -u user echo "This is a test echo."" using "time"...'
+      time sudo -u user echo "This is a test echo."
+
+      ## 32_sanity_checks }}
+
+      ## 70_tor {{
+
+      addgroup debian-tor || true
+
+      ## Add user "user" to the group "debian-tor", so user "user" can access Tor's control port.
+      addgroup user debian-tor
+
+      ## 70_tor }}
+
+      true "INFO: End configuring $DPKG_MAINTSCRIPT_PACKAGE."
+
+      ;;
+
+   *)
+      ;;
+esac
+
+true "INFO: debhelper beginning here."
+
+#DEBHELPER#
+
+true "INFO: Done with debhelper."
+
+true "
+####################################################################
+## INFO: $DPKG_MAINTSCRIPT_NAME script $DPKG_MAINTSCRIPT_PACKAGE no error detected.
+####################################################################
+"
+
+## Explicitly "exit 0", so eventually trapped errors can be ignored.
+exit 0
