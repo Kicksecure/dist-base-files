@@ -84,15 +84,6 @@ case "$1" in
 
       ## 32_sanity_checks }}
 
-      ## 70_tor {{
-
-      addgroup debian-tor || true
-
-      ## Add user "user" to the group "debian-tor", so user "user" can access Tor's control port.
-      addgroup user debian-tor
-
-      ## 70_tor }}
-
       true "INFO: End configuring $DPKG_MAINTSCRIPT_PACKAGE."
 
       ;;
