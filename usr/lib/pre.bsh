@@ -141,7 +141,7 @@ error_handler_pre() {
 
    force_echo "
 ####################################################################
-## ${red}${bold}BEGIN ERROR in $0 detected!${reset}
+## ${red}${bold}BEGIN ERROR in $BASH_SOURCE detected!${reset}
 ##
 ## ${under}ERROR LOG${reset}:
 $output
@@ -149,7 +149,7 @@ $output
 ## ${under}BASH_COMMAND${reset}: $BASH_COMMAND
 ## ${under}EXIT_CODE${reset}: $exit_code
 ##
-## ${red}${bold}END ERROR in $0 detected!${reset}
+## ${red}${bold}END ERROR in $BASH_SOURCE detected!${reset}
 ## ${red}${bold}Please report this bug!${reset}
 ####################################################################
 " 1>&2
@@ -170,7 +170,7 @@ else
 fi
 ## }}
 
-own_filename="$(basename $0)"
+own_filename="$(basename $BASH_SOURCE)"
 for skip_script in $SKIP_SCRIPTS; do
    if [ "$skip_script" = "$own_filename" ]; then
       force_echo "INFO: Skipping $own_filename, because SKIP_SCRIPTS includes it."

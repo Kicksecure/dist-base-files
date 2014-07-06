@@ -25,10 +25,10 @@ case "$1" in
       if [ "$BARE_METAL" = "1" ] || [ "$CI" = "true" ]; then
          ## Working around: "sudo: unable to resolve host host"
          my_host_name="$(cat "/etc/hostname")"
-         echo "INFO $0: Running \"hostname $my_host_name\"."
+         echo "INFO $BASH_SOURCE: Running \"hostname $my_host_name\"."
          hostname "$my_host_name"
       else
-        echo "INFO $0: Skipping, because neither BARE_METAL is not set to 1, nor CI is set to true, ok."
+        echo "INFO $BASH_SOURCE: Skipping, because neither BARE_METAL is not set to 1, nor CI is set to true, ok."
       fi
 
       ## 20_hostname }}
@@ -72,7 +72,7 @@ case "$1" in
          hostname --long || true
 
          ## Sanity test.
-         sudo -u user echo "INFO $0: Test echo as user."
+         sudo -u user echo "INFO $BASH_SOURCE: Test echo as user."
       fi
 
       ## 30_adduser_user }}
