@@ -24,7 +24,7 @@
 ## Pipefail:
 ## - enable pipefail
 
-## {{{ pre.bsh 0.4
+## {{{ pre.bsh 0.5
 
 ## bash script fragment
 
@@ -171,6 +171,10 @@ fi
 ## }}
 
 own_filename="${0##*/}"
+
+bash -n "$own_filename"
+bash -n "$BASH_SOURCE"
+
 for skip_script in $SKIP_SCRIPTS; do
    if [ "$skip_script" = "$own_filename" ]; then
       force_echo "INFO: Skipping $own_filename, because SKIP_SCRIPTS includes it."
