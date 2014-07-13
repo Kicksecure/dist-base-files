@@ -170,7 +170,7 @@ else
 fi
 ## }}
 
-own_filename="${BASH_SOURCE##*/}"
+own_filename="${0##*/}"
 for skip_script in $SKIP_SCRIPTS; do
    if [ "$skip_script" = "$own_filename" ]; then
       force_echo "INFO: Skipping $own_filename, because SKIP_SCRIPTS includes it."
