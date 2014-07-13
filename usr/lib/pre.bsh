@@ -10,6 +10,8 @@
 ## - write xtrace to temporary log
 ## - show full xtrace on unexpected non-zero exit code
 ## - show exit code on unexpected non-zero exit code
+## - run syntax check "bash -n" on this script
+## - run syntax check "bash -n" on the script that sourced this script
 ##
 ## DEBDEBUG:
 ## - enable xtrace (-x) for maintainer script when DEBDEBUG environment
