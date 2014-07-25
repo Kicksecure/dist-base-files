@@ -172,10 +172,13 @@ else
 fi
 ## }}
 
-own_filename="${0##*/}"
-
-bash -n "$own_filename"
+## syntax check this script
 bash -n "$BASH_SOURCE"
+
+## syntax check script that sourced this script
+bash -n "$0"
+
+own_filename="${0##*/}"
 
 for skip_script in $SKIP_SCRIPTS; do
    if [ "$skip_script" = "$own_filename" ]; then
