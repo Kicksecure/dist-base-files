@@ -26,11 +26,15 @@
 ## Pipefail:
 ## - enable pipefail
 
-## {{{ pre.bsh 0.5
+## {{{ pre.bsh 0.6
 
 ## bash script fragment
 
-TEMP_DIR="$(mktemp --directory)"
+if [ ! -d "/tmp/prepost" ]; then
+   mkdir --parents --mode=g+rw "/tmp/prepost"
+fi
+
+TEMP_DIR="$(mktemp --tmpdir="/tmp/prepost")"
 
 [ -o xtrace ]
 ## returns:
