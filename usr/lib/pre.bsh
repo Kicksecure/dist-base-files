@@ -34,7 +34,7 @@ if [ ! -d "/tmp/prepost" ]; then
    mkdir --parents --mode=g+rw "/tmp/prepost"
 fi
 
-TEMP_DIR="$(mktemp --tmpdir="/tmp/prepost")"
+TEMP_DIR="$(mktemp --directory --tmpdir="/tmp/prepost")"
 
 [ -o xtrace ]
 ## returns:
