@@ -50,8 +50,6 @@ case "$1" in
          ## changeme
          ## Resulted in: aTayYxVyw5kDo
          useradd --password aTayYxVyw5kDo --user-group --create-home --shell /bin/bash user
-
-         #chown --recursive user:user /home/user
       else
          echo 'Not creating user "user", because it user already exists.'
       fi
