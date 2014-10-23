@@ -1,3 +1,9 @@
+anon-base-files (3:0.7-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 23 Oct 2014 22:38:18 +0000
+
 anon-base-files (3:0.6-1) unstable; urgency=low
 
   * New upstream version.
