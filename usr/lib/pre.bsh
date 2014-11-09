@@ -5,7 +5,7 @@
 ## See the file COPYING for copying conditions.
 
 ## Error log:
-## - implement trap ERR if function error_handler_general does not exist
+## - implement trap ERR if function errorhandlergeneral does not exist
 ## - run silent by default
 ## - write xtrace to temporary log
 ## - show full xtrace on unexpected non-zero exit code
@@ -164,13 +164,13 @@ $output
 }
 
 ## {{ Set up error handler.
-if [ "$(type -t error_handler_general)" = "function" ]; then
-   ## Function error_handler_general exists (declared in
+if [ "$(type -t errorhandlergeneral)" = "function" ]; then
+   ## Function errorhandlergeneral exists (declared in
    ## help-steps/pre). Prefer to use the more feature rich version of the error
    ## handler.
-   trap "error_handler_general" ERR
+   trap "errorhandlergeneral" ERR
 else
-   ## Function error_handler_general does not exist.
+   ## Function errorhandlergeneral does not exist.
    ## Fall back to a simpler error handler.
    trap "error_handler_pre" ERR
 fi
