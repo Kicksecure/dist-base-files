@@ -23,8 +23,9 @@
 ## Colorful output:
 ## - provide color function
 ##
-## Pipefail:
+## Shell options:
 ## - enable pipefail
+## - enable errtrace
 
 ## {{{ pre.bsh 0.6
 
@@ -43,6 +44,7 @@ TEMP_DIR="$(mktemp --directory --tmpdir="/tmp/prepost")"
 XTRACE="$?"
 
 set -o pipefail
+set -o errtrace
 
 ## {{ Colors
 
