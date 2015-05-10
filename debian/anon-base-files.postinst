@@ -22,13 +22,17 @@ case "$1" in
 
       ## 20_hostname {{
 
-      if [ "$ANON_BUILD_INSTALL_TO_ROOT" = "1" ] || [ "$CI" = "true" ]; then
+      if [ "$ANON_BUILD_INSTALL_TO_ROOT" = "1" ] || [ "$CI" = "true" ] || [ "$WHONIX_BUILD_QUBES" = "true" ]; then
          ## Working around: "sudo: unable to resolve host host"
          my_host_name="$(cat "/etc/hostname")"
          echo "INFO $BASH_SOURCE: Running \"hostname $my_host_name\"."
          hostname "$my_host_name"
       else
-        echo "INFO $BASH_SOURCE: Skipping, because neither ANON_BUILD_INSTALL_TO_ROOT is not set to 1, nor CI is set to true, ok."
+        echo "INFO $BASH_SOURCE: Skipping, because neither \
+ANON_BUILD_INSTALL_TO_ROOT is not set to 1, \
+nor CI is set to true, \
+nor WHONIX_BUILD_QUBES is set to true, \
+ok."
       fi
 
       ## 20_hostname }}
