@@ -1,3 +1,15 @@
+commit 698ba10c7554a020891d619bcdd61b01014c4245
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun May 10 20:14:24 2015 +0000
+
+    implemented WHONIX_BUILD_QUBES=true environment variable support - https://phabricator.whonix.org/T298
+
+commit 718e26d47c753690733d0e6a83db0cdb6211f17e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 30 17:55:29 2015 +0000
+
+    bumped changelog version
+
 commit 65f2a84b9f94b38b8d756af21d449a75acc477db
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Apr 28 13:40:44 2015 +0000
