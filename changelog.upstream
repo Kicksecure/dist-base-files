@@ -1,3 +1,15 @@
+commit 3c4e108e7732fa83fceea628540b80d8529d57ef
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu May 28 21:10:09 2015 +0000
+
+    no longer 'set -o pipefail' in /usr/lib/pre.bsh - https://phabricator.whonix.org/T329
+
+commit 0322186a4ef6f95038fecce292bef0175ed6e54b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 15 20:20:49 2015 +0000
+
+    bumped changelog version
+
 commit 698ba10c7554a020891d619bcdd61b01014c4245
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun May 10 20:14:24 2015 +0000
