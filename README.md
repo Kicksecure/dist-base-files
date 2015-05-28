@@ -17,7 +17,7 @@ default. Write xtrace to temporary log. Show full xtrace on unexpected
 non-zero exit code. Shows exit code on unexpected non-zero exit code.
 Enables xtrace (-x) for maintainer script when DEBDEBUG environment variable
 is set to 1. Provides SKIP_SCRIPTS environment variable to skip scripts by
-name. Provides provide color function. Enables pipefail.
+name. Provides provide color function.
 
 (This package description has been [automatically](https://github.com/Whonix/whonix-developer-meta-files/blob/master/debug-steps/packaging-helper-script) extracted and mirrored from `debian/control`.)
 

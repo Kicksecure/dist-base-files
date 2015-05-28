@@ -24,10 +24,9 @@
 ## - provide color function
 ##
 ## Shell options:
-## - enable pipefail
 ## - enable errtrace
 
-## {{{ pre.bsh 0.6
+## {{{ pre.bsh 0.7
 
 ## bash script fragment
 
@@ -43,7 +42,10 @@ TEMP_DIR="$(mktemp --directory --tmpdir="/tmp/prepost")"
 ## - 1, if xtrace (-x) is not set
 XTRACE="$?"
 
-set -o pipefail
+## config-package-dev doesn't like 'set -o pipefail'
+## http://mailman.mit.edu/pipermail/config-package-dev/2015-May/000041.html
+#set -o pipefail
+
 set -o errtrace
 
 ## {{ Colors
