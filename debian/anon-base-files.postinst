@@ -22,7 +22,7 @@ case "$1" in
 
       ## 20_hostname {{
 
-      if [ "$ANON_BUILD_INSTALL_TO_ROOT" = "1" ] || [ "$CI" = "true" ] || [ "$WHONIX_BUILD_QUBES" = "true" ]; then
+      if [ "$ANON_BUILD_INSTALL_TO_ROOT" = "1" ] || [ "$WHONIX_BUILD_QUBES" = "true" ]; then
          ## Working around: "sudo: unable to resolve host host"
          my_host_name="$(cat "/etc/hostname")"
          echo "INFO $BASH_SOURCE: Running \"hostname $my_host_name\"."
@@ -59,23 +59,6 @@ ok."
       fi
 
       usermod --append --groups adm,cdrom,audio,dip,sudo,plugdev user || true
-
-      ## Debugging CI.
-      if [ "$CI" = "true" ]; then
-         true "UWT_DEV_PASSTHROUGH: $UWT_DEV_PASSTHROUGH"
-         ls -la "/etc/resolv.conf" || true
-         cat "/etc/resolv.conf" || true
-         ls -la "/etc/hostname" || true
-         cat "/etc/hostname" || true
-         ls -la "/etc/hosts" || true
-         cat "/etc/hosts" || true
-         hostname || true
-         hostname --all-fqdns || true
-         hostname --long || true
-
-         ## Sanity test.
-         sudo -u user echo "INFO $BASH_SOURCE: Test echo as user."
-      fi
 
       ## 30_adduser_user }}
 
