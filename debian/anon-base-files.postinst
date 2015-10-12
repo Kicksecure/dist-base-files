@@ -46,14 +46,19 @@ ok."
 
       if [ ! "$ret" = "0" ]; then
          echo 'INFO: Creating user "user"...'
-         ## setting password of user user to changeme
-         ##
-         ## How this password was created:
-         ## sudo apt-get install whois
-         ## mkpasswd
-         ## changeme
-         ## Resulted in: aTayYxVyw5kDo
-         useradd --password aTayYxVyw5kDo --user-group --create-home --shell /bin/bash user
+         if command -v qubesdb-read >/dev/null 2>&1 ; then
+            password=""
+         else
+            ## setting password of user user to changeme
+            ##
+            ## How this password was created:
+            ## sudo apt-get install whois
+            ## mkpasswd
+            ## changeme
+            ## Resulted in: aTayYxVyw5kDo
+            password="aTayYxVyw5kDo"
+         fi
+         useradd --password "$password" --user-group --create-home --shell /bin/bash user
       else
          true 'Not creating user "user", because it user already exists.'
       fi
