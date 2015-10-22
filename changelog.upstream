@@ -1,3 +1,15 @@
+commit 537a9f1599a016a7f3a765d36c51ecdb0c1d8201
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Oct 12 11:54:39 2015 +0000
+
+    no password for user "user" in Qubes
+
+commit 8307c7a85170fc364c4095e29a31ce3c571a3e95
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Aug 25 14:07:30 2015 +0000
+
+    bumped changelog version
+
 commit 130d7ab129ea0bc926fc5dd3785229e35c6b86ea
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Aug 24 17:47:08 2015 +0000
