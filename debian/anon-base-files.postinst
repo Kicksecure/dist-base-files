@@ -20,6 +20,25 @@ case "$1" in
    configure)
       true "INFO: Configuring $DPKG_MAINTSCRIPT_PACKAGE..."
 
+      build_version_file="/var/lib/anon-dist/build_version"
+      if [ ! -f "$build_version_file" ]; then
+         echo "INFO: Logging anon_dist_build_version $anon_dist_build_version to $build_version_file..."
+         ## Sanity test.
+         if [ "$anon_dist_build_version" = "" ]; then
+            ## If anon_dist_build_version is empty, use the version number of the package.
+            anon_dist_build_version="$2"
+            ## example $2:
+            ## 3:1.7-1
+         fi
+         mkdir --parents /var/lib/anon-dist
+         ## Debugging.
+         touch "$build_version_file"
+         ## Logging.
+         echo "$anon_dist_build_version" > "$build_version_file"
+         ## Debugging.
+         cat "$build_version_file"
+      fi
+
       ## 20_hostname {{
 
       if [ "$ANON_BUILD_INSTALL_TO_ROOT" = "1" ] || [ "$WHONIX_BUILD_QUBES" = "true" ]; then
