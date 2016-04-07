@@ -1,3 +1,37 @@
+commit a2bc954be3cadd8bbb710dfbdd1351267f6a35ad
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 7 00:28:00 2016 +0000
+
+    fixed logging version of the package as build version
+    
+    in case anon_dist_build_version is not set
+    
+    https://phabricator.whonix.org/T461
+
+commit b70100ea125e3907aa358251f9b375e97ef4392c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Jan 19 22:12:32 2016 +0100
+
+    added marker file: /usr/share/anon-dist/marker
+
+commit a9752eb30fa3347fd0b0cf555720b6218ffb0d32
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Jan 5 00:14:40 2016 +0000
+
+    log build version
+    
+    So the chroot-script
+    https://github.com/Whonix/anon-shared-build-log-build-version/blob/master/usr/lib/anon-dist/chroot-scripts-post.d/70_log_build_version
+    can be deprecated.
+    
+    https://phabricator.whonix.org/T461
+
+commit 0273000b4319d67eff553685fedf5b5b4bfb666c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Oct 22 23:12:30 2015 +0000
+
+    bumped changelog version
+
 commit 537a9f1599a016a7f3a765d36c51ecdb0c1d8201
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Oct 12 11:54:39 2015 +0000
