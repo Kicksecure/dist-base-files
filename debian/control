@@ -14,7 +14,7 @@ Standards-Version: 3.9.6
 
 Package: anon-base-files
 Architecture: all
-Depends: sudo, ${misc:Depends}
+Depends: sudo, dpkg-dev, ${misc:Depends}
 Provides: ${diverted-files}
 Conflicts: ${diverted-files}
 Description: base files for Anonymity Distributions
