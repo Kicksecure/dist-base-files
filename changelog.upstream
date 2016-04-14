@@ -1,3 +1,15 @@
+commit 8949fa44549ff1f908c5b7637e1a432419ef1caf
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Apr 8 21:42:42 2016 +0000
+
+    run 'hostname "$my_host_name" || true' for installation from repository also
+
+commit 83c7c49c2345a604515b141069e6d171a06281d0
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 7 22:54:22 2016 +0000
+
+    bumped changelog version
+
 commit a2bc954be3cadd8bbb710dfbdd1351267f6a35ad
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Apr 7 00:28:00 2016 +0000
