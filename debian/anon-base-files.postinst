@@ -39,13 +39,9 @@ case "$1" in
 
       ## 20_hostname {{
 
-      if [ "$ANON_BUILD_INSTALL_TO_ROOT" = "1" ] || [ "$WHONIX_BUILD_QUBES" = "true" ]; then
-         ## Working around: "sudo: unable to resolve host host"
-         my_host_name="$(cat "/etc/hostname")"
-         echo "INFO $BASH_SOURCE: Running \"hostname $my_host_name\"."
-         hostname "$my_host_name"
-      else
-         ## For installation from repository.
+      true 'INFO: Working around: "sudo: unable to resolve host host"'
+      if [ -f /etc/hostname ]; then
+         my_host_name="$(cat "/etc/hostname")" || true
          hostname "$my_host_name" || true
       fi
 
