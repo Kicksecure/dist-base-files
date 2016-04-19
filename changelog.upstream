@@ -1,3 +1,17 @@
+commit 887094d1e21ec79ad03abc2364cb07fe0bc100cf
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Apr 15 01:13:40 2016 +0000
+
+    more robust handling of /etc/hostname
+    
+    https://phabricator.whonix.org/T461
+
+commit 1ec8bead322386987e16ec62f5006375d82bc92d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 14 21:14:43 2016 +0000
+
+    bumped changelog version
+
 commit 8949fa44549ff1f908c5b7637e1a432419ef1caf
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Apr 8 21:42:42 2016 +0000
