@@ -68,7 +68,7 @@ case "$1" in
       usermod --append --groups adm,cdrom,audio,dip,sudo,plugdev user || true
 
       true 'INFO: Benchmarking "sudo -u user echo "This is a test echo."" using "time"...'
-      time sudo -u user echo "This is a test echo."
+      time sudo --non-interactive -u user echo "This is a test echo."
 
       true "INFO: End configuring $DPKG_MAINTSCRIPT_PACKAGE."
 
