@@ -1,3 +1,15 @@
+commit ed10dad68953572560471a66527cc3b769b729f5
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Jan 17 10:34:28 2017 +0100
+
+    remove sudo echo test since broken on stretch and not important
+
+commit 0624d8ad281c389c8ef829709ce9d16f5c32863b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jan 15 15:18:40 2017 +0000
+
+    bumped changelog version
+
 commit fc1123b80bd6ad24652dff24762f2c368735e22d
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Jan 15 08:33:48 2017 +0100
