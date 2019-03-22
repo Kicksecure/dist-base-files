@@ -97,6 +97,33 @@ colors() {
 
 colors
 
+source_config_folder() {
+   ## dpkg sets envrionment variables
+   ## example:
+   ## DPKG_MAINTSCRIPT_PACKAGE=timezone-utc
+
+   pre_bsh_settings_folder="${DPKG_MAINTSCRIPT_PACKAGE}_maint.d"
+
+   ## example:
+   ## pre_bsh_settings_folder=timezone-utc_maint.d
+
+   shopt -s nullglob
+   local i
+   for i in /etc/${pre_bsh_settings_folder}/*.conf /usr/local/etc/${pre_bsh_settings_folder}/*.conf; do
+      bash_n_exit_code="0"
+      bash_n_output="$(bash -n "$i" 2>&1)" || { bash_n_exit_code="$?" ; true; };
+      if [ ! "$bash_n_exit_code" = "0" ]; then
+         force_echo "Invalid config file: $i
+   bash_n_exit_code: $bash_n_exit_code
+   bash_n_output:
+   $bash_n_output" >&2
+         exit 1
+      fi
+      source "$i"
+   done
+   shopt -u nullglob
+}
+
 disable_echo() {
    exec 5>&1 1>> "$TEMP_DIR/output"
    exec 6>&2 2>> "$TEMP_DIR/output"
@@ -191,6 +218,8 @@ bash -n "$0"
 
 own_filename="${0##*/}"
 
+source_config_folder
+
 for skip_script in $SKIP_SCRIPTS; do
    if [ "$skip_script" = "$own_filename" ]; then
       force_echo "INFO: Skipping $own_filename, because SKIP_SCRIPTS includes it."
@@ -198,5 +227,13 @@ for skip_script in $SKIP_SCRIPTS; do
    fi
 done
 unset skip_script
+
+## example:
+## maintscript_name="timezone-utc.postinst"
+
+if [ "$own_filename" = "$maintscript_name" ]; then
+   force_echo "INFO: Skipping $own_filename, because SKIP_SCRIPTS includes it."
+   exit 0
+fi
 
 ## }}}
