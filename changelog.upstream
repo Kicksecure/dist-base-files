@@ -1,3 +1,25 @@
+commit a62fcbd4ac542db98cd82511c918f1cff492fcd8
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Mar 29 09:02:43 2019 +0000
+
+    https://www.whonix.org/wiki/Dev/Licensing
+
+commit fe5433f52678597c4e26ca06ecfab4c3619e45de
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Mar 22 10:01:12 2019 +0000
+
+    add mechanism to add variables to Debian packaging maintainance scripts
+    
+    /etc/package-name_maint.d or /usr/local/etc/package-name_maint.d
+    
+    /etc/timezone-utc_maint.d or /usr/local/timezone-utc_maint.d
+
+commit ac7fed7c51fbfd548c3ba7e9cda4c29baeda635a
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Mar 12 11:10:40 2019 +0000
+
+    bumped changelog version
+
 commit 12f782bce97fc2c70f50f6e0dc7518ebc35c7471
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Mar 1 14:31:47 2019 +0000
