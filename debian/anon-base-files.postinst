@@ -64,7 +64,7 @@ case "$1" in
          true 'Not creating user "user", because it user already exists.'
       fi
 
-      usermod --append --groups adm,cdrom,audio,dip,sudo,plugdev user || true
+      usermod --append --groups cdrom,audio,dip,sudo,plugdev user || true
 
       true "INFO: End configuring $DPKG_MAINTSCRIPT_PACKAGE."
 
