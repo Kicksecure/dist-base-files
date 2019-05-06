@@ -1,3 +1,31 @@
+commit e92283868ef464847206122d0a36f030ef0f1531
+Merge: 228bd6c 11e3860
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon May 6 05:56:01 2019 -0400
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 11e386061dc3c63d1578bf1bb9f9159dd8bc5c34
+Merge: 228bd6c d750325
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon May 6 05:55:16 2019 -0400
+
+    Merge pull request #1 from madaidan/patch-1
+    
+    Remove user from 'adm' group.
+
+commit d750325392929363a81fcb2c5387d0c93db13592
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Sun May 5 21:33:07 2019 +0000
+
+    Update anon-base-files.postinst
+
+commit 228bd6cac9165f36883141a94fb5e7e537448c08
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 3 11:07:59 2019 +0000
+
+    bumped changelog version
+
 commit 84c44e40898991941d68fec1f41ca3aa03947beb
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri May 3 10:56:49 2019 +0000
