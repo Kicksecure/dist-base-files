@@ -59,9 +59,8 @@ case "$1" in
             password="aTayYxVyw5kDo"
          fi
          useradd --password "$password" --user-group --create-home --shell /bin/bash user
+         usermod --append --groups cdrom,audio,dip,sudo,plugdev user || true
       fi
-
-      usermod --append --groups cdrom,audio,dip,sudo,plugdev user || true
 
       true "INFO: End configuring $DPKG_MAINTSCRIPT_PACKAGE."
 
