@@ -43,7 +43,6 @@ case "$1" in
       fi
 
       if ! id user ; then
-         echo 'INFO: Creating user "user"...'
          if command -v qubesdb-read >/dev/null 2>&1 ; then
             password=""
          else
@@ -57,8 +56,6 @@ case "$1" in
             password="aTayYxVyw5kDo"
          fi
          useradd --password "$password" --user-group --create-home --shell /bin/bash user
-      else
-         true 'Not creating user "user", because it user already exists.'
       fi
 
       usermod --append --groups cdrom,audio,dip,sudo,plugdev user || true
