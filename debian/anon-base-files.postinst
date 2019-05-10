@@ -21,6 +21,7 @@ case "$1" in
 
       ## Define moniker variable here to make this easier to software fork.
       moniker="anon-dist"
+
       build_version_file="/var/lib/$moniker/build_version"
       if [ ! -f "$build_version_file" ]; then
          echo "INFO: Logging anon_dist_build_version $anon_dist_build_version to $build_version_file..."
