@@ -30,6 +30,7 @@ case "$1" in
             anon_dist_build_version="$(zless "/usr/share/doc/$DPKG_MAINTSCRIPT_PACKAGE/changelog.Debian.gz" | dpkg-parsechangelog -l- -SVersion)"
          fi
          mkdir --parents "$(dirname "$build_version_file")"
+         echo "INFO: Logging anon_dist_build_version $anon_dist_build_version to $build_version_file..."
          ## Debugging.
          touch "$build_version_file"
          ## Logging.
