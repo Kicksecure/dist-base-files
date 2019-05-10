@@ -15,13 +15,13 @@ true "
 #####################################################################
 "
 
+## Define variables here to make this easier to software fork.
+moniker="anon-dist"
+user_to_be_created="user"
+
 case "$1" in
    configure)
       true "INFO: Configuring $DPKG_MAINTSCRIPT_PACKAGE..."
-
-      ## Define variables here to make this easier to software fork.
-      moniker="anon-dist"
-      user_to_be_created="user"
 
       build_version_file="/var/lib/$moniker/build_version"
       if [ ! -f "$build_version_file" ]; then
