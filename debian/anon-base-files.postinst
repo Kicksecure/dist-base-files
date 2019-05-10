@@ -51,7 +51,7 @@ case "$1" in
          if command -v qubesdb-read >/dev/null 2>&1 ; then
             password=""
          else
-            ## setting password of user user to changeme
+            ## setting password to changeme
             ##
             ## How this password was created:
             ## sudo apt-get install whois
