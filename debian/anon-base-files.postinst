@@ -42,10 +42,7 @@ case "$1" in
          hostname "$my_host_name" || true
       fi
 
-      ret="0"
-      id user || { ret="$?" ; true; };
-
-      if [ ! "$ret" = "0" ]; then
+      if ! id user ; then
          echo 'INFO: Creating user "user"...'
          if command -v qubesdb-read >/dev/null 2>&1 ; then
             password=""
