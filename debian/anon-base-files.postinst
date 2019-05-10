@@ -19,7 +19,8 @@ case "$1" in
    configure)
       true "INFO: Configuring $DPKG_MAINTSCRIPT_PACKAGE..."
 
-      build_version_file="/var/lib/anon-dist/build_version"
+      moniker="anon-dist"
+      build_version_file="/var/lib/$moniker/build_version"
       if [ ! -f "$build_version_file" ]; then
          echo "INFO: Logging anon_dist_build_version $anon_dist_build_version to $build_version_file..."
          ## Sanity test.
@@ -27,7 +28,7 @@ case "$1" in
             ## If anon_dist_build_version is empty, use the version number of the package.
             anon_dist_build_version="$(zless /usr/share/doc/$DPKG_MAINTSCRIPT_PACKAGE/changelog* | dpkg-parsechangelog -l- -SVersion)" || true
          fi
-         mkdir --parents "/var/lib/anon-dist"
+         mkdir --parents "$(dirname "$build_version_file")"
          ## Debugging.
          touch "$build_version_file"
          ## Logging.
