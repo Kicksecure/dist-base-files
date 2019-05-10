@@ -19,7 +19,7 @@ case "$1" in
    configure)
       true "INFO: Configuring $DPKG_MAINTSCRIPT_PACKAGE..."
 
-      ## Define moniker variable here to make this easier to software fork.
+      ## Define variables here to make this easier to software fork.
       moniker="anon-dist"
       user_to_be_created="user"
 
