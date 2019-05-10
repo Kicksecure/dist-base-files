@@ -27,7 +27,7 @@ case "$1" in
          ## Sanity test.
          if [ "$anon_dist_build_version" = "" ]; then
             ## If anon_dist_build_version is empty, use the version number of the package.
-            anon_dist_build_version="$(zless "/usr/share/doc/$DPKG_MAINTSCRIPT_PACKAGE/changelog.Debian.gz" | dpkg-parsechangelog -l- -SVersion)" || true
+            anon_dist_build_version="$(zless "/usr/share/doc/$DPKG_MAINTSCRIPT_PACKAGE/changelog.Debian.gz" | dpkg-parsechangelog -l- -SVersion)"
          fi
          mkdir --parents "$(dirname "$build_version_file")"
          ## Debugging.
