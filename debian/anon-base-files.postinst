@@ -21,6 +21,7 @@ case "$1" in
 
       ## Define moniker variable here to make this easier to software fork.
       moniker="anon-dist"
+      user_to_be_created="user"
 
       build_version_file="/var/lib/$moniker/build_version"
       if [ ! -f "$build_version_file" ]; then
@@ -46,7 +47,7 @@ case "$1" in
          hostname "$my_host_name" || true
       fi
 
-      if ! id user ; then
+      if ! id "$user_to_be_created" ; then
          if command -v qubesdb-read >/dev/null 2>&1 ; then
             password=""
          else
@@ -59,8 +60,8 @@ case "$1" in
             ## Resulted in: aTayYxVyw5kDo
             password="aTayYxVyw5kDo"
          fi
-         useradd --password "$password" --user-group --create-home --shell /bin/bash user
-         usermod --append --groups cdrom,audio,dip,sudo,plugdev user
+         useradd --password "$password" --user-group --create-home --shell /bin/bash "$user_to_be_created"
+         usermod --append --groups cdrom,audio,dip,sudo,plugdev "$user_to_be_created"
       fi
 
       true "INFO: End configuring $DPKG_MAINTSCRIPT_PACKAGE."
