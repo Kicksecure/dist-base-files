@@ -348,7 +348,7 @@ commit 3c4e108e7732fa83fceea628540b80d8529d57ef
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu May 28 21:10:09 2015 +0000
 
-    no longer 'set -o pipefail' in /usr/lib/pre.bsh - https://phabricator.whonix.org/T329
+    no longer 'set -o pipefail' in /usr/lib/helper-scripts/pre.bsh - https://phabricator.whonix.org/T329
 
 commit 0322186a4ef6f95038fecce292bef0175ed6e54b
 Author: Patrick Schleizer <adrelanos@riseup.net>
@@ -535,7 +535,7 @@ commit f9fb8c7da88ee45c96266e56736df1d2e289c465
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Aug 26 15:43:59 2014 +0000
 
-    anon-base-files /usr/lib/pre.bsh: all temporary files are now in /tmp/prepost
+    anon-base-files /usr/lib/helper-scripts/pre.bsh: all temporary files are now in /tmp/prepost
 
 commit 8bf9efd62a70fc06e40b69cf60f5be03e209e31a
 Author: Patrick Schleizer <adrelanos@riseup.net>
