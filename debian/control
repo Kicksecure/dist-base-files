@@ -26,12 +26,3 @@ Description: base files for Anonymity Distributions
  .
  Adds user "user" to the group "debian-tor", so user "user" can access Tor's
  control port.
- .
- Provides /usr/lib/helper-scripts/pre.bsh which if available, gets sourced by other
- maintainer scripts. pre.bash implements an improved error log. Implements
- trap ERR if function errorhandlergeneral does not exist. Runs silent by
- default. Write xtrace to temporary log. Show full xtrace on unexpected
- non-zero exit code. Shows exit code on unexpected non-zero exit code.
- Enables xtrace (-x) for maintainer script when DEBDEBUG environment variable
- is set to 1. Provides SKIP_SCRIPTS environment variable to skip scripts by
- name. Provides provide color function.
