@@ -1,3 +1,117 @@
+commit 0da69ed9f575cb70c5677f99b5740fe1d5beb7c0
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun May 12 05:31:12 2019 -0400
+
+    update
+
+commit 099eedc4b5c933c5b3fab7f80c6d2be48f1ce543
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun May 12 02:58:41 2019 -0400
+
+    update path to pre.bsh
+
+commit bf881b6be071d0582394039677892d2befc4843e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun May 12 02:40:37 2019 -0400
+
+    move pre.bsh to helper-scripts package
+
+commit e6edc54928257c563873914f99c116d2b750add0
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 10 11:06:24 2019 +0000
+
+    refactoring
+
+commit 79f5b5a9ee2dde16879a2edcdb4d4f34b2af01b9
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 10 11:05:57 2019 +0000
+
+    comment
+
+commit b020510175f37952374cc322e3e1664f95eef49c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 10 11:04:16 2019 +0000
+
+    comment
+
+commit 955aff78bfdece0c27ab9210fd573ef75bc559eb
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 10 11:03:34 2019 +0000
+
+    refactoring
+
+commit df733e0124d89e003e05f036d7cb9780b53c7247
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 10 11:02:37 2019 +0000
+
+    minor
+
+commit f767c034bc585c56002db9b625667e30ab0842db
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 10 11:01:47 2019 +0000
+
+    error out on error
+
+commit 69034bbd6b0808331c635bf4ad1068ca9699f924
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 10 11:00:51 2019 +0000
+
+    stop enforcing user groups
+
+commit 2926d8dfd6006ece45bebc52003bf2af607e439f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 10 06:59:08 2019 -0400
+
+    output
+
+commit 8e553e0eba8c7a85a2c5e274d72deace3533f4df
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 10 06:56:18 2019 -0400
+
+    error out on error
+
+commit a55ab32333baa8ca72b82c35de2c996d41d8418a
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 10 06:54:57 2019 -0400
+
+    hardcode changelog.Debian.gz
+
+commit 93f6a2cac95b4a35f7b36abdf4e13197db9ed16b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 10 06:49:07 2019 -0400
+
+    comment
+
+commit 154685bc335dfb31c9f0f47ce9dfe867fe63808e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 10 06:47:58 2019 -0400
+
+    refactoring to allow easier forks
+
+commit 156df915e656ffd0704f79cc612008b12525a06e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 10 06:45:11 2019 -0400
+
+    quotes
+
+commit c2fbb55c6bebdb344c3024d724b5b4b52a50c63b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 10 06:40:56 2019 -0400
+
+    code simplification
+
+commit ae99f63a941af15ddaafdd19fbe062f9ce3640e6
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 10 06:39:45 2019 -0400
+
+    code simplification
+
+commit 4845dfe93160e9080a7baf97faeaaa3cfdbb21f0
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon May 6 09:57:29 2019 +0000
+
+    bumped changelog version
+
 commit e92283868ef464847206122d0a36f030ef0f1531
 Merge: 228bd6c 11e3860
 Author: Patrick Schleizer <adrelanos@riseup.net>
@@ -348,7 +462,7 @@ commit 3c4e108e7732fa83fceea628540b80d8529d57ef
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu May 28 21:10:09 2015 +0000
 
-    no longer 'set -o pipefail' in /usr/lib/helper-scripts/pre.bsh - https://phabricator.whonix.org/T329
+    no longer 'set -o pipefail' in /usr/lib/pre.bsh - https://phabricator.whonix.org/T329
 
 commit 0322186a4ef6f95038fecce292bef0175ed6e54b
 Author: Patrick Schleizer <adrelanos@riseup.net>
@@ -535,7 +649,7 @@ commit f9fb8c7da88ee45c96266e56736df1d2e289c465
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Aug 26 15:43:59 2014 +0000
 
-    anon-base-files /usr/lib/helper-scripts/pre.bsh: all temporary files are now in /tmp/prepost
+    anon-base-files /usr/lib/pre.bsh: all temporary files are now in /tmp/prepost
 
 commit 8bf9efd62a70fc06e40b69cf60f5be03e209e31a
 Author: Patrick Schleizer <adrelanos@riseup.net>
