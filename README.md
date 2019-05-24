@@ -9,15 +9,6 @@ distributions. See also:
 
 Adds user "user" to the group "debian-tor", so user "user" can access Tor's
 control port.
-
-Provides /usr/lib/helper-scripts/pre.bsh which if available, gets sourced by other
-maintainer scripts. pre.bash implements an improved error log. Implements
-trap ERR if function errorhandlergeneral does not exist. Runs silent by
-default. Write xtrace to temporary log. Show full xtrace on unexpected
-non-zero exit code. Shows exit code on unexpected non-zero exit code.
-Enables xtrace (-x) for maintainer script when DEBDEBUG environment variable
-is set to 1. Provides SKIP_SCRIPTS environment variable to skip scripts by
-name. Provides provide color function.
 ## How to install `anon-base-files` using apt-get ##
 
 1\. Add [Whonix's Signing Key](https://www.whonix.org/wiki/Whonix_Signing_Key).
@@ -29,7 +20,7 @@ sudo apt-key --keyring /etc/apt/trusted.gpg.d/whonix.gpg adv --keyserver hkp://i
 3\. Add Whonix's APT repository.
 
 ```
-echo "deb http://deb.whonix.org buster main" | sudo tee /etc/apt/sources.list.d/whonix.list
+echo "deb http://deb.whonix.org buster main contrib non-free" | sudo tee /etc/apt/sources.list.d/whonix.list
 ```
 
 4\. Update your package lists.
@@ -53,6 +44,6 @@ Replace `apparmor-profile-torbrowser` with the actual name of this package with 
 * [Free Forum Support](https://forums.whonix.org)
 * [Professional Support](https://www.whonix.org/wiki/Professional_Support)
 
-## Payments ##
+## Donate ##
 
-`anon-base-files` requires [payments](https://www.whonix.org/wiki/Payments) to stay alive!
+`anon-base-files` requires [donations](https://www.whonix.org/wiki/Donate) to stay alive!
