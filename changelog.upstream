@@ -1,3 +1,49 @@
+commit 1bb0a6a4ce8f742c6bba0f13143ac485d490f011
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jul 11 06:52:54 2019 +0000
+
+    renamed etc/machine-id.anondist -> etc/machine-id
+    
+    /etc/machine-id isn't owned by any package.
+    (See 'dpkg -S /etc/machine-id'.)
+    (And unlikely to change in the future.)
+    Therefore this package can safely own it.
+    No need to use config-package-dev displace.
+
+commit 0752ded55970518d405b5257fe2b7c1236794662
+Merge: c11f289 4d99b8d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jul 11 06:51:33 2019 +0000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 4d99b8d86e707fd4e83a8decb1c3975c15c0d0b9
+Merge: c11f289 b3e9f05
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jul 11 06:51:18 2019 +0000
+
+    Merge pull request #2 from madaidan/patch-2
+    
+    Anonymize /etc/machine-id
+
+commit b3e9f05b6f3727676d8592812b20628cbf653311
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Wed Jul 10 14:34:17 2019 +0000
+
+    Update control
+
+commit 45389540ea3249942f6b0ed6bf8133abe9318481
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Wed Jul 10 14:33:33 2019 +0000
+
+    Create machine-id.anondist
+
+commit c11f2898a82ad1259c1d781c22bf4316591c44bb
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jun 8 10:05:30 2019 +0000
+
+    bumped changelog version
+
 commit 5b894b530592228d86e9156d762b09645d324230
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Jun 8 00:05:27 2019 -0400
