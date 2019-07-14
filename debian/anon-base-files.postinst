@@ -18,6 +18,7 @@ true "
 ## Define variables here to make this easier to software fork.
 moniker="anon-dist"
 user_to_be_created="user"
+account_to_be_locked="root"
 
 case "$1" in
    configure)
@@ -72,6 +73,22 @@ case "$1" in
             pam-auth-update --enable mkhomedir
 
             usermod --append --groups cdrom,audio,dip,sudo,plugdev "$user_to_be_created"
+
+            ## https://www.whonix.org/wiki/Root
+
+            ## Lock the account.
+            passwd --lock "$account_to_be_locked"
+
+            ## Expire the account to prevent SSH login.
+            ## https://www.cyberciti.biz/faq/linux-locking-an-account/
+            chage --expiredate 0 "$account_to_be_locked"
+
+            ## Debugging.
+            chage --list "$account_to_be_locked"
+
+            ## To undo:
+            #sudo chage --expiredate -1 "$account_to_be_locked"
+            #sudo passwd
          fi
       fi
 
