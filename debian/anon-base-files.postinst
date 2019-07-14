@@ -63,7 +63,7 @@ case "$1" in
             ## Resulted in: aTayYxVyw5kDo
             password="aTayYxVyw5kDo"
 
-            useradd --password "$password" --user-group --shell /bin/bash "$user_to_be_created"
+            useradd --no-create-home --password "$password" --user-group --shell /bin/bash "$user_to_be_created"
 
             pam-auth-update --enable mkhomedir
 
