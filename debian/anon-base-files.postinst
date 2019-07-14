@@ -49,7 +49,8 @@ case "$1" in
 
       if ! id "$user_to_be_created" ; then
          if command -v qubesdb-read >/dev/null 2>&1 ; then
-            password=""
+            ## Leave user 'user' creation to Qubes.
+            true "INFO: Not creating user '$user_to_be_created' since Qubes detected."
          else
             ## setting password to changeme
             ##
@@ -59,12 +60,14 @@ case "$1" in
             ## changeme
             ## Resulted in: aTayYxVyw5kDo
             password="aTayYxVyw5kDo"
+
+            useradd --password "$password" --user-group --shell /bin/bash "$user_to_be_created"
+
+            pam-auth-update --enable mkhomedir
+
+            usermod --append --groups cdrom,audio,dip,sudo,plugdev "$user_to_be_created"
          fi
-         useradd --password "$password" --user-group --shell /bin/bash "$user_to_be_created"
 
-         pam-auth-update --enable mkhomedir
-
-         usermod --append --groups cdrom,audio,dip,sudo,plugdev "$user_to_be_created"
       fi
 
       true "INFO: End configuring $DPKG_MAINTSCRIPT_PACKAGE."
