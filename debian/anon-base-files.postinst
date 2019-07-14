@@ -47,7 +47,9 @@ case "$1" in
          hostname "$my_host_name" || true
       fi
 
-      if ! id "$user_to_be_created" ; then
+      if id "$user_to_be_created" ; then
+         true "INFO: User '$user_to_be_created' already exists, skip creation."
+      else
          if command -v qubesdb-read >/dev/null 2>&1 ; then
             ## Leave user 'user' creation to Qubes.
             true "INFO: Not creating user '$user_to_be_created' since Qubes detected."
@@ -67,7 +69,6 @@ case "$1" in
 
             usermod --append --groups cdrom,audio,dip,sudo,plugdev "$user_to_be_created"
          fi
-
       fi
 
       true "INFO: End configuring $DPKG_MAINTSCRIPT_PACKAGE."
