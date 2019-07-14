@@ -60,7 +60,10 @@ case "$1" in
             ## Resulted in: aTayYxVyw5kDo
             password="aTayYxVyw5kDo"
          fi
-         useradd --password "$password" --user-group --create-home --shell /bin/bash "$user_to_be_created"
+         useradd --password "$password" --user-group --shell /bin/bash "$user_to_be_created"
+
+         pam-auth-update --enable mkhomedir
+
          usermod --append --groups cdrom,audio,dip,sudo,plugdev "$user_to_be_created"
       fi
 

@@ -13,7 +13,7 @@ Standards-Version: 4.3.0
 
 Package: anon-base-files
 Architecture: all
-Depends: sudo, dpkg-dev, ${misc:Depends}
+Depends: sudo, dpkg-dev, libpam-runtime, ${misc:Depends}
 Provides: ${diverted-files}
 Conflicts: ${diverted-files}
 Description: base files for Anonymity Distributions
