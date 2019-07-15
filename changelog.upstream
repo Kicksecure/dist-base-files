@@ -1,3 +1,56 @@
+commit cfdf46b3913a0b176814c93f5343d0b31462393f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jul 14 12:39:06 2019 +0000
+
+    lock and expire root account in new Whonix builds
+    
+    https://forums.whonix.org/t/restrict-root-access/7658
+    
+    https://www.whonix.org/wiki/Dev/Permissions
+    
+    https://www.whonix.org/wiki/Root
+
+commit 1ef79d24aadd634966f64e6d5385d0b0c2afc834
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jul 14 11:46:31 2019 +0000
+
+    comment
+
+commit 64287c4276ebfb1bc6e7a25f34951b31a091d5ab
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jul 14 11:40:22 2019 +0000
+
+    fix, actually use --no-create-home
+
+commit 733b551312e0e22137610472947832e943c2c9ba
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jul 14 11:39:35 2019 +0000
+
+    debugging
+
+commit 02d3a1a82de86e10f65fc7ac200d892bf8c00808
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jul 14 11:38:08 2019 +0000
+
+    Leave user 'user' creation to Qubes.
+
+commit ddc8813c1d0403f54de4702ad390d051f51a75b8
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jul 14 11:35:52 2019 +0000
+
+    do not create home folder during postinst
+    
+    leave that to:
+    pam-auth-update --enable mkhomedir
+    
+    https://phabricator.whonix.org/T913
+
+commit baa79da1cb9a388641268fe9c94706e3465cf2c1
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jul 13 16:29:47 2019 +0000
+
+    bumped changelog version
+
 commit ca2b68eb514f89ed2912875ad7d68516653105fc
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Jul 13 16:28:56 2019 +0000
