@@ -1,3 +1,18 @@
+commit a86ed82f4c4505bc8dd89d7d2c95f8bad644425b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Aug 10 06:57:18 2019 -0400
+
+    Disable setting root account to expire.
+    (`chage --expiredate 0 root`)
+    Because it breaks `adduser`.
+    https://forums.whonix.org/t/restrict-root-access/7658/59
+
+commit 8f602c20662f31ba5c15b1d951aa25ba9dc8857e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Aug 1 11:15:29 2019 +0000
+
+    bumped changelog version
+
 commit 6efd4f381e3cf964e99a1a91a182e20e7e6dd042
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Aug 1 11:13:28 2019 +0000
