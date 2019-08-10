@@ -79,9 +79,11 @@ case "$1" in
             ## Lock the account.
             passwd --lock "$account_to_be_locked"
 
+            ## Disabled because it breaks `adduser`.
+            ## https://forums.whonix.org/t/restrict-root-access/7658/59
             ## Expire the account to prevent SSH login.
             ## https://www.cyberciti.biz/faq/linux-locking-an-account/
-            chage --expiredate 0 "$account_to_be_locked"
+            #chage --expiredate 0 "$account_to_be_locked"
 
             ## Debugging.
             chage --list "$account_to_be_locked"
