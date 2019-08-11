@@ -90,7 +90,7 @@ case "$1" in
             #chage --expiredate 0 "$account_to_be_locked"
 
             ## Debugging.
-            chage --list "$account_to_be_locked"
+            #chage --list "$account_to_be_locked"
 
             ## To undo:
             #sudo chage --expiredate -1 "$account_to_be_locked"
