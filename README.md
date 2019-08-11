@@ -1,14 +1,28 @@
 # base files for Anonymity Distributions #
 
+Creates user "user" with password "changeme" (not in Qubes).
+That is if user "user" is not existing yet.
+And if it does create "user" user it also locks the root account.
+Therefore root account locking effectively only happens in new
+builds not having user "user" already created.
+
+Adds user "user" to groups "cdrom,audio,dip,sudo,plugdev".
+
+Creates version file /var/lib/anon-dist/build_version.
+
 Anonymized operating system user name "user", /etc/hostname, /etc/hosts,
 /etc/machine-id, /var/lib/dbus/machine-id, which should be shared among all
 anonymity distributions. See also:
+
 * https://mailman.boum.org/pipermail/tails-dev/2013-January/002457.html
 * https://labs.riseup.net/code/issues/5655
 * http://lists.autistici.org/message/20140627.215105.24023267.en.html
 
-Adds user "user" to the group "debian-tor", so user "user" can access Tor's
-control port.
+Ships a systemd unit file anon-base-files-skel-first-boot.service
+which runs /usr/lib/helper-scripts/first-boot-skel (part of helper-scripts)
+package.
+
+This package gets installed by default in both, Kicksecure and Whonix.
 ## How to install `anon-base-files` using apt-get ##
 
 1\. Download [Whonix's Signing Key]().
