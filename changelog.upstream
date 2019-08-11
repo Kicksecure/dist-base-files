@@ -1,3 +1,23 @@
+commit d94a11ea34a3819521e90b2e552d49aa660c5ee6
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Aug 11 11:38:59 2019 +0000
+
+    No longer enable pam mkhomedir here.
+    This is done by the security-misc package. File:
+    /usr/share/pam-configs/mkhomedir-security-misc
+
+commit d518bc61e4d89934d3c44c68e6f43775950b78a2
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Aug 11 11:37:45 2019 +0000
+
+    refactoring, move "pam-auth-update --enable mkhomedir" up
+
+commit 21f72f3a168a23d964cd3fe724f960e4b5a47eab
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Aug 10 11:35:40 2019 +0000
+
+    bumped changelog version
+
 commit a86ed82f4c4505bc8dd89d7d2c95f8bad644425b
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Aug 10 06:57:18 2019 -0400
