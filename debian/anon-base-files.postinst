@@ -55,6 +55,8 @@ case "$1" in
             ## Leave user 'user' creation to Qubes.
             true "INFO: Not creating user '$user_to_be_created' since Qubes detected."
          else
+            pam-auth-update --enable mkhomedir
+
             ## setting password to changeme
             ##
             ## How this password was created:
@@ -69,8 +71,6 @@ case "$1" in
             ## https://phabricator.whonix.org/T913
             ## https://forums.whonix.org/t/bug-not-all-files-form-etc-skel-are-copied-to-home-user/6778/4
             useradd --no-create-home --password "$password" --user-group --shell /bin/bash "$user_to_be_created"
-
-            pam-auth-update --enable mkhomedir
 
             usermod --append --groups cdrom,audio,dip,sudo,plugdev "$user_to_be_created"
 
