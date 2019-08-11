@@ -55,7 +55,10 @@ case "$1" in
             ## Leave user 'user' creation to Qubes.
             true "INFO: Not creating user '$user_to_be_created' since Qubes detected."
          else
-            pam-auth-update --enable mkhomedir
+            ## No longer enable pam mkhomedir here.
+            ## This is done by the security-misc package. File:
+            ## /usr/share/pam-configs/mkhomedir-security-misc
+            ## pam-auth-update --enable mkhomedir
 
             ## setting password to changeme
             ##
