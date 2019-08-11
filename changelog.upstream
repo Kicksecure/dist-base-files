@@ -1,3 +1,67 @@
+commit 5bcf31b6256a0128272de05295cda89bb6c4492c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Aug 11 15:05:02 2019 +0000
+
+    readme
+
+commit a556244e454f30804e8f8f4d4473e72d78ce6b55
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Aug 11 14:33:38 2019 +0000
+
+    description
+
+commit 9fa7a21eecf33cb2fd6b5daa2d083920e0b0eea6
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Aug 11 14:32:29 2019 +0000
+
+    lower debugging
+
+commit b4845561603252ff923a3e1338465161c65a9ba9
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Aug 11 14:31:39 2019 +0000
+
+    comment
+
+commit b247337425c957f5a8b7b29aaf6300ae5b72b777
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Aug 11 14:30:11 2019 +0000
+
+    description
+
+commit 1166b2356f0c03c1994d90fc791c2eeb19c0948b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Aug 11 14:28:31 2019 +0000
+
+    depend on helper scripts
+    
+    which provides /usr/lib/helper-scripts/first-boot-skel
+
+commit e04601fd52ff8bfd3cb70c69048e2eb16298c4b5
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Aug 11 14:27:47 2019 +0000
+
+    drop dependency of libpam-runtime
+    
+    (since now handled by security-misc package)
+
+commit 55da858c046e61b01aa62f525e7443c1298c2ef6
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Aug 11 14:26:40 2019 +0000
+
+    description
+
+commit 5692d18e19675dd0b46d4f2e61d455e66726b39f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Aug 11 14:19:00 2019 +0000
+
+    import from whonix-base-files
+
+commit e904b0d74645ea419e35b5dbbb4c0d94bf5558c1
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Aug 11 11:39:37 2019 +0000
+
+    bumped changelog version
+
 commit d94a11ea34a3819521e90b2e552d49aa660c5ee6
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Aug 11 11:38:59 2019 +0000
