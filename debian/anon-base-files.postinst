@@ -70,13 +70,17 @@ case "$1" in
             ## Resulted in: aTayYxVyw5kDo
             password="aTayYxVyw5kDo"
 
-            ## Use --no-create-home and leave home folder creation to
-            ## pam mkhomedir in the overnext command.
-            ## https://phabricator.whonix.org/T913
-            ## https://forums.whonix.org/t/bug-not-all-files-form-etc-skel-are-copied-to-home-user/6778/4
-            useradd --no-create-home --password "$password" --user-group --shell /bin/bash "$user_to_be_created"
+            if [ "$WHONIX_BUILD_TYPE" = "whonix-host" ]; then
+               true "INFO: Skipping creation of user '$user_to_be_created' since WHONIX_BUILD_TYPE is set to $WHONIX_BUILD_TYPE."
+            else
+               ## Use --no-create-home and leave home folder creation to
+               ## pam mkhomedir in the overnext command.
+               ## https://phabricator.whonix.org/T913
+               ## https://forums.whonix.org/t/bug-not-all-files-form-etc-skel-are-copied-to-home-user/6778/4
+               useradd --no-create-home --password "$password" --user-group --shell /bin/bash "$user_to_be_created"
 
-            usermod --append --groups cdrom,audio,dip,sudo,plugdev "$user_to_be_created"
+               usermod --append --groups cdrom,audio,dip,sudo,plugdev "$user_to_be_created"
+            fi
 
             ## https://www.whonix.org/wiki/Root
 
