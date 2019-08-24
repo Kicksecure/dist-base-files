@@ -1,3 +1,17 @@
+commit 8635315603aeda5065db88351cef026057af50a4
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Aug 24 12:26:24 2019 -0400
+
+    skip creation of user "user" for Whonix-Host builds
+    
+    https://forums.whonix.org/t/whonix-desktop-installer-with-calamares-field-report/7350/124
+
+commit c43d3553624c93214032c459fad038cd916f2ebd
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Aug 11 15:05:15 2019 +0000
+
+    bumped changelog version
+
 commit 5bcf31b6256a0128272de05295cda89bb6c4492c
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Aug 11 15:05:02 2019 +0000
