@@ -1,3 +1,13 @@
+## Copyright (C) 2012 - 2019 ENCRYPTED SUPPORT LP <adrelanos@riseup.net>
+## See the file COPYING for copying conditions.
+
+#### meta start
+#### project Whonix
+#### category networking and dns
+#### description Debian default /etc/hosts + Anonymity Distribution specific additions.
+## Currently only <code>127.0.0.1 host.localdomain host</code> gets added.
+#### meta end
+
 ## Anonymity Distribution /etc/hosts
 
 ## Defaults
