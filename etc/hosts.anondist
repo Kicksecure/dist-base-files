@@ -4,7 +4,9 @@
 #### meta start
 #### project Whonix
 #### category networking and dns
-#### description Debian default /etc/hosts + Anonymity Distribution specific additions.
+#### description
+## Debian default /etc/hosts + Anonymity Distribution specific additions.
+##
 ## Currently only <code>127.0.0.1 host.localdomain host</code> gets added.
 #### meta end
 
