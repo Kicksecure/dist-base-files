@@ -22,6 +22,8 @@ Ships a systemd unit file anon-base-files-skel-first-boot.service
 which runs /usr/lib/helper-scripts/first-boot-skel (part of helper-scripts)
 package.
 
+Simplifies sudo default lecture to only showing the default password once.
+
 This package gets installed by default in both, Kicksecure and Whonix.
 ## How to install `anon-base-files` using apt-get ##
 
