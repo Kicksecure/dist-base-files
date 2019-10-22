@@ -1,3 +1,23 @@
+commit 312b1f538d6c4b0d3c771cb0f188fa3688621a8e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Oct 22 06:31:10 2019 +0000
+
+    readme
+
+commit a929f1c438a9ac2a7cc01926e30b8d210debe442
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Oct 22 01:56:58 2019 -0400
+
+    simplify sudo default lecture to only show default password
+    
+    https://forums.whonix.org/t/disable-or-change-sudo-lecture-at-frist-run-we-trust-you-have-received-the-usual-lecture-from-the-local-system-administrator-it-usually-boils-down-to-these-three-things/8323
+
+commit dd0d165002aba7033c7c129278683fcdda983605
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Oct 14 10:11:32 2019 +0000
+
+    bumped changelog version
+
 commit 9c6ff7592e5a8b954b189bfaa344182cc46401e1
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Oct 7 10:17:30 2019 +0000
