@@ -105,6 +105,9 @@ case "$1" in
                ## Use --encrypted to be able to use a static, precalculated hash for reproducible builds.
                echo "${user_to_be_created}:${password}" | chpasswd --encrypted
 
+               ## Make sure this group exists. Might not exist if security-misc is not (yet) installed.
+               addgroup --system console
+
                ## old:
                #usermod --append --groups cdrom,audio,dip,sudo,plugdev "$user_to_be_created"
                ##
@@ -114,6 +117,7 @@ case "$1" in
                addgroup "$user_to_be_created" dip
                addgroup "$user_to_be_created" sudo
                addgroup "$user_to_be_created" plugdev
+               addgroup "$user_to_be_created" console
             fi
 
             ## https://www.whonix.org/wiki/Root
