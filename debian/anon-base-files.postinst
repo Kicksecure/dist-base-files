@@ -120,7 +120,8 @@ case "$1" in
                addgroup "$user_to_be_created" console
 
                ## By package security-misc.
-               pam-auth-update --enable console-lockdown
+               ## Breaks ssh login for those who install openssh-server.
+               #pam-auth-update --enable console-lockdown
             fi
 
             ## https://www.whonix.org/wiki/Root
