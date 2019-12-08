@@ -119,6 +119,7 @@ case "$1" in
                addgroup "$user_to_be_created" dip
                addgroup "$user_to_be_created" plugdev
 
+               ## Required by security-misc preinst.
                addgroup "$user_to_be_created" sudo
 
                ## security-misc: Console Lockdown.
