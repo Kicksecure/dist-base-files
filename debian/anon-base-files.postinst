@@ -126,6 +126,9 @@ case "$1" in
 
                ## By package security-misc.
                pam-auth-update --enable console-lockdown-security-misc
+
+               ## In Qubes and for existing installations Console Lockdown is
+               ## is handled by whonix-legacy package.
             fi
 
             ## https://www.whonix.org/wiki/Root
