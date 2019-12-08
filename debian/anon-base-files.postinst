@@ -105,8 +105,10 @@ case "$1" in
                ## Use --encrypted to be able to use a static, precalculated hash for reproducible builds.
                echo "${user_to_be_created}:${password}" | chpasswd --encrypted
 
+               ## security-misc: Console Lockdown.
                ## Make sure this group exists. Might not exist if security-misc is not (yet) installed.
                addgroup --system console
+               addgroup --system ssh
 
                ## old:
                #usermod --append --groups cdrom,audio,dip,sudo,plugdev "$user_to_be_created"
@@ -117,11 +119,13 @@ case "$1" in
                addgroup "$user_to_be_created" dip
                addgroup "$user_to_be_created" sudo
                addgroup "$user_to_be_created" plugdev
+
+               ## security-misc: Console Lockdown.
                addgroup "$user_to_be_created" console
+               addgroup "$user_to_be_created" ssh
 
                ## By package security-misc.
-               ## Breaks ssh login for those who install openssh-server.
-               #pam-auth-update --enable console-lockdown-security-misc
+               pam-auth-update --enable console-lockdown-security-misc
             fi
 
             ## https://www.whonix.org/wiki/Root
