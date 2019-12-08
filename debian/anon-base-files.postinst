@@ -121,7 +121,7 @@ case "$1" in
 
                ## By package security-misc.
                ## Breaks ssh login for those who install openssh-server.
-               #pam-auth-update --enable console-lockdown
+               #pam-auth-update --enable console-lockdown-security-misc
             fi
 
             ## https://www.whonix.org/wiki/Root
