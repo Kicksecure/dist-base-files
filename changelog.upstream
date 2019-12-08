@@ -1,3 +1,51 @@
+commit a72cba1c93b90154a450ecdc6c69a75cf39d2779
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Dec 8 03:42:42 2019 -0500
+
+    comment
+
+commit ae22878d7c7f6f961c379056f1f454150f851752
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Dec 8 03:36:55 2019 -0500
+
+    add user to group ssh by default
+    
+    to be able to receive incoming SSH connections even if Console Lockdown is enabled
+    
+    that also permitted to enable console-lockdown-security-misc by default
+
+commit 7b230bafd89b21ca704a0bd7fb66bc7e94ee0a34
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Dec 8 02:06:58 2019 -0500
+
+    comment
+
+commit 77e2bbc8e9b986ee54702e87fd62d16f1f5ad6c1
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 7 07:03:35 2019 -0500
+
+    disable console-lockdown
+    
+    Breaks ssh login for those who install openssh-server.
+
+commit f548b22b320d67ce2daf440c6befa818a4353f8a
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 7 05:29:47 2019 -0500
+
+    pam-auth-update --enable console-lockdown
+
+commit 31ae03b865703f4a4e3c0dc8a82eea70092a967e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 7 05:24:26 2019 -0500
+
+    add user "user" to group "console"
+
+commit fe09d43cac3d8741e33d517c0bad2eec0d83f643
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Oct 22 06:31:24 2019 +0000
+
+    bumped changelog version
+
 commit 312b1f538d6c4b0d3c771cb0f188fa3688621a8e
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Oct 22 06:31:10 2019 +0000
