@@ -1,3 +1,15 @@
+commit d43765cc08862998ed47e87381dd78d13240c7d7
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Dec 12 07:49:46 2019 -0500
+
+    more defensive if dpkg-parsechangelog fails
+
+commit 8c007f163ff9795fda69bd31411b3560c497daad
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Dec 8 04:26:08 2019 -0500
+
+    bumped changelog version
+
 commit 29081582854ffb6c158829b7bd89ea163ad6f385
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Dec 8 04:19:50 2019 -0500
