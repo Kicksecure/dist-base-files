@@ -1,0 +1,14 @@
+#!/bin/bash
+
+## Copyright (C) 2019 - 2019 ENCRYPTED SUPPORT LP <adrelanos@riseup.net>
+## See the file COPYING for copying conditions.
+
+set -x
+
+if test -w /boot/grub/grub.cfg ; then
+   str_replace " GNU/Linux" "" /boot/grub/grub.cfg &>/dev/null || echo "$0: failed"
+fi
+
+true "OK."
+
+exit 0
