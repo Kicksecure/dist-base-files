@@ -1,3 +1,23 @@
+commit b584d10fa5e4c424e14069c412ff1309603e85de
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Dec 13 12:06:01 2019 -0500
+
+    Revert "remove string GNU/Linux from grub boot menu entries"
+    
+    This reverts commit 7949b134329be04702274321c277ef4efb005a50.
+
+commit 7949b134329be04702274321c277ef4efb005a50
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Dec 13 06:02:32 2019 -0500
+
+    remove string GNU/Linux from grub boot menu entries
+
+commit b6edbecf10173f80224bcf99f9bd4862a539185b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Dec 12 08:02:47 2019 -0500
+
+    bumped changelog version
+
 commit d43765cc08862998ed47e87381dd78d13240c7d7
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Dec 12 07:49:46 2019 -0500
