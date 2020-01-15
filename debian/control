@@ -5,7 +5,7 @@ Source: anon-base-files
 Section: misc
 Priority: optional
 Maintainer: Patrick Schleizer <adrelanos@riseup.net>
-Build-Depends: debhelper (>= 12), genmkfile, config-package-dev
+Build-Depends: debhelper (>= 12), genmkfile, config-package-dev, ronn
 Homepage: https://github.com/Whonix/anon-base-files
 Vcs-Browser: https://github.com/Whonix/anon-base-files
 Vcs-Git: https://github.com/Whonix/anon-base-files.git
