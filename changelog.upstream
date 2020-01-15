@@ -1,3 +1,17 @@
+commit 9e97a9998912a83f660531107b1dabf7f79e73ab
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 15 10:06:52 2020 -0500
+
+    dsudo default password sudo
+    
+    https://forums.whonix.org/t/dsudo-default-password-sudo/8766
+
+commit f0b38f9454b071718e1b2012ec1a827b3280869f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Dec 16 06:24:21 2019 -0500
+
+    bumped changelog version
+
 commit b584d10fa5e4c424e14069c412ff1309603e85de
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Dec 13 12:06:01 2019 -0500
