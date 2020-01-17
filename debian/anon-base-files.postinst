@@ -53,7 +53,7 @@ case "$1" in
          hostname "$my_host_name" || true
       fi
 
-      if id "$user_to_be_created" ; then
+      if id "$user_to_be_created" &>/dev/null ; then
          true "INFO: User '$user_to_be_created' already exists, skip creation."
       else
          if command -v qubesdb-read >/dev/null 2>&1 ; then
