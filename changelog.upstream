@@ -1,3 +1,15 @@
+commit c910ec3c3235f7c1aa7d2f9628dd859b703c13af
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Mar 6 08:55:50 2020 -0500
+
+    same method for user "user" creation also for Whonix hosts
+
+commit a3de09b809407c53c9bd3a86b410519118d453f5
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Jan 17 05:34:58 2020 -0500
+
+    bumped changelog version
+
 commit b5431b40b1feaa4e587be21abfe8daf68b9ab587
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Jan 17 04:57:13 2020 -0500
