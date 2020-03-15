@@ -168,6 +168,11 @@ esac
 ## dpkg-divert: error: unable to remove copied source file '/etc/hosts': Device or resource busy
 set +e
 
+## Debugging.
+ls -la /etc/hosts || true
+mount | grep /etc/hosts || true
+cat /etc/hosts || true
+
 true "INFO: debhelper beginning here."
 
 #DEBHELPER#
