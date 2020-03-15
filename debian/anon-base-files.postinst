@@ -133,6 +133,7 @@ case "$1" in
             ## is handled by whonix-legacy package.
 
             ## https://www.whonix.org/wiki/Root
+            ## https://www.whonix.org/wiki/Dev/Strong_Linux_User_Account_Isolation
 
             ## Lock the account.
             passwd --lock "$account_to_be_locked"
