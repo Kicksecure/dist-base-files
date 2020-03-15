@@ -1,3 +1,9 @@
+anon-base-files (3:5.4-1) unstable; urgency=medium
+
+  * New upstream version (local package).
+
+ -- Patrick Schleizer <adrelanos@riseup.net>  Sun, 15 Mar 2020 20:04:20 +0000
+
 anon-base-files (3:5.3-1) unstable; urgency=medium
 
   * New upstream version (local package).

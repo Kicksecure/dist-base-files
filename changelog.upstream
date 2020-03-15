@@ -1,3 +1,39 @@
+commit 41223ee17a52b3c735e6ae6faf6b610f3be899dc
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Mar 15 16:03:58 2020 -0400
+
+    debugging
+
+commit a00e41674ec7d2b7b8e12d30afaf2a72aeee8a81
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Mar 15 16:03:06 2020 -0400
+
+    travis CI compatibility
+
+commit 02283dc77f022b9726dcd8d10ee8ace4d8054650
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Mar 15 16:01:31 2020 -0400
+
+    comment
+
+commit 24f103f172e583431b5b7c6811c7e8bc48d9a012
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Mar 15 16:00:10 2020 -0400
+
+    output
+
+commit cc277aa529a1f810d0a0c4cc4261d6d812a58e76
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Mar 15 15:51:58 2020 -0400
+
+    output
+
+commit 26836f47dc0aa4049241bfbcaf4b2a1efcde6816
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Mar 6 09:04:43 2020 -0500
+
+    bumped changelog version
+
 commit c910ec3c3235f7c1aa7d2f9628dd859b703c13af
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Mar 6 08:55:50 2020 -0500
