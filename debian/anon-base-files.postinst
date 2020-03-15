@@ -162,11 +162,12 @@ case "$1" in
 esac
 
 ## config-package-dev displace of /etc/hosts broken on Travis CI.
-## Therefore disabling errexit.
+## Therefore disabling errexit and ERR trap.
 ## https://api.travis-ci.org/v3/job/662802873/log.txt
 ## Adding 'diversion of /etc/hosts to /etc/hosts.anondist-orig by anon-base-files'
 ## dpkg-divert: error: unable to remove copied source file '/etc/hosts': Device or resource busy
 set +e
+trap "" ERR
 
 ## Debugging.
 ls -la /etc/hosts || true
