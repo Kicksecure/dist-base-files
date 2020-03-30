@@ -1,3 +1,21 @@
+commit c825d4caa11fcb7d20a45a450a66ad493634f830
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Mar 30 17:29:17 2020 -0400
+
+    comment
+
+commit da8a6af630401bd87677bf79026ce7b9cced8d89
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Mar 30 17:28:17 2020 -0400
+
+    prevent question to rewrite /etc/machine-id
+
+commit 601ee98f7e0b6693a42fecf8accbb9e51cd6f60e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Mar 15 16:06:51 2020 -0400
+
+    bumped changelog version
+
 commit 558f7410ea19656ce1c9eefca2798a8c56a49954
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Mar 15 16:06:15 2020 -0400
