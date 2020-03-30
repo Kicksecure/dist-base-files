@@ -1,3 +1,15 @@
+commit 5a0b12867dc1685a0f931d19b061005d0d49db6a
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Mar 30 18:33:41 2020 -0400
+
+    do /etc/machine-id modification only once
+
+commit 2aefbc4f2d943d64d1a8b034ea2b751a6f1bf52a
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Mar 30 17:32:31 2020 -0400
+
+    bumped changelog version
+
 commit c825d4caa11fcb7d20a45a450a66ad493634f830
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Mar 30 17:29:17 2020 -0400
