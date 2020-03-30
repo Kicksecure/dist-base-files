@@ -1,0 +1,40 @@
+#!/bin/bash
+
+## Copyright (C) 2012 - 2018 ENCRYPTED SUPPORT LP <adrelanos@riseup.net>
+## See the file COPYING for copying conditions.
+
+if [ -f /usr/lib/helper-scripts/pre.bsh ]; then
+   source /usr/lib/helper-scripts/pre.bsh
+fi
+
+set -e
+
+true "
+#####################################################################
+## INFO: BEGIN: $DPKG_MAINTSCRIPT_PACKAGE $DPKG_MAINTSCRIPT_NAME $@
+#####################################################################
+"
+
+machine_id_wanted="b08dfa6083e7567a1921a715000001fb"
+
+if test -f "/etc/machine-id" ; then
+   current="$(cat "/etc/machine-id")"
+   if [ ! "$current" = "$machine_id_wanted" ]; then
+      echo "$machine_id_wanted" | tee "/etc/machine-id" >/dev/null || true
+   fi
+fi
+
+true "INFO: debhelper beginning here."
+
+#DEBHELPER#
+
+true "INFO: Done with debhelper."
+
+true "
+#####################################################################
+## INFO: END  : $DPKG_MAINTSCRIPT_PACKAGE $DPKG_MAINTSCRIPT_NAME $@
+#####################################################################
+"
+
+## Explicitly "exit 0", so eventually trapped errors can be ignored.
+exit 0
