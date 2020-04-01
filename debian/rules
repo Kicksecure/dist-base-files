@@ -12,5 +12,5 @@ override_dh_installchangelogs:
 	dh_installchangelogs changelog.upstream upstream
 
 override_dh_installman:
-	make manpages
+	
 	dh_installman $(CURDIR)/auto-generated-man-pages/*
