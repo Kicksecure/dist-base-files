@@ -49,7 +49,9 @@ case "$1" in
       true 'INFO: Working around: "sudo: unable to resolve host host"'
       if [ -f /etc/hostname ]; then
          my_host_name="$(cat "/etc/hostname")" || true
-         hostname "$my_host_name" || true
+         if [ ! "$my_host_name" = "" ]; then
+            hostname "$my_host_name" || true
+         fi
       fi
 
       if id "$user_to_be_created" &>/dev/null ; then
