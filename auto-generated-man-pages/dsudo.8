@@ -1,0 +1,18 @@
+.\" generated with Ronn-NG/v0.8.0
+.\" http://github.com/apjanke/ronn-ng/tree/0.8.0
+.TH "DSUDO" "8" "April 2020" "anon-base-files" "anon-base-files Manual"
+.SH "NAME"
+\fBdsudo\fR \- default password sudo
+.P
+.SH "SYNOPSIS"
+\fBdsudo [OPTIONS]\fR
+.SH "DESCRIPTION"
+Runs \fBsudo\fR default password "changeme"\.
+.P
+Forwards all environment variables and parameters to \fBsudo\fR\.
+.P
+Sets \fBSUDO_ASKPASS=/usr/lib/derivative\-base\-files/askpass\-default\fR which sets \fBsudo_password=changeme\fR \- unless environment variable \fBsudo_password\fR is already set to something else\.
+.P
+Useful for testing\.
+.SH "AUTHOR"
+This man page has been written by Patrick Schleizer (adrelanos@riseup\.net)\.
