@@ -1,3 +1,21 @@
+commit c242a0500d48c5d27301adacebf17f2242654d6f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Apr 1 09:09:32 2020 -0400
+
+    do no set hostname if /etc/hostname is empty
+
+commit 9349cd807f7dcd8d264d4968915004efaacad1fe
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Apr 1 08:49:50 2020 -0400
+
+    update copyright year
+
+commit 8604f0e4348dc488982f403d8a89231f66359645
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Mar 30 18:40:00 2020 -0400
+
+    bumped changelog version
+
 commit 5a0b12867dc1685a0f931d19b061005d0d49db6a
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Mar 30 18:33:41 2020 -0400
