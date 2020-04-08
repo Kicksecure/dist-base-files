@@ -25,8 +25,6 @@ Description: base files for Anonymity Distributions
  .
  Adds user "user" to groups "cdrom,audio,dip,sudo,plugdev".
  .
- Creates version file /var/lib/anon-dist/build_version.
- .
  Anonymized operating system user name "user", /etc/hostname, /etc/hosts,
  /etc/machine-id, /var/lib/dbus/machine-id, which should be shared among all
  anonymity distributions. See also:
