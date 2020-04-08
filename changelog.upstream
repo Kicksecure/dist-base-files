@@ -1,3 +1,15 @@
+commit 87666aa6e7fcb21dcb1f037c556e60352eef9c9b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Apr 8 17:39:25 2020 +0000
+
+    https://www.debian.org/doc/debian-policy/ch-relationships.html#replacing-whole-packages-forcing-their-removal
+
+commit 480b6c75626d104c091f5d66317ba33a9ca4e56d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Apr 8 17:12:03 2020 +0000
+
+    bumped changelog version
+
 commit b8dd7af6047b0ea6a152e80daf1ab2119eac96cd
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Apr 8 17:09:17 2020 +0000
