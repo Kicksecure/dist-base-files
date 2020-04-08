@@ -23,7 +23,7 @@ package.
 Simplifies sudo default lecture to only showing the default password once.
 
 This package gets installed by default in both, Kicksecure and Whonix.
-## How to install `anon-base-files` using apt-get ##
+## How to install `dist-base-files` using apt-get ##
 
 1\. Download [Whonix's Signing Key]().
 
@@ -51,10 +51,10 @@ echo "deb https://deb.whonix.org buster main contrib non-free" | sudo tee /etc/a
 sudo apt-get update
 ```
 
-5\. Install `anon-base-files`.
+5\. Install `dist-base-files`.
 
 ```
-sudo apt-get install anon-base-files
+sudo apt-get install dist-base-files
 ```
 
 ## How to Build deb Package from Source Code ##
@@ -65,7 +65,7 @@ Can be build using standard Debian package build tools such as:
 dpkg-buildpackage -b
 ```
 
-See [instructions](https://www.whonix.org/wiki/Dev/Build_Documentation/anon-base-files). (Replace `package-name` with the actual name of this package.)
+See [instructions](https://www.whonix.org/wiki/Dev/Build_Documentation/dist-base-files). (Replace `package-name` with the actual name of this package.)
 
 ## Contact ##
 
@@ -74,4 +74,4 @@ See [instructions](https://www.whonix.org/wiki/Dev/Build_Documentation/anon-base
 
 ## Donate ##
 
-`anon-base-files` requires [donations](https://www.whonix.org/wiki/Donate) to stay alive!
+`dist-base-files` requires [donations](https://www.whonix.org/wiki/Donate) to stay alive!

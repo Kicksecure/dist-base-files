@@ -3,7 +3,7 @@
 
 [Unit]
 Description=/home/user from /etc/skel Population at First Boot Service
-Documentation=https://github.com/Whonix/anon-base-files
+Documentation=https://github.com/Whonix/dist-base-files
 
 After=qubes-mount-dirs.service
 After=qubes-mount-home.service
