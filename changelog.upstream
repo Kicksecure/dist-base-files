@@ -1,3 +1,33 @@
+commit 16ad40f74c3238db3daed60e4a102611c1d7cd81
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Apr 8 09:41:39 2020 +0000
+
+    readme
+
+commit 4a64447c63ce25b786bfc170c15551797a7890ae
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Apr 7 21:18:20 2020 +0000
+
+    move build version creation code to whonix-base-files
+
+commit a2ba08ba4492e6ae1e8c7739dcb633c6467e02ca
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Apr 7 21:11:29 2020 +0000
+
+    move usr/share/anon-dist/marker to whonix-base-files
+
+commit 2b599a80ebc1ab4ee3d34b1935068decee776b90
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Apr 7 21:08:41 2020 +0000
+
+    lib/systemd/system/anon-base-files-skel-first-boot.service -> lib/systemd/system/dist-skel-first-boot.service
+
+commit aa73f89d89f3d26fad8550fb6ec693e5fa398cd8
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 2 07:24:20 2020 -0400
+
+    bumped changelog version
+
 commit 1d026d46b99e6a1498a971b2d73499abb795d1af
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Apr 2 07:22:05 2020 -0400
