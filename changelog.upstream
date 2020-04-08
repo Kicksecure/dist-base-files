@@ -1,3 +1,15 @@
+commit 48b58fe4241624ba600044d204b9e27024b6344a
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Apr 8 13:24:37 2020 +0000
+
+    disable debugging
+
+commit 25f607a3fa40ddd36fa70917676ed68207c7e604
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Apr 8 13:20:10 2020 +0000
+
+    bumped changelog version
+
 commit 882df2d5b1c9d65c6c4123e093fc0239bab5ab06
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Apr 8 13:03:54 2020 +0000
