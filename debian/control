@@ -17,6 +17,7 @@ Depends: sudo, dpkg-dev, helper-scripts, adduser, ${misc:Depends}
 Provides: ${diverted-files}
 Conflicts: ${diverted-files}
 Replaces: anon-base-files
+Breaks: anon-base-files
 Description: base files for distributions
  Creates user `user` with password `changeme` (not in Qubes).
  That is if user `user` is not existing yet.
