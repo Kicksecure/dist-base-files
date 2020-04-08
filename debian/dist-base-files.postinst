@@ -148,11 +148,6 @@ esac
 set +e
 trap "" ERR
 
-## Debugging.
-ls -la /etc/hosts || true
-mount | grep /etc/hosts || true
-cat /etc/hosts || true
-
 true "INFO: debhelper beginning here."
 
 #DEBHELPER#
