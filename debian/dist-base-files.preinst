@@ -36,7 +36,7 @@ etc_machine_id_modify() {
 
    machine_id_wanted="b08dfa6083e7567a1921a715000001fb"
    if test -f "/etc/machine-id" ; then
-      current="$(cat "/etc/machine-id")"
+      current="$(cat "/etc/machine-id")" || true
       if [ ! "$current" = "$machine_id_wanted" ]; then
          echo "$machine_id_wanted" | tee "/etc/machine-id" >/dev/null || true
       fi
