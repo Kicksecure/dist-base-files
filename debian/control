@@ -16,7 +16,7 @@ Architecture: all
 Depends: sudo, dpkg-dev, helper-scripts, adduser, ${misc:Depends}
 Provides: ${diverted-files}
 Conflicts: ${diverted-files}
-Description: base files for Anonymity Distributions
+Description: base files for distributions
  Creates user `user` with password `changeme` (not in Qubes).
  That is if user `user` is not existing yet.
  And if it does create user `user` it also locks the root account.
