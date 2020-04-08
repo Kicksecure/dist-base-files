@@ -132,6 +132,9 @@ case "$1" in
          fi
       fi
 
+      ## Legacy.
+      dpkg-divert --remove --no-rename --package "anon-base-files" "/etc/hosts" || true
+
       true "INFO: End configuring $DPKG_MAINTSCRIPT_PACKAGE."
 
       ;;
