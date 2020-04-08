@@ -1,3 +1,17 @@
+commit 96e4958741d7ced559faf0627e5bc057e1e70762
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Apr 8 17:54:56 2020 +0000
+
+    legacy
+    
+    dpkg-divert --remove --no-rename --package "anon-base-files" "/etc/hosts"
+
+commit 604a432b86545d627b36a0b6e16d4daa277c319c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Apr 8 17:41:31 2020 +0000
+
+    bumped changelog version
+
 commit 87666aa6e7fcb21dcb1f037c556e60352eef9c9b
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Apr 8 17:39:25 2020 +0000
