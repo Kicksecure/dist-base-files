@@ -18,7 +18,7 @@ anonymity distributions. See also:
 * https://labs.riseup.net/code/issues/5655
 * http://lists.autistici.org/message/20140627.215105.24023267.en.html
 
-Ships a systemd unit file anon-base-files-skel-first-boot.service
+Ships a systemd unit file dist-skel-first-boot.service
 which runs /usr/lib/helper-scripts/first-boot-skel (part of helper-scripts)
 package.
 
