@@ -15,6 +15,18 @@ true "
 #####################################################################
 "
 
+legacy() {
+   ## Legacy.
+   dpkg-divert --remove --no-rename --package "anon-base-files" "/etc/hosts" || true
+   # + dpkg-divert --divert /etc/hosts.anondist-orig --rename --package dist-base-files --add /etc/hosts
+   # Adding 'diversion of /etc/hosts to /etc/hosts.anondist-orig by dist-base-files'
+   # dpkg-divert: error: rename involves overwriting '/etc/hosts.anondist-orig' with
+   #   different file '/etc/hosts', not allowed
+   if [ -e /etc/hosts.anondist-orig ]; then
+      mv --backup=numbered --force /etc/hosts.anondist-orig /etc/hosts.anondist-orig_backup || true
+   fi
+}
+
 ## Define variables here to make this easier to software fork.
 user_to_be_created="user"
 account_to_be_locked="root"
@@ -132,8 +144,7 @@ case "$1" in
          fi
       fi
 
-      ## Legacy.
-      dpkg-divert --remove --no-rename --package "anon-base-files" "/etc/hosts" || true
+      legacy || true
 
       true "INFO: End configuring $DPKG_MAINTSCRIPT_PACKAGE."
 
