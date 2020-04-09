@@ -1,0 +1,65 @@
+#!/bin/bash
+
+## Copyright (C) 2012 - 2020 ENCRYPTED SUPPORT LP <adrelanos@riseup.net>
+## See the file COPYING for copying conditions.
+
+if test -f /usr/share/anon-gw-base-files/gateway ; then
+   name_machine=Whonix-Gateway
+   name_lower_case=whonix
+   name_regular_case=Whonix
+elif test -f /usr/share/anon-ws-base-files/workstation ; then
+   name_machine=Whonix-Workstation
+   name_lower_case=whonix
+   name_regular_case=Whonix
+elif test -f /usr/share/whonix-libvirt/marker ; then
+   name_machine=Whonix-Host
+   name_lower_case=whonix
+   name_regular_case=Whonix
+elif test -f /usr/share/kicksecure/marker ; then
+   name_machine=Kicksecure
+   name_lower_case=kicksecure
+   name_regular_case=Kicksecure
+else
+   ## Fallback.
+   name_machine=dist-base-files
+   name_lower_case=dist
+   name_regular_case=Dist
+fi
+
+echo "Welcome to $name_machine ™!"
+echo "https://www.${name_lower_case}.org"
+echo "
+$name_regular_case Copyright (C) 2012 - 2020 ENCRYPTED SUPPORT LP
+$name_regular_case is Freedom Software, and you are welcome to redistribute it under
+certain conditions; type \"${name_lower_case}-license\" <enter> for details.
+$name_regular_case is a compilation of software packages, each under its own copyright and
+license. The exact license terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+$name_regular_case GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law; for details type \"${name_lower_case}-disclaimer\" <enter>.
+"
+if test -f /usr/share/whonix/marker ; then
+   echo "$name_regular_case is a derivative of Debian GNU/Linux and based on Tor.
+
+$name_regular_case is produced independently from the Tor (r) anonymity software and
+carries no guarantee from The Tor Project about quality, suitability or
+anything else."
+else
+   echo "$name_regular_case is a derivative of Debian GNU/Linux."
+fi
+echo "
+$name_regular_case is a research project.
+"
+
+if command -v qubesdb-read >/dev/null 2>&1 ; then
+   ## Skip Qubes default password until Qubes sudo gets implemented.
+   ## https://github.com/QubesOS/qubes-issues/issues/2695
+   true
+else
+   echo "default user account: user
+default password: changeme
+"
+fi
+
+echo "Type: \"${name_lower_case}\" <enter> for help."
