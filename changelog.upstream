@@ -1,3 +1,17 @@
+commit 2f2c9d221abb0fc80e7c4dde4d7a9d52395409e4
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 9 10:13:53 2020 +0000
+
+    /etc/update-motd.d
+    
+    https://phabricator.whonix.org/T975
+
+commit 12e3f9be68c145137607aa5f39c4231b01732a49
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 9 09:41:49 2020 +0000
+
+    bumped changelog version
+
 commit 6b06e495474a8251f135f9022ae1b9f85050e3fb
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Apr 8 18:34:05 2020 +0000
