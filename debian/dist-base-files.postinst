@@ -39,20 +39,20 @@ case "$1" in
       build_version_file="/var/lib/$moniker/build_version"
       if [ ! -f "$build_version_file" ]; then
          ## Sanity test.
-         if [ "$anon_dist_build_version" = "" ]; then
+         if [ "$dist_build_version" = "" ]; then
             ## Package dpkg-dev provides dpkg-parsechangelog.
-            ## If anon_dist_build_version is empty, use the version number of the package.
-            anon_dist_build_version="$(zless "/usr/share/doc/$DPKG_MAINTSCRIPT_PACKAGE/changelog.Debian.gz" | dpkg-parsechangelog -l- -SVersion)" || true
+            ## If dist_build_version is empty, use the version number of the package.
+            dist_build_version="$(zless "/usr/share/doc/$DPKG_MAINTSCRIPT_PACKAGE/changelog.Debian.gz" | dpkg-parsechangelog -l- -SVersion)" || true
          fi
-         if [ "$anon_dist_build_version" = "" ]; then
-            echo "ERROR: Could not determine variable 'anon_dist_build_version'."
+         if [ "$dist_build_version" = "" ]; then
+            echo "ERROR: Could not determine variable 'dist_build_version'."
          else
             mkdir --parents "$(dirname "$build_version_file")"
-            echo "INFO: Logging anon_dist_build_version '$anon_dist_build_version' to '$build_version_file'..."
+            echo "INFO: Logging dist_build_version '$dist_build_version' to '$build_version_file'..."
             ## Debugging.
             touch "$build_version_file"
             ## Logging.
-            echo "$anon_dist_build_version" > "$build_version_file"
+            echo "$dist_build_version" > "$build_version_file"
             ## Debugging.
             cat "$build_version_file"
          fi
