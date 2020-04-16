@@ -30,13 +30,12 @@ legacy() {
 ## Define variables here to make this easier to software fork.
 user_to_be_created="user"
 account_to_be_locked="root"
-moniker="anon-dist"
 
 case "$1" in
    configure)
       true "INFO: Configuring $DPKG_MAINTSCRIPT_PACKAGE..."
 
-      build_version_file="/var/lib/$moniker/build_version"
+      build_version_file="/var/lib/anon-dist/build_version"
       if [ ! -f "$build_version_file" ]; then
          ## Sanity test.
          if [ "$dist_build_version" = "" ]; then
