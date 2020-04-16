@@ -1,3 +1,57 @@
+commit 76951390d73ed8587a34ab306bfeffc096eab08d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 16 17:00:35 2020 -0400
+
+    readme
+
+commit 28e787a08d55a7bd8e031e0ea9d89188b846afc3
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 16 16:41:02 2020 -0400
+
+    add auto-generated-man-pages/dist-info.8
+
+commit 71a8221101fbf130bf1184c840799dd8400acf6a
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 16 16:40:53 2020 -0400
+
+    add usr/bin/dist-info
+
+commit 5bba9c396ec770d813f7a497fc14c0246715c653
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 16 11:59:25 2020 -0400
+
+    description
+
+commit ef496950cd377fa6dd69ade5255c089fd80396cc
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 16 11:48:49 2020 -0400
+
+    /var/lib/anon-dist/build_version -> /var/lib/dist-base-files/build_version
+
+commit 739efe5b97bea22470fdf20ba32274106c0bb4c5
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 16 11:48:20 2020 -0400
+
+    refactoring
+
+commit 48868c21884256d9c9f1874f7cc41f77114194bd
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 16 11:45:38 2020 -0400
+
+    anon_dist_build_version -> dist_build_version
+
+commit c8fc6345b9299b7a77275539adcfe015c1893484
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 16 11:43:11 2020 -0400
+
+    import build version file creation from dist-base-files
+
+commit 74cb53895b37cb4ede0e2849d2345f26cf839e86
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 16 08:30:08 2020 -0400
+
+    bumped changelog version
+
 commit 2e78d4454c37a59539a22cf065afb6fb76cc3730
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Apr 15 14:05:31 2020 -0400

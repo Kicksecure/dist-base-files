@@ -1,3 +1,9 @@
+dist-base-files (3:7.3-1) unstable; urgency=medium
+
+  * New upstream version (local package).
+
+ -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 16 Apr 2020 21:00:36 +0000
+
 dist-base-files (3:7.2-1) unstable; urgency=medium
 
   * New upstream version (local package).
