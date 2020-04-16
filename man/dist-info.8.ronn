@@ -1,0 +1,16 @@
+dist-info(8) -- output build version and build timestamp
+=============================================
+
+<span class="comment">
+# Copyright (C) 2019 - 2020 ENCRYPTED SUPPORT LP <adrelanos@riseup.net>
+# See the file COPYING for copying conditions.
+</span>
+
+## SYNOPSIS
+`dist-info`
+
+## DESCRIPTION
+Outputs build version and build timestamp.
+
+## AUTHOR
+This man page has been written by Patrick Schleizer (adrelanos@riseup.net).
