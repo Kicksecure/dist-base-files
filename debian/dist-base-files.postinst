@@ -35,7 +35,7 @@ case "$1" in
    configure)
       true "INFO: Configuring $DPKG_MAINTSCRIPT_PACKAGE..."
 
-      build_version_file="/var/lib/anon-dist/build_version"
+      build_version_file="/var/lib/dist-base-files/build_version"
       if [ ! -f "$build_version_file" ]; then
          ## Sanity test.
          if [ "$dist_build_version" = "" ]; then
