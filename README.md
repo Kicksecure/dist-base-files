@@ -22,6 +22,8 @@ package.
 
 Simplifies sudo default lecture to only showing the default password once.
 
+Creates version file `/var/lib/dist-base-files/build_version`.
+
 This package gets installed by default in both, Kicksecure and Whonix.
 ## How to install `dist-base-files` using apt-get ##
 
