@@ -15,18 +15,6 @@ true "
 #####################################################################
 "
 
-legacy() {
-   ## Legacy.
-   dpkg-divert --remove --no-rename --package "anon-base-files" "/etc/hosts" &>/dev/null || true
-   # + dpkg-divert --divert /etc/hosts.anondist-orig --rename --package dist-base-files --add /etc/hosts
-   # Adding 'diversion of /etc/hosts to /etc/hosts.anondist-orig by dist-base-files'
-   # dpkg-divert: error: rename involves overwriting '/etc/hosts.anondist-orig' with
-   #   different file '/etc/hosts', not allowed
-   if [ -e /etc/hosts.anondist-orig ]; then
-      mv --backup=numbered --force /etc/hosts.anondist-orig /etc/hosts.anondist-orig_backup &>/dev/null || true
-   fi
-}
-
 ## Define variables here to make this easier to software fork.
 user_to_be_created="user"
 account_to_be_locked="root"
@@ -54,14 +42,6 @@ case "$1" in
             echo "$dist_build_version" > "$build_version_file"
             ## Debugging.
             cat "$build_version_file"
-         fi
-      fi
-
-      true 'INFO: Working around: "sudo: unable to resolve host host"'
-      if [ -f /etc/hostname ]; then
-         my_host_name="$(cat "/etc/hostname")" || true
-         if [ ! "$my_host_name" = "" ]; then
-            hostname "$my_host_name" || true
          fi
       fi
 
@@ -175,14 +155,6 @@ case "$1" in
    *)
       ;;
 esac
-
-## config-package-dev displace of /etc/hosts broken on Travis CI.
-## Therefore disabling errexit and ERR trap.
-## https://api.travis-ci.org/v3/job/662802873/log.txt
-## Adding 'diversion of /etc/hosts to /etc/hosts.anondist-orig by dist-base-files'
-## dpkg-divert: error: unable to remove copied source file '/etc/hosts': Device or resource busy
-set +e
-trap "" ERR
 
 true "INFO: debhelper beginning here."
 

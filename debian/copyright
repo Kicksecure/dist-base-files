@@ -71,15 +71,3 @@ License: GPL-3+-with-additional-terms-1
  ACTION, LAWSUITS, JUDGMENTS EXPENSES (INCLUDING WITHOUT LIMITATION REASONABLE
  ATTORNEYS' FEES AND EXPENSES) OR ANY OTHER LIABILITY ARISING FROM, RELATED TO OR
  IN CONNECTION WITH YOUR ASSUMPTIONS OF LIABILITY.
-
-Files: etc/hosts.anondist
-Comments: Downloaded from:
-          http://sources.debian.net/src/live-config/3.0.23-1/scripts/config/0020-hostname?hl=62#L62
-          http://www.webcitation.org/6PnWZfyea
-          http://sources.debian.net/src/live-config/3.0.23-1/COPYING
-          http://www.webcitation.org/6PnWZFir0
-Copyright: Copyright (C) 2006-2013 Daniel Baumann <daniel@debian.org>
-License: GPL-3
- On Debian systems, the full text of the GNU General Public
- License version 3 can be found in the file
- `/usr/share/common-licenses/GPL-3'.
