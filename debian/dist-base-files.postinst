@@ -146,8 +146,6 @@ case "$1" in
          fi
       fi
 
-      legacy || true
-
       true "INFO: End configuring $DPKG_MAINTSCRIPT_PACKAGE."
 
       ;;
