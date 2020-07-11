@@ -1,3 +1,33 @@
+commit a7dd694fad29aea104d45dbda9da328304578842
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jul 11 13:40:29 2020 -0400
+
+    readme
+
+commit a6bd57eef98759249b2452fe353acdd31c5dffd1
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jul 11 13:28:06 2020 -0400
+
+    copy from debian/copyright
+
+commit 0beef5966a03197515d53925c218d0f0e3da41e5
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jul 11 13:26:55 2020 -0400
+
+    remove /etc/hosts /etc/hostname from Kicksecure
+    
+    and move to whonix-base-files
+    
+    as this should only be done in Whonix
+    
+    modification of this file on Kicksecure based servers is bad
+
+commit a82e0d5daca6c4972ecbcf9bb62f24068194d0d6
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 16 17:00:36 2020 -0400
+
+    bumped changelog version
+
 commit 76951390d73ed8587a34ab306bfeffc096eab08d
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Apr 16 17:00:35 2020 -0400
