@@ -2,454 +2,454 @@ dist-base-files (3:7.5-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sat, 11 Jul 2020 18:49:43 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sat, 11 Jul 2020 18:49:43 +0000
 
 dist-base-files (3:7.4-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sat, 11 Jul 2020 17:40:29 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sat, 11 Jul 2020 17:40:29 +0000
 
 dist-base-files (3:7.3-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 16 Apr 2020 21:00:36 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 16 Apr 2020 21:00:36 +0000
 
 dist-base-files (3:7.2-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 16 Apr 2020 12:30:08 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 16 Apr 2020 12:30:08 +0000
 
 dist-base-files (3:7.1-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 09 Apr 2020 12:41:49 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 09 Apr 2020 12:41:49 +0000
 
 dist-base-files (3:7.0-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 09 Apr 2020 10:16:52 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 09 Apr 2020 10:16:52 +0000
 
 dist-base-files (3:6.9-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 09 Apr 2020 09:41:49 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 09 Apr 2020 09:41:49 +0000
 
 dist-base-files (3:6.8-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 08 Apr 2020 18:28:50 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 08 Apr 2020 18:28:50 +0000
 
 dist-base-files (3:6.7-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 08 Apr 2020 17:56:11 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 08 Apr 2020 17:56:11 +0000
 
 dist-base-files (3:6.6-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 08 Apr 2020 17:41:31 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 08 Apr 2020 17:41:31 +0000
 
 dist-base-files (3:6.5-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 08 Apr 2020 17:12:03 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 08 Apr 2020 17:12:03 +0000
 
 dist-base-files (3:6.4-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 08 Apr 2020 16:21:50 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 08 Apr 2020 16:21:50 +0000
 
 dist-base-files (3:6.3-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 08 Apr 2020 13:20:10 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 08 Apr 2020 13:20:10 +0000
 
 dist-base-files (3:6.2-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 08 Apr 2020 12:49:55 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 08 Apr 2020 12:49:55 +0000
 
 dist-base-files (3:6.1-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 08 Apr 2020 10:30:06 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 08 Apr 2020 10:30:06 +0000
 
 dist-base-files (3:6.0-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 08 Apr 2020 09:42:24 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 08 Apr 2020 09:42:24 +0000
 
 dist-base-files (3:5.9-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 02 Apr 2020 11:24:20 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 02 Apr 2020 11:24:20 +0000
 
 dist-base-files (3:5.8-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 01 Apr 2020 14:14:48 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 01 Apr 2020 14:14:48 +0000
 
 dist-base-files (3:5.7-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Mon, 30 Mar 2020 22:40:00 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Mon, 30 Mar 2020 22:40:00 +0000
 
 dist-base-files (3:5.6-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Mon, 30 Mar 2020 21:32:31 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Mon, 30 Mar 2020 21:32:31 +0000
 
 dist-base-files (3:5.5-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sun, 15 Mar 2020 20:06:51 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sun, 15 Mar 2020 20:06:51 +0000
 
 dist-base-files (3:5.4-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sun, 15 Mar 2020 20:04:20 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sun, 15 Mar 2020 20:04:20 +0000
 
 dist-base-files (3:5.3-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Fri, 06 Mar 2020 14:04:43 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Fri, 06 Mar 2020 14:04:43 +0000
 
 dist-base-files (3:5.2-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Fri, 17 Jan 2020 10:34:58 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Fri, 17 Jan 2020 10:34:58 +0000
 
 dist-base-files (3:5.1-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 15 Jan 2020 15:09:02 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 15 Jan 2020 15:09:02 +0000
 
 dist-base-files (3:5.0-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Mon, 16 Dec 2019 11:24:21 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Mon, 16 Dec 2019 11:24:21 +0000
 
 dist-base-files (3:4.9-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 12 Dec 2019 13:02:47 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 12 Dec 2019 13:02:47 +0000
 
 dist-base-files (3:4.8-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sun, 08 Dec 2019 09:26:08 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sun, 08 Dec 2019 09:26:08 +0000
 
 dist-base-files (3:4.7-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sun, 08 Dec 2019 09:03:07 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sun, 08 Dec 2019 09:03:07 +0000
 
 dist-base-files (3:4.6-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Tue, 22 Oct 2019 06:31:23 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Tue, 22 Oct 2019 06:31:23 +0000
 
 dist-base-files (3:4.5-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Mon, 14 Oct 2019 10:11:32 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Mon, 14 Oct 2019 10:11:32 +0000
 
 dist-base-files (3:4.4-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sat, 31 Aug 2019 13:40:41 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sat, 31 Aug 2019 13:40:41 +0000
 
 dist-base-files (3:4.3-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sat, 24 Aug 2019 16:40:02 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sat, 24 Aug 2019 16:40:02 +0000
 
 dist-base-files (3:4.2-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sun, 11 Aug 2019 15:05:15 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sun, 11 Aug 2019 15:05:15 +0000
 
 dist-base-files (3:4.1-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sun, 11 Aug 2019 11:39:37 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sun, 11 Aug 2019 11:39:37 +0000
 
 dist-base-files (3:4.0-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sat, 10 Aug 2019 11:35:40 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sat, 10 Aug 2019 11:35:40 +0000
 
 dist-base-files (3:3.9-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 01 Aug 2019 11:15:29 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 01 Aug 2019 11:15:29 +0000
 
 dist-base-files (3:3.8-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Mon, 15 Jul 2019 13:26:06 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Mon, 15 Jul 2019 13:26:06 +0000
 
 dist-base-files (3:3.7-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sat, 13 Jul 2019 16:29:47 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sat, 13 Jul 2019 16:29:47 +0000
 
 dist-base-files (3:3.6-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 11 Jul 2019 07:22:24 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 11 Jul 2019 07:22:24 +0000
 
 dist-base-files (3:3.5-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 11 Jul 2019 07:07:53 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 11 Jul 2019 07:07:53 +0000
 
 dist-base-files (3:3.4-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sat, 08 Jun 2019 10:05:30 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sat, 08 Jun 2019 10:05:30 +0000
 
 dist-base-files (3:3.3-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Fri, 24 May 2019 20:03:44 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Fri, 24 May 2019 20:03:44 +0000
 
 dist-base-files (3:3.2-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sun, 12 May 2019 10:27:32 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sun, 12 May 2019 10:27:32 +0000
 
 dist-base-files (3:3.1-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Mon, 06 May 2019 09:57:29 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Mon, 06 May 2019 09:57:29 +0000
 
 dist-base-files (3:3.0-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Fri, 03 May 2019 11:07:59 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Fri, 03 May 2019 11:07:59 +0000
 
 dist-base-files (3:2.9-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sat, 06 Apr 2019 11:47:34 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sat, 06 Apr 2019 11:47:34 +0000
 
 dist-base-files (3:2.8-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Fri, 29 Mar 2019 09:37:23 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Fri, 29 Mar 2019 09:37:23 +0000
 
 dist-base-files (3:2.7-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Tue, 12 Mar 2019 11:10:40 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Tue, 12 Mar 2019 11:10:40 +0000
 
 dist-base-files (3:2.6-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Mon, 27 Aug 2018 15:43:43 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Mon, 27 Aug 2018 15:43:43 +0000
 
 dist-base-files (3:2.5-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 01 Feb 2018 14:38:24 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 01 Feb 2018 14:38:24 +0000
 
 dist-base-files (3:2.4-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Fri, 17 Feb 2017 13:39:50 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Fri, 17 Feb 2017 13:39:50 +0000
 
 dist-base-files (3:2.3-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Tue, 17 Jan 2017 11:06:33 +0100
+ -- Patrick Schleizer <adrelanos@whonix.org>  Tue, 17 Jan 2017 11:06:33 +0100
 
 dist-base-files (3:2.2-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sun, 15 Jan 2017 15:18:40 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sun, 15 Jan 2017 15:18:40 +0000
 
 dist-base-files (3:2.1-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sat, 10 Dec 2016 00:03:47 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sat, 10 Dec 2016 00:03:47 +0000
 
 dist-base-files (3:2.0-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Tue, 19 Apr 2016 19:44:36 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Tue, 19 Apr 2016 19:44:36 +0000
 
 dist-base-files (3:1.9-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 14 Apr 2016 21:14:43 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 14 Apr 2016 21:14:43 +0000
 
 dist-base-files (3:1.8-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 07 Apr 2016 22:54:22 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 07 Apr 2016 22:54:22 +0000
 
 dist-base-files (3:1.7-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 22 Oct 2015 23:12:30 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 22 Oct 2015 23:12:30 +0000
 
 dist-base-files (3:1.6-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Tue, 25 Aug 2015 14:07:30 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Tue, 25 Aug 2015 14:07:30 +0000
 
 dist-base-files (3:1.5-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Mon, 24 Aug 2015 17:47:08 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Mon, 24 Aug 2015 17:47:08 +0000
 
 dist-base-files (3:1.4-1) unstable; urgency=low
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 03 Jun 2015 14:58:49 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 03 Jun 2015 14:58:49 +0000
 
 dist-base-files (3:1.3-1) unstable; urgency=low
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 28 May 2015 21:11:58 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 28 May 2015 21:11:58 +0000
 
 dist-base-files (3:1.2-1) unstable; urgency=low
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Fri, 15 May 2015 20:20:44 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Fri, 15 May 2015 20:20:44 +0000
 
 dist-base-files (3:1.1-1) unstable; urgency=low
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 30 Apr 2015 17:55:29 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 30 Apr 2015 17:55:29 +0000
 
 dist-base-files (3:1.0-1) unstable; urgency=low
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Tue, 07 Apr 2015 17:40:52 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Tue, 07 Apr 2015 17:40:52 +0000
 
 dist-base-files (3:0.9-1) unstable; urgency=low
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Tue, 24 Mar 2015 17:28:31 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Tue, 24 Mar 2015 17:28:31 +0000
 
 dist-base-files (3:0.8-1) unstable; urgency=low
 
   * New upstream version.
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 04 Feb 2015 00:51:16 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 04 Feb 2015 00:51:16 +0000
 
 dist-base-files (3:0.7-1) unstable; urgency=low
 
   * New upstream version.
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 23 Oct 2014 22:38:18 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 23 Oct 2014 22:38:18 +0000
 
 dist-base-files (3:0.6-1) unstable; urgency=low
 
   * New upstream version.
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Mon, 13 Oct 2014 12:32:40 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Mon, 13 Oct 2014 12:32:40 +0000
 
 dist-base-files (3:0.5-1) unstable; urgency=low
 
   * New upstream version.
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 25 Sep 2014 21:58:54 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 25 Sep 2014 21:58:54 +0000
 
 dist-base-files (3:0.4-1) unstable; urgency=low
 
   * New upstream version.
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Tue, 26 Aug 2014 15:28:19 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Tue, 26 Aug 2014 15:28:19 +0000
 
 dist-base-files (3:0.3-1) unstable; urgency=low
 
   * New upstream version.
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Tue, 19 Aug 2014 18:40:55 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Tue, 19 Aug 2014 18:40:55 +0000
 
 dist-base-files (3:0.2-2) unstable; urgency=low
 
   * Fixed changelog date.
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sun, 17 Aug 2014 20:49:36 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sun, 17 Aug 2014 20:49:36 +0000
 
 dist-base-files (3:0.2-1) unstable; urgency=low
 
   * New upstream version.
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sun, 17 Aug 2014 20:44:58 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sun, 17 Aug 2014 20:44:58 +0000
 
 dist-base-files (3:0.1-2) unstable; urgency=low
 
   * Initial release.
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sun, 17 Aug 2014 17:55:59 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sun, 17 Aug 2014 17:55:59 +0000
