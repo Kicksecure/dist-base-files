@@ -37,7 +37,7 @@ fi
 echo "Welcome to $name_machine ™!"
 echo "$project_website"
 echo "
-$name_regular_case Copyright (C) 2012 - 2020 ENCRYPTED SUPPORT LP
+$name_regular_case Copyright (C) 2012 - 2021 ENCRYPTED SUPPORT LP
 $name_regular_case is Freedom Software, and you are welcome to redistribute it under
 certain conditions; type \"${name_lower_case}-license\" <enter> for details.
 $name_regular_case is a compilation of software packages, each under its own copyright and
