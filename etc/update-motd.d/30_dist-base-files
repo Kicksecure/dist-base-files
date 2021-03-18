@@ -28,8 +28,14 @@ else
    name_regular_case=Dist
 fi
 
+if test -f /usr/share/whonix/marker ; then
+   project_website="https://www.whonix.org"
+else
+   project_website="https://www.kicksecure.com"
+fi
+
 echo "Welcome to $name_machine ™!"
-echo "https://www.${name_lower_case}.org"
+echo "$project_website"
 echo "
 $name_regular_case Copyright (C) 2012 - 2020 ENCRYPTED SUPPORT LP
 $name_regular_case is Freedom Software, and you are welcome to redistribute it under
