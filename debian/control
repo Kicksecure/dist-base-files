@@ -14,8 +14,10 @@ Standards-Version: 4.3.0
 Package: dist-base-files
 Architecture: all
 Depends: sudo, dpkg-dev, helper-scripts, adduser, ${misc:Depends}
-Provides: anon-base-files, ${diverted-files}
-Conflicts: anon-base-files, ${diverted-files}
+Provides: anon-base-files,
+ ${diverted-files}
+Conflicts: anon-base-files,
+ ${diverted-files}
 Replaces: anon-base-files
 Description: base files for distributions
  Creates user `user` with password `changeme` (not in Qubes).
