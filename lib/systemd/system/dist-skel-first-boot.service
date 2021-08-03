@@ -11,7 +11,7 @@ After=qubes-mount-home.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/usr/lib/helper-scripts/first-boot-skel
+ExecStart=/usr/libexec/helper-scripts/first-boot-skel
 
 [Install]
 WantedBy=multi-user.target
