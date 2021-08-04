@@ -14,9 +14,9 @@ Runs `sudo` default password "changeme".
 
 Forwards all environment variables and parameters to `sudo`.
 
-Sets `SUDO_ASKPASS=/usr/lib/derivative-base-files/askpass-default` which sets
-`sudo_password=changeme` - unless environment variable `sudo_password` is
-already set to something else.
+Sets `SUDO_ASKPASS=/usr/libexec/derivative-base-files/askpass-default`
+which sets `sudo_password=changeme` - unless environment variable
+`sudo_password` is already set to something else.
 
 Useful for testing.
 
