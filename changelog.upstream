@@ -1,3 +1,69 @@
+commit aef07b064612524f172fa8e7939049c09157a783
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Aug 5 16:40:34 2021 -0400
+
+    readme
+
+commit 6df30f971beff76c123313ffdf7a1aa9d25d106f
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Aug 5 16:40:33 2021 -0400
+
+    re-generate man pages (generated using "genmkfile manpages")
+
+commit d2ea32415c3554a84acfe25a08d1d1384fe9b1aa
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 4 15:44:57 2021 -0400
+
+    lintian
+
+commit c594fa7ca1d06c6a5c2180f9a77697fbb2f5cab9
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 4 15:39:20 2021 -0400
+
+    lintian
+
+commit d5ff1720c7b34f114b01a003893185f1aaa5b3b4
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 4 12:35:20 2021 -0400
+
+    lintian FHS
+
+commit 960856159075d7924ed5438b7dc0a7546d975cba
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Aug 3 12:48:53 2021 -0400
+
+    move /usr/lib/helper-scripts and /usr/lib/curl-scripts to /usr/libexec/helper-scripts as per lintian FHS
+
+commit fe16c81c2130c46610139dceb75ac1f6f39c1073
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Aug 3 11:47:33 2021 -0400
+
+    re-generate man pages (generated using "genmkfile manpages")
+
+commit 20315222bd671000178cbbf95a17e531e082dde1
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Aug 3 11:42:07 2021 -0400
+
+    man page
+
+commit bbadf33485e03220ebe08cfb4053736a26a92f46
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Aug 3 05:48:19 2021 -0400
+
+    bullseye
+
+commit d422eed353558482f5c1a673de8d9a72393c3199
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Aug 1 16:24:27 2021 -0400
+
+    readme
+
+commit 59ba5e3d3cdfa613d235c6b79d6d73c91701d5d4
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Mar 23 07:46:29 2021 -0400
+
+    bumped changelog version
+
 commit 3fdfd85ec71b7f4ef7a44afe94d4f93c2087271e
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Tue Mar 23 07:29:39 2021 -0400
