@@ -6,11 +6,11 @@ And if it does create user `user` it also locks the root account.
 Therefore root account locking effectively only happens in new
 builds not having user `user` already created.
 
-Adds user `user` to groups `cdrom,audio,dip,sudo,plugdev`.
+Adds user `user` to groups `cdrom`, `audio`, `dip`, `sudo`, `plugdev`.
 
 Ships a systemd unit file dist-skel-first-boot.service
-which runs `/usr/libexec/helper-scripts/first-boot-skel` (part of helper-scripts)
-package.
+which runs `/usr/libexec/helper-scripts/first-boot-skel`
+(part of helper-scripts) package.
 
 Simplifies sudo default lecture to only showing the default password once.
 
