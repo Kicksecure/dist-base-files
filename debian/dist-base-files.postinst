@@ -123,7 +123,7 @@ case "$1" in
             pam-auth-update --enable console-lockdown-security-misc
 
             ## In Qubes and for existing installations Console Lockdown is
-            ## is handled by whonix-legacy package.
+            ## is handled by legacy-dist package.
 
             ## https://www.whonix.org/wiki/Root
             ## https://www.whonix.org/wiki/Dev/Strong_Linux_User_Account_Isolation

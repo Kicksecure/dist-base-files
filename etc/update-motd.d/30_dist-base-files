@@ -13,7 +13,7 @@ elif test -f /usr/share/anon-ws-base-files/workstation ; then
    name_machine=Whonix-Workstation
    name_lower_case=whonix
    name_regular_case=Whonix
-elif test -f /usr/share/whonix-libvirt/marker ; then
+elif test -f /usr/share/libvirt-dist/marker ; then
    name_machine=Whonix-Host
    name_lower_case=whonix
    name_regular_case=Whonix
