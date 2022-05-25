@@ -1,3 +1,63 @@
+commit c42bb82e368f54921f03ae381b0106934be03fa3
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri May 20 15:27:04 2022 -0400
+
+    readme
+
+commit f22c3b2b9564f9bccbb8292ef056d9dbcd987b75
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri May 20 14:46:33 2022 -0400
+
+    copyright
+
+commit 65fdf42db519af7358a567e142f9ee8c9a4f2407
+Merge: 5f48b06 aa4eabd
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed May 18 09:47:09 2022 -0400
+
+    Merge remote-tracking branch 'github-kicksecure/master'
+
+commit aa4eabda13ab406c4a4d744aa7ea8522797ef79e
+Merge: 54856db eee5c45
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed May 18 09:45:57 2022 -0400
+
+    Merge pull request #3 from andrea-varesio/patch-1
+    
+    Update motd copyright year
+
+commit eee5c45e3a40006b763a0ab5ad0beddc04c723b4
+Author: Andrea Varesio <75442907+andrea-varesio@users.noreply.github.com>
+Date:   Fri May 13 12:24:09 2022 +0000
+
+    Update motd copyright year
+    
+    It's still outdated in various other files (both website and packages), but with this fix users will be greeted on the terminal with the correct copyright info.
+
+commit 5f48b06471f72b639f211fa101dc0a2c5c07f9a9
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Apr 10 12:37:40 2022 -0400
+
+    readme
+
+commit 0471c5cebaed92c39489c73cd9ce367bdc3c0dbc
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Mar 22 09:16:35 2022 -0400
+
+    rename
+
+commit 54856db975013fb2e71e8b8ffc07a1b075cf4b06
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Nov 9 14:32:30 2021 -0500
+
+    readme
+
+commit 4dac046d7525b0625432043f24678d57b4c8aa4d
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Sep 11 18:40:33 2021 -0400
+
+    bumped changelog version
+
 commit cc35d9a12a07407775c6e9c1316029771bc38260
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Sep 11 16:31:10 2021 -0400
