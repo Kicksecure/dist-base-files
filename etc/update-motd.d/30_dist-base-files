@@ -34,7 +34,7 @@ else
    project_website="https://www.kicksecure.com"
 fi
 
-echo "Welcome to $name_machine ™!"
+echo "Welcome to $name_machine (TM)!"
 echo "$project_website"
 echo "
 $name_regular_case Copyright (C) 2012 - 2022 ENCRYPTED SUPPORT LP
