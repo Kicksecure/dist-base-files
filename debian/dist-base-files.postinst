@@ -106,18 +106,18 @@ case "$1" in
             ## old:
             #usermod --append --groups cdrom,audio,dip,sudo,plugdev "$user_to_be_created"
             ##
-            ## Prefer addgroup over usermod.
-            addgroup "$user_to_be_created" cdrom
-            addgroup "$user_to_be_created" audio
-            addgroup "$user_to_be_created" dip
-            addgroup "$user_to_be_created" plugdev
+            ## Prefer adduser over usermod.
+            adduser "$user_to_be_created" cdrom
+            adduser "$user_to_be_created" audio
+            adduser "$user_to_be_created" dip
+            adduser "$user_to_be_created" plugdev
 
             ## Required by security-misc preinst.
-            addgroup "$user_to_be_created" sudo
+            adduser "$user_to_be_created" sudo
 
             ## security-misc: Console Lockdown.
-            addgroup "$user_to_be_created" console
-            addgroup "$user_to_be_created" ssh
+            adduser "$user_to_be_created" console
+            adduser "$user_to_be_created" ssh
 
             ## By package security-misc.
             pam-auth-update --enable console-lockdown-security-misc
