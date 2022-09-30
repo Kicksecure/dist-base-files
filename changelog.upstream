@@ -1,3 +1,29 @@
+commit b7e79d64baf05a66e788a734d87319e84489f127
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Sep 30 08:42:17 2022 -0400
+
+    change default shell from bash to zsh by default
+    
+    https://forums.whonix.org/t/change-default-shell-from-bash-to-zsh-by-default/14792
+
+commit ca86ba5c4dabec997822ef3697897e118947018e
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Sep 30 08:24:53 2022 -0400
+
+    Depends: zsh, zsh-syntax-highlighting, zsh-autosuggestions
+
+commit 46eaa88f1969adf01763484ce24a6cd30ab204b2
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Sep 30 08:23:54 2022 -0400
+
+    refactoring
+
+commit a8862856abe778920e5676f372cc412436e5b517
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Aug 13 11:38:34 2022 -0400
+
+    bumped changelog version
+
 commit fd450e0559270b301b6027b2e8dc833085abfb16
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Aug 13 11:34:32 2022 -0400
