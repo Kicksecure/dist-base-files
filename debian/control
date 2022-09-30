@@ -14,7 +14,8 @@ Rules-Requires-Root: no
 
 Package: dist-base-files
 Architecture: all
-Depends: sudo, dpkg-dev, helper-scripts, adduser, ${misc:Depends}
+Depends: sudo, dpkg-dev, helper-scripts, adduser,
+ ${misc:Depends}
 Provides: anon-base-files,
  ${diverted-files}
 Conflicts: anon-base-files,
