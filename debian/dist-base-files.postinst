@@ -15,6 +15,31 @@ true "
 #####################################################################
 "
 
+user_shell_to_zsh() {
+   if [ -f "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_1" ]; then
+      return 0
+   fi
+
+   if [ -f "/etc/no-shell-change" ]; then
+      echo "$0: INFO: No change because file /etc/no-shell-change exists, ok."
+      return 0
+   fi
+
+   if ! id "$user_to_be_created" &>/dev/null ; then
+      echo "$0: INFO: user '$user_to_be_created' does not exist. Not setting shell to zsh."
+      return 0
+   fi
+
+   echo "$0: INFO: Setting shell for user '$user_to_be_created' to zsh."
+   if ! chsh --shell /bin/zsh user ; then
+      echo "$0: ERROR: Command 'chsh --shell /bin/zsh user' failed. This is only a minor issue."
+   fi
+   echo "$0: INFO: For more information, see: https://www.kicksecure.com/shell#default"
+
+   mkdir --parents "/var/lib/dist-base-files/do_once"
+   touch "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_1"
+}
+
 ## Define variables here to make this easier to software fork.
 user_to_be_created="user"
 account_to_be_locked="root"
@@ -86,7 +111,7 @@ case "$1" in
             ## Prefer adduser rather than useradd.
             ##
             ## No need to user --user-group since this is Debian adduser default.
-            ## No need to use --shell since it defaults to /bin/bash anyhow and should be left to adduser configuration file.
+            ## No need to use --shell here. Doing that later.
             ##
             ## Quote adduser man page:
             ## With the --disabled-login option, the account will be created but will be disabled until a password is set.
@@ -145,6 +170,8 @@ case "$1" in
             #sudo passwd
          fi
       fi
+
+      user_shell_to_zsh
 
       true "INFO: End configuring $DPKG_MAINTSCRIPT_PACKAGE."
 
