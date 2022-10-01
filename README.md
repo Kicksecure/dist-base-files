@@ -16,6 +16,10 @@ Simplifies sudo default lecture to only showing the default password once.
 
 Creates version file `/var/lib/dist-base-files/build_version`.
 
+Default shell: Sets default shell for user `user` to `zsh`.
+(Unless file `/etc/no-shell-change` exists.)
+`debian/dist-base-files.postinst`
+
 This package gets installed by default in both, Kicksecure and Whonix.
 
 ## How to install `dist-base-files` using apt-get ##
