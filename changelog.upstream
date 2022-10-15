@@ -1,3 +1,15 @@
+commit d23d87e5ae8203f6447947e19157f0ddca23b44d
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Oct 15 18:25:35 2022 -0400
+
+    improve function user_shell_to_zsh
+
+commit 855b43f9b049f3e1c3ccf26dbd6d90e088b643ca
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Oct 15 11:56:41 2022 -0400
+
+    bumped changelog version
+
 commit c907750fb258cb16e5e8dd7f9f655456712c4d3b
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Oct 15 11:53:42 2022 -0400
