@@ -16,12 +16,26 @@ true "
 "
 
 user_shell_to_zsh() {
-   if [ -f "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_1" ]; then
+   if [ -f "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_2" ]; then
       return 0
    fi
 
-   if [ -f "/etc/no-shell-change" ]; then
-      echo "$0: INFO: No change because file /etc/no-shell-change exists, ok."
+   if [ -f "/etc/nozsh" ]; then
+      echo "$0: INFO: No shell change because file /etc/nozsh exists, ok."
+      return 0
+   fi
+   if [ -f "/usr/local/etc/nozsh" ]; then
+      echo "$0: INFO: No shell change because file /usr/local/etc/nozsh exists, ok."
+      return 0
+   fi
+
+   if grep -q 'nozsh' /proc/cmdline; then
+      echo "$0: INFO: No shell change because nozsh in kernel command line, ok."
+      return 0
+   fi
+
+   if ! test -x /usr/bin/zsh ; then
+      echo "$0: INFO: No shell change because /usr/bin/zsh does not exist or is not executable, ok."
       return 0
    fi
 
@@ -31,13 +45,13 @@ user_shell_to_zsh() {
    fi
 
    echo "$0: INFO: Setting shell for user '$user_to_be_created' to zsh."
-   if ! chsh --shell /bin/zsh user ; then
-      echo "$0: ERROR: Command 'chsh --shell /bin/zsh user' failed. This is only a minor issue."
+   if ! chsh --shell /usr/bin/zsh "$user_to_be_created" ; then
+      echo "$0: ERROR: Command 'chsh --shell /usr/bin/zsh user' failed. This is only a minor issue."
    fi
    echo "$0: INFO: For more information, see: https://www.kicksecure.com/shell#default"
 
    mkdir --parents "/var/lib/dist-base-files/do_once"
-   touch "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_1"
+   touch "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_2"
 }
 
 ## Define variables here to make this easier to software fork.
