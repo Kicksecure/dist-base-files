@@ -171,7 +171,8 @@ case "$1" in
          fi
       fi
 
-      user_shell_to_zsh
+      ## https://forums.whonix.org/t/change-default-shell-from-bash-to-zsh-by-default/14792/41
+      #user_shell_to_zsh
 
       true "INFO: End configuring $DPKG_MAINTSCRIPT_PACKAGE."
 
