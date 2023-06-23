@@ -120,6 +120,10 @@ case "$1" in
             ## Resulted in: aTayYxVyw5kDo
             password="aTayYxVyw5kDo"
 
+            if [ "$zsh_enable" = "yes" ]; then
+               shell_maybe="--shell /bin/zsh"
+            fi
+
             ## adduser and addgroup
             ##
             ## Quoted from Debian adduser manpage:
@@ -140,13 +144,12 @@ case "$1" in
             ## Prefer adduser rather than useradd.
             ##
             ## No need to user --user-group since this is Debian adduser default.
-            ## No need to use --shell here. Doing that later.
             ##
             ## Quote adduser man page:
             ## --disabled-password
             ## Do not run passwd(1) to set a password. In most situations, logins are still possible though
             ## (for example using SSH keys or through PAM) for reasons that are beyond adduser's scope.
-            adduser --no-create-home --disabled-password --gecos "" "$user_to_be_created"
+            adduser $shell_maybe --no-create-home --disabled-password --gecos "" "$user_to_be_created"
 
             ## Use --encrypted to be able to use a static, precalculated hash for reproducible builds.
             echo "${user_to_be_created}:${password}" | chpasswd --encrypted
