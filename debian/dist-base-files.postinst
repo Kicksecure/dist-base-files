@@ -128,11 +128,10 @@ case "$1" in
             ## No need to use --shell here. Doing that later.
             ##
             ## Quote adduser man page:
-            ## With the --disabled-login option, the account will be created but will be disabled until a password is set.
-            ## The --disabled-password option will not set a password, but login is still possible (for example with SSH RSA keys).
-            ##
-            ## Use --disabled-login and --gecos to run adduser in non-interactive mode.
-            adduser --no-create-home --disabled-login --gecos "" "$user_to_be_created"
+            ## --disabled-password
+            ## Do not run passwd(1) to set a password. In most situations, logins are still possible though
+            ## (for example using SSH keys or through PAM) for reasons that are beyond adduser's scope.
+            adduser --no-create-home --disabled-password --gecos "" "$user_to_be_created"
 
             ## Use --encrypted to be able to use a static, precalculated hash for reproducible builds.
             echo "${user_to_be_created}:${password}" | chpasswd --encrypted
