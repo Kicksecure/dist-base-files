@@ -15,27 +15,40 @@ true "
 #####################################################################
 "
 
-user_shell_to_zsh() {
-   if [ -f "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_2" ]; then
-      return 0
-   fi
-
+zsh_yes_or_no() {
+   zsh_enable=""
    if [ -f "/etc/nozsh" ]; then
       echo "$0: INFO: No shell change because file /etc/nozsh exists, ok."
+      zsh_enable=no
       return 0
    fi
    if [ -f "/usr/local/etc/nozsh" ]; then
       echo "$0: INFO: No shell change because file /usr/local/etc/nozsh exists, ok."
+      zsh_enable=no
       return 0
    fi
 
    if grep -q 'nozsh' /proc/cmdline; then
       echo "$0: INFO: No shell change because nozsh in kernel command line, ok."
+      zsh_enable=no
       return 0
    fi
 
    if ! test -x /usr/bin/zsh ; then
       echo "$0: INFO: No shell change because /usr/bin/zsh does not exist or is not executable, ok."
+      zsh_enable=no
+      return 0
+   fi
+
+   zsh_enable=yes
+}
+
+user_shell_to_zsh() {
+   if [ -f "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_2" ]; then
+      return 0
+   fi
+
+   if [ ! "$zsh_enable" = "yes" ]; then
       return 0
    fi
 
@@ -83,6 +96,8 @@ case "$1" in
             cat "$build_version_file"
          fi
       fi
+
+      zsh_yes_or_no
 
       if id "$user_to_be_created" &>/dev/null ; then
          true "INFO: User '$user_to_be_created' already exists, skip creation."
