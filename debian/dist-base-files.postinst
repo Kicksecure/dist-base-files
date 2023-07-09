@@ -99,6 +99,19 @@ case "$1" in
 
       zsh_yes_or_no
 
+      ## setting password to changeme
+      ##
+      ## How this password was created:
+      ## sudo apt-get install whois
+      ## mkpasswd
+      ## changeme
+      ## Resulted in: aTayYxVyw5kDo
+      password="aTayYxVyw5kDo"
+
+      if [ "$zsh_enable" = "yes" ]; then
+         shell_maybe="--shell /bin/zsh"
+      fi
+
       ## Qubes-Whonix build process: user "user" already exists.
       if id "$user_to_be_created" &>/dev/null ; then
          true "INFO: User '$user_to_be_created' already exists, skip creation."
@@ -111,19 +124,6 @@ case "$1" in
             ## This is done by the security-misc package. File:
             ## /usr/share/pam-configs/mkhomedir-security-misc
             ## pam-auth-update --enable mkhomedir
-
-            ## setting password to changeme
-            ##
-            ## How this password was created:
-            ## sudo apt-get install whois
-            ## mkpasswd
-            ## changeme
-            ## Resulted in: aTayYxVyw5kDo
-            password="aTayYxVyw5kDo"
-
-            if [ "$zsh_enable" = "yes" ]; then
-               shell_maybe="--shell /bin/zsh"
-            fi
 
             ## adduser and addgroup
             ##
