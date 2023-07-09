@@ -99,6 +99,7 @@ case "$1" in
 
       zsh_yes_or_no
 
+      ## Qubes-Whonix build process: user "user" already exists.
       if id "$user_to_be_created" &>/dev/null ; then
          true "INFO: User '$user_to_be_created' already exists, skip creation."
       else
