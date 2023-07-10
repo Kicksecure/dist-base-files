@@ -1,3 +1,17 @@
+commit 99853dc67406a2b38f39bd77ee34e375f6936ffe
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Jul 10 17:31:16 2023 -0400
+
+    undo zsh by default for existing builds and Qubes-Whonix
+    
+    https://forums.whonix.org/t/change-default-shell-from-bash-to-zsh-by-default/14792/130
+
+commit fd3a56b30224d424243ed832fc230e3d645ecec4
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Jul 9 15:04:49 2023 -0400
+
+    bumped changelog version
+
 commit 22f43cdb1cbf0a26f808cebfbcc4ae73779fe0b4
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sun Jul 9 14:54:46 2023 -0400
