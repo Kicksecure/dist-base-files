@@ -207,7 +207,10 @@ case "$1" in
       ## Needed for:
       ## - existing builds
       ## - Qubes-Whonix
-      user_shell_to_zsh
+      ## Doing this for all existing builds would cause the zsh newuser module to appear
+      ## for existing builds when upgrading.
+      ## https://forums.whonix.org/t/change-default-shell-from-bash-to-zsh-by-default/14792/37
+      #user_shell_to_zsh
 
       true "INFO: End configuring $DPKG_MAINTSCRIPT_PACKAGE."
 
