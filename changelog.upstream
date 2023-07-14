@@ -1,3 +1,15 @@
+commit 28c927853883d5ba11ce28bb3dbe79dede070c13
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Jul 14 08:05:10 2023 -0400
+
+    enable zsh by default for existing and new builds
+
+commit 914f22ec1bbac6eacb5697551ae39bf095ce54e4
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Jul 14 06:50:49 2023 -0400
+
+    bumped changelog version
+
 commit 12464c7a9431c58157447229716fde666d167f29
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Fri Jul 14 06:48:14 2023 -0400
