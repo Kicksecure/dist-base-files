@@ -204,13 +204,21 @@ case "$1" in
       fi
 
       ## https://forums.whonix.org/t/change-default-shell-from-bash-to-zsh-by-default/14792/41
-      ## Needed for:
+      ##
+      ## Running function user_shell_to_zsh is needed for:
       ## - existing builds
-      ## - Qubes-Whonix
-      ## Doing this for all existing builds would cause the zsh newuser module to appear
+      ## - Qubes-Whonix new builds
+      ##
+      ## Check if we are running during a Qubes build process.
+      if [ "$QUBES_BUILDER" = "1" ]; then
+         ## Yes, we are run during a Qubes build process.
+         ## Therefore change default shell to zsh.
+         ## https://github.com/QubesOS/qubes-issues/issues/8343
+         user_shell_to_zsh
+      fi
+      ## Doing user_shell_to_zsh for all existing builds would cause the zsh newuser module to appear
       ## for existing builds when upgrading.
       ## https://forums.whonix.org/t/change-default-shell-from-bash-to-zsh-by-default/14792/37
-      #user_shell_to_zsh
 
       true "INFO: End configuring $DPKG_MAINTSCRIPT_PACKAGE."
 
