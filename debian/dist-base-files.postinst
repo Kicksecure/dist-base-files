@@ -199,29 +199,9 @@ case "$1" in
 
       zsh_yes_or_no
       true "zsh_enable: $zsh_enable"
-      true "QUBES_BUILDER: $QUBES_BUILDER"
-      true "derivative_maker: $derivative_maker"
 
       if [ "$zsh_enable" = "yes" ]; then
-         ## Check if we are running during a Qubes build process.
-         if [ "$QUBES_BUILDER" = "1" ]; then
-            ## Yes, we are run during a Qubes build process.
-            ## Therefore change default shell to zsh.
-            ## https://github.com/QubesOS/qubes-issues/issues/8343
-            user_shell_to_zsh
-         ## Check if we are running during a derivative-maker build process.
-         elif [ "$derivative_maker" = "true" ]; then
-            ## Yes, we are run during a derivative-maker build process.
-            ## Therefore change default shell to zsh.
-            user_shell_to_zsh
-         else
-            ## Doing user_shell_to_zsh for all existing builds would cause the zsh newuser module to appear
-            ## for existing builds when upgrading.
-            ## https://forums.whonix.org/t/change-default-shell-from-bash-to-zsh-by-default/14792/37
-            true "INFO: Probably not running during a build process."
-            true "INFO: Not changing default shell to zsh for existing builds."
-            true "INFO: Not running user_shell_to_zsh because neither derivative-maker nor Qubes builder detected."
-         fi
+         user_shell_to_zsh
       fi
 
       true "INFO: End configuring $DPKG_MAINTSCRIPT_PACKAGE."
