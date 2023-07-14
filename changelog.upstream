@@ -1,3 +1,21 @@
+commit 12464c7a9431c58157447229716fde666d167f29
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Jul 14 06:48:14 2023 -0400
+
+    refactoring
+
+commit 1a4ec6eea67b94ad8daab0ce6920c3b67305b0cd
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Jul 14 06:39:43 2023 -0400
+
+    re-enable zsh by default in new Qubes Templates builds
+
+commit a28ec650b73445642d07e200457fcf2fc1cbb32b
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Jul 10 17:31:56 2023 -0400
+
+    bumped changelog version
+
 commit 99853dc67406a2b38f39bd77ee34e375f6936ffe
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Jul 10 17:31:16 2023 -0400
