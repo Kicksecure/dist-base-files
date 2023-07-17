@@ -6,9 +6,9 @@ Section: misc
 Priority: optional
 Maintainer: Patrick Schleizer <adrelanos@whonix.org>
 Build-Depends: debhelper (>= 13), debhelper-compat (= 13), config-package-dev
-Homepage: https://github.com/Whonix/dist-base-files
-Vcs-Browser: https://github.com/Whonix/dist-base-files
-Vcs-Git: https://github.com/Whonix/dist-base-files.git
+Homepage: https://github.com/Kicksecure/dist-base-files
+Vcs-Browser: https://github.com/Kicksecure/dist-base-files
+Vcs-Git: https://github.com/Kicksecure/dist-base-files.git
 Standards-Version: 4.6.2
 Rules-Requires-Root: no
 
