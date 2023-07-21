@@ -47,6 +47,7 @@ user_shell_to_zsh() {
    if [ -f "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_2" ]; then
       return 0
    fi
+   mkdir --parents "/var/lib/dist-base-files/do_once"
 
    if [ ! "$zsh_enable" = "yes" ]; then
       return 0
@@ -57,13 +58,23 @@ user_shell_to_zsh() {
       return 0
    fi
 
+   ## Use getent to retrieve the user's entry from /etc/passwd
+   user_passwd_entry=$(getent passwd "$user_to_be_created")
+
+   ## Extract the shell field (the last field) from the user's entry
+   user_default_shell=$(echo "$user_passwd_entry" | awk -F: '{print $NF}')
+
+   if [ "$user_default_shell" = "/usr/bin/zsh" ]; then
+      touch "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_2"
+      return 0
+   fi
+
    echo "$0: INFO: Setting shell for user '$user_to_be_created' to zsh."
    if ! chsh --shell /usr/bin/zsh "$user_to_be_created" ; then
       echo "$0: ERROR: Command 'chsh --shell /usr/bin/zsh user' failed. This is only a minor issue."
    fi
    echo "$0: INFO: For more information, see: https://www.kicksecure.com/shell#default"
 
-   mkdir --parents "/var/lib/dist-base-files/do_once"
    touch "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_2"
 }
 
