@@ -1,3 +1,15 @@
+commit dbf919bfcb1451f03845ae769c5ad9b7a1943bd6
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Jul 21 06:03:24 2023 -0400
+
+    fix, do not attempt to set the default shell to /usr/bin/zsh if it already is
+
+commit 630c60f1c0d1ac55d91ff4e26367253463ef24ee
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Jul 17 11:33:47 2023 -0400
+
+    bumped changelog version
+
 commit df8ce9e4c804247d1c909033088c229d37de10ea
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Jul 17 11:17:47 2023 -0400
