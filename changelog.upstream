@@ -1,3 +1,33 @@
+commit 39431e4b715689b8e0fbc29776ad396aed355c0a
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Apr 13 07:59:42 2024 -0400
+
+    symlink `/usr/share/distro-info/derivative.csv` to `/usr/share/distro-info/kicksecure.csv`
+    
+    https://github.com/QubesOS/qubes-core-agent-linux/pull/481
+
+commit e00ae12d058b21e0ae74bfff5502b8baa9457154
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Apr 13 07:54:53 2024 -0400
+
+    readme
+    
+    https://github.com/QubesOS/qubes-core-agent-linux/pull/481
+
+commit 3a39d9af620bb7e2d613e196e8ae78be905d49eb
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Apr 13 07:51:01 2024 -0400
+
+    implement `/usr/share/distro-info/kicksecure.csv`
+    
+    https://github.com/QubesOS/qubes-core-agent-linux/pull/481
+
+commit 13eb5a4cf4b76715b872f24bab63807f7370e041
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Feb 2 12:34:38 2024 +0000
+
+    bumped changelog version
+
 commit 9cde48629e4785f80325c5d29004de9a8cb93edc
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Fri Feb 2 07:32:24 2024 -0500
