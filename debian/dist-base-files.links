@@ -1,0 +1,5 @@
+## Copyright (C) 2024 - 2024 ENCRYPTED SUPPORT LP <adrelanos@whonix.org>
+## See the file COPYING for copying conditions.
+
+## https://github.com/QubesOS/qubes-core-agent-linux/pull/481
+/usr/share/distro-info/kicksecure.csv /usr/share/distro-info/derivative.csv
