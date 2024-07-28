@@ -30,103 +30,105 @@ add_linux_user_account_named_user() {
    ## Qubes-Whonix build process: user "user" already exists.
    if id "$user_to_be_created" &>/dev/null ; then
       true "INFO: User '$user_to_be_created' already exists, skip creation."
-   else
-      if command -v qubesdb-read >/dev/null 2>&1 ; then
-         ## Leave user 'user' creation to Qubes.
-         true "INFO: Not creating user '$user_to_be_created' since Qubes detected."
-      else
-         ## No longer enable pam mkhomedir here.
-         ## This is done by the security-misc package. File:
-         ## /usr/share/pam-configs/mkhomedir-security-misc
-         ## pam-auth-update --enable mkhomedir
+      return 0
+   fi
 
-         ## adduser and addgroup
-         ##
-         ## Quoted from Debian adduser manpage:
-         ##
-         ## They are friendlier front ends to the low level tools like useradd, groupadd and usermod programs,
-         ## by default choosing Debian policy conformant UID and GID values,  creating a home directory with
-         ## skeletal configuration, running a custom script, and other features.
-         ##
-         ## https://forums.whonix.org/t/port-from-useradd-groupadd-and-usermod-to-adduser-and-addgroup/7977
+   if command -v qubesdb-read >/dev/null 2>&1 ; then
+      ## Leave user 'user' creation to Qubes.
+      true "INFO: Not creating user '$user_to_be_created' since Qubes detected."
+      return 0
+   fi
 
-         ## Use --no-create-home and leave home folder creation to pam mkhomedir
-         ## https://phabricator.whonix.org/T913
-         ## https://forums.whonix.org/t/bug-not-all-files-form-etc-skel-are-copied-to-home-user/6778/4
-         ##
-         ## old:
-         #useradd --no-create-home --password "$password" --user-group --shell /bin/bash "$user_to_be_created"
-         ##
-         ## Prefer adduser rather than useradd.
-         ##
-         ## No need to user --user-group since this is Debian adduser default.
-         ##
-         ## Quote adduser man page:
-         ## --disabled-password
-         ## Do not run passwd(1) to set a password. In most situations, logins are still possible though
-         ## (for example using SSH keys or through PAM) for reasons that are beyond adduser's scope.
-         adduser --no-create-home --disabled-password --comment "" "$user_to_be_created"
+   ## No longer enable pam mkhomedir here.
+   ## This is done by the security-misc package. File:
+   ## /usr/share/pam-configs/mkhomedir-security-misc
+   ## pam-auth-update --enable mkhomedir
 
-         ## No longer in use.
-         ## Use --encrypted to be able to use a static, precalculated hash for reproducible builds.
-         #echo "${user_to_be_created}:${password}" | chpasswd --encrypted
+   ## adduser and addgroup
+   ##
+   ## Quoted from Debian adduser manpage:
+   ##
+   ## They are friendlier front ends to the low level tools like useradd, groupadd and usermod programs,
+   ## by default choosing Debian policy conformant UID and GID values,  creating a home directory with
+   ## skeletal configuration, running a custom script, and other features.
+   ##
+   ## https://forums.whonix.org/t/port-from-useradd-groupadd-and-usermod-to-adduser-and-addgroup/7977
 
-         ## adduser '--disabled-password' is not the same as 'passwd --delete user'.
-         ## /etc/shadow:
-         #user:!:19932:0:99999:7:::
+   ## Use --no-create-home and leave home folder creation to pam mkhomedir
+   ## https://phabricator.whonix.org/T913
+   ## https://forums.whonix.org/t/bug-not-all-files-form-etc-skel-are-copied-to-home-user/6778/4
+   ##
+   ## old:
+   #useradd --no-create-home --password "$password" --user-group --shell /bin/bash "$user_to_be_created"
+   ##
+   ## Prefer adduser rather than useradd.
+   ##
+   ## No need to user --user-group since this is Debian adduser default.
+   ##
+   ## Quote adduser man page:
+   ## --disabled-password
+   ## Do not run passwd(1) to set a password. In most situations, logins are still possible though
+   ## (for example using SSH keys or through PAM) for reasons that are beyond adduser's scope.
+   adduser --no-create-home --disabled-password --comment "" "$user_to_be_created"
 
-         ## Set empty password for user.
-         passwd --delete user
-         ## /etc/shadow:
-         #user::19932:0:99999:7:::
+   ## No longer in use.
+   ## Use --encrypted to be able to use a static, precalculated hash for reproducible builds.
+   #echo "${user_to_be_created}:${password}" | chpasswd --encrypted
 
-         ## security-misc: Console Lockdown.
-         ## Make sure this group exists. Might not exist if security-misc is not (yet) installed.
-         addgroup --system console
-         addgroup --system ssh
+   ## adduser '--disabled-password' is not the same as 'passwd --delete user'.
+   ## /etc/shadow:
+   #user:!:19932:0:99999:7:::
 
-         ## old:
-         #usermod --append --groups cdrom,audio,dip,sudo,plugdev "$user_to_be_created"
-         ##
-         ## Prefer adduser over usermod.
-         adduser "$user_to_be_created" cdrom
-         adduser "$user_to_be_created" audio
-         adduser "$user_to_be_created" dip
-         adduser "$user_to_be_created" plugdev
+   ## Set empty password for user.
+   passwd --delete user
+   ## /etc/shadow:
+   #user::19932:0:99999:7:::
 
-         ## Required by security-misc preinst.
-         adduser "$user_to_be_created" sudo
+   ## security-misc: Console Lockdown.
+   ## Make sure this group exists. Might not exist if security-misc is not (yet) installed.
+   addgroup --system console
+   addgroup --system ssh
 
-         ## security-misc: Console Lockdown.
-         adduser "$user_to_be_created" console
-         adduser "$user_to_be_created" ssh
+   ## old:
+   #usermod --append --groups cdrom,audio,dip,sudo,plugdev "$user_to_be_created"
+   ##
+   ## Prefer adduser over usermod.
+   adduser "$user_to_be_created" cdrom
+   adduser "$user_to_be_created" audio
+   adduser "$user_to_be_created" dip
+   adduser "$user_to_be_created" plugdev
 
-         ## By package security-misc.
-         pam-auth-update --enable console-lockdown-security-misc
+   ## Required by security-misc preinst.
+   adduser "$user_to_be_created" sudo
 
-         ## In Qubes and for existing installations Console Lockdown is
-         ## is handled by legacy-dist package.
+   ## security-misc: Console Lockdown.
+   adduser "$user_to_be_created" console
+   adduser "$user_to_be_created" ssh
 
-         ## https://www.whonix.org/wiki/Root
-         ## https://www.whonix.org/wiki/Dev/Strong_Linux_User_Account_Isolation
+   ## By package security-misc.
+   pam-auth-update --enable console-lockdown-security-misc
 
-         ## Lock the account.
-         passwd --lock "$account_to_be_locked"
+   ## In Qubes and for existing installations Console Lockdown is
+   ## is handled by legacy-dist package.
 
-         ## Disabled because it breaks `adduser`.
-         ## https://forums.whonix.org/t/restrict-root-access/7658/59
-         ## Expire the account to prevent SSH login.
-         ## https://www.cyberciti.biz/faq/linux-locking-an-account/
-         #chage --expiredate 0 "$account_to_be_locked"
+   ## https://www.whonix.org/wiki/Root
+   ## https://www.whonix.org/wiki/Dev/Strong_Linux_User_Account_Isolation
 
-         ## Debugging.
-         #chage --list "$account_to_be_locked"
+   ## Lock the account.
+   passwd --lock "$account_to_be_locked"
 
-         ## To undo:
-         #sudo chage --expiredate -1 "$account_to_be_locked"
-         #sudo passwd
-      fi
-      fi
+   ## Disabled because it breaks `adduser`.
+   ## https://forums.whonix.org/t/restrict-root-access/7658/59
+   ## Expire the account to prevent SSH login.
+   ## https://www.cyberciti.biz/faq/linux-locking-an-account/
+   #chage --expiredate 0 "$account_to_be_locked"
+
+   ## Debugging.
+   #chage --list "$account_to_be_locked"
+
+   ## To undo:
+   #sudo chage --expiredate -1 "$account_to_be_locked"
+   #sudo passwd
 }
 
 zsh_yes_or_no() {
