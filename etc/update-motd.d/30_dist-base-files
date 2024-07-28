@@ -66,7 +66,7 @@ if command -v qubesdb-read >/dev/null 2>&1 ; then
    true
 else
    echo "default user account: user
-default password: changeme
+default password: No password required. (Passwordless login.)
 "
 fi
 

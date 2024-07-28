@@ -23,7 +23,7 @@ Conflicts: anon-base-files,
  ${diverted-files}
 Replaces: anon-base-files
 Description: base files for distributions
- Creates user `user` with password `changeme` (not in Qubes).
+ Creates user `user` with empty password (passwordless) (not in Qubes).
  That is if user `user` is not existing yet.
  And if it does create user `user` it also locks the root account.
  Therefore root account locking effectively only happens in new
