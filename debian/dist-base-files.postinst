@@ -15,99 +15,7 @@ true "
 #####################################################################
 "
 
-zsh_yes_or_no() {
-   zsh_enable=""
-   if [ -f "/etc/nozsh" ]; then
-      echo "$0: INFO: No shell change because file /etc/nozsh exists, ok."
-      zsh_enable=no
-      return 0
-   fi
-   if [ -f "/usr/local/etc/nozsh" ]; then
-      echo "$0: INFO: No shell change because file /usr/local/etc/nozsh exists, ok."
-      zsh_enable=no
-      return 0
-   fi
-
-   if grep -q 'nozsh' /proc/cmdline; then
-      echo "$0: INFO: No shell change because nozsh in kernel command line, ok."
-      zsh_enable=no
-      return 0
-   fi
-
-   if ! test -x /usr/bin/zsh ; then
-      echo "$0: INFO: No shell change because /usr/bin/zsh does not exist or is not executable, ok."
-      zsh_enable=no
-      return 0
-   fi
-
-   zsh_enable=yes
-}
-
-user_shell_to_zsh() {
-   if [ -f "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_2" ]; then
-      return 0
-   fi
-   mkdir --parents "/var/lib/dist-base-files/do_once"
-
-   if [ ! "$zsh_enable" = "yes" ]; then
-      return 0
-   fi
-
-   if ! id "$user_to_be_created" &>/dev/null ; then
-      echo "$0: INFO: user '$user_to_be_created' does not exist. Not setting shell to zsh."
-      return 0
-   fi
-
-   ## Use getent to retrieve the user's entry from /etc/passwd
-   user_passwd_entry=$(getent passwd "$user_to_be_created")
-
-   ## Extract the shell field (the last field) from the user's entry
-   user_default_shell=$(echo "$user_passwd_entry" | awk -F: '{print $NF}')
-
-   if [ "$user_default_shell" = "/usr/bin/zsh" ]; then
-      touch "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_2"
-      return 0
-   fi
-
-   echo "$0: INFO: Setting shell for user '$user_to_be_created' to zsh."
-   if ! chsh --shell /usr/bin/zsh "$user_to_be_created" ; then
-      echo "$0: ERROR: Command 'chsh --shell /usr/bin/zsh user' failed. This is only a minor issue."
-   fi
-   echo "$0: INFO: For more information, see: https://www.kicksecure.com/shell#default"
-
-   touch "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_2"
-}
-
-## Define variables here to make this easier to software fork.
-user_to_be_created="user"
-account_to_be_locked="root"
-
-case "$1" in
-   configure)
-      true "INFO: Configuring $DPKG_MAINTSCRIPT_PACKAGE..."
-
-      build_version_file="/var/lib/dist-base-files/build_version"
-      if [ ! -f "$build_version_file" ]; then
-         ## Sanity test.
-         if [ "$dist_build_version" = "" ]; then
-            ## Package dpkg-dev provides dpkg-parsechangelog.
-            ## If dist_build_version is empty, use the version number of the package.
-            dist_build_version="$(zless "/usr/share/doc/$DPKG_MAINTSCRIPT_PACKAGE/changelog.Debian.gz" | dpkg-parsechangelog -l- -SVersion)" || true
-         fi
-         if [ "$dist_build_version" = "" ]; then
-            echo "ERROR: Could not determine variable 'dist_build_version'."
-         else
-            mkdir --parents "$(dirname "$build_version_file")"
-            echo "INFO: Logging dist_build_version '$dist_build_version' to '$build_version_file'..."
-            ## Debugging.
-            touch "$build_version_file"
-            ## Logging.
-            echo "$dist_build_version" | tee "$build_version_file" >/dev/null
-            ## Debugging.
-            cat "$build_version_file"
-         fi
-      fi
-
+add_linux_user_account_named_user() {
       ## No longer in use.
       ##
       ## setting password to changeme
@@ -219,6 +127,102 @@ case "$1" in
             #sudo passwd
          fi
       fi
+}
+
+zsh_yes_or_no() {
+   zsh_enable=""
+   if [ -f "/etc/nozsh" ]; then
+      echo "$0: INFO: No shell change because file /etc/nozsh exists, ok."
+      zsh_enable=no
+      return 0
+   fi
+   if [ -f "/usr/local/etc/nozsh" ]; then
+      echo "$0: INFO: No shell change because file /usr/local/etc/nozsh exists, ok."
+      zsh_enable=no
+      return 0
+   fi
+
+   if grep -q 'nozsh' /proc/cmdline; then
+      echo "$0: INFO: No shell change because nozsh in kernel command line, ok."
+      zsh_enable=no
+      return 0
+   fi
+
+   if ! test -x /usr/bin/zsh ; then
+      echo "$0: INFO: No shell change because /usr/bin/zsh does not exist or is not executable, ok."
+      zsh_enable=no
+      return 0
+   fi
+
+   zsh_enable=yes
+}
+
+user_shell_to_zsh() {
+   if [ -f "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_2" ]; then
+      return 0
+   fi
+   mkdir --parents "/var/lib/dist-base-files/do_once"
+
+   if [ ! "$zsh_enable" = "yes" ]; then
+      return 0
+   fi
+
+   if ! id "$user_to_be_created" &>/dev/null ; then
+      echo "$0: INFO: user '$user_to_be_created' does not exist. Not setting shell to zsh."
+      return 0
+   fi
+
+   ## Use getent to retrieve the user's entry from /etc/passwd
+   user_passwd_entry=$(getent passwd "$user_to_be_created")
+
+   ## Extract the shell field (the last field) from the user's entry
+   user_default_shell=$(echo "$user_passwd_entry" | awk -F: '{print $NF}')
+
+   if [ "$user_default_shell" = "/usr/bin/zsh" ]; then
+      touch "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_2"
+      return 0
+   fi
+
+   echo "$0: INFO: Setting shell for user '$user_to_be_created' to zsh."
+   if ! chsh --shell /usr/bin/zsh "$user_to_be_created" ; then
+      echo "$0: ERROR: Command 'chsh --shell /usr/bin/zsh user' failed. This is only a minor issue."
+   fi
+   echo "$0: INFO: For more information, see: https://www.kicksecure.com/shell#default"
+
+   touch "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_2"
+}
+
+## Define variables here to make this easier to software fork.
+user_to_be_created="user"
+account_to_be_locked="root"
+
+case "$1" in
+   configure)
+      true "INFO: Configuring $DPKG_MAINTSCRIPT_PACKAGE..."
+
+      build_version_file="/var/lib/dist-base-files/build_version"
+      if [ ! -f "$build_version_file" ]; then
+         ## Sanity test.
+         if [ "$dist_build_version" = "" ]; then
+            ## Package dpkg-dev provides dpkg-parsechangelog.
+            ## If dist_build_version is empty, use the version number of the package.
+            dist_build_version="$(zless "/usr/share/doc/$DPKG_MAINTSCRIPT_PACKAGE/changelog.Debian.gz" | dpkg-parsechangelog -l- -SVersion)" || true
+         fi
+         if [ "$dist_build_version" = "" ]; then
+            echo "ERROR: Could not determine variable 'dist_build_version'."
+         else
+            mkdir --parents "$(dirname "$build_version_file")"
+            echo "INFO: Logging dist_build_version '$dist_build_version' to '$build_version_file'..."
+            ## Debugging.
+            touch "$build_version_file"
+            ## Logging.
+            echo "$dist_build_version" | tee "$build_version_file" >/dev/null
+            ## Debugging.
+            cat "$build_version_file"
+         fi
+      fi
+
+      add_linux_user_account_named_user
 
       zsh_yes_or_no
       true "zsh_enable: $zsh_enable"
