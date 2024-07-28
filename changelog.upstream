@@ -1,3 +1,47 @@
+commit a50d4f49acd9cfe5b62cfdd86855649f6d44bc82
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Jul 28 19:14:00 2024 -0400
+
+    passwordless
+
+commit 1e2aacd2d678ce0a12d4c6f5d045b7ce22b6b719
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Jul 28 18:46:54 2024 -0400
+
+    do_once
+
+commit bf95887565242af81c02a4c6d79e65db6b404bc8
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Jul 28 18:45:53 2024 -0400
+
+    refactoring
+
+commit 75b2e4ea64dd1894e9c6dd47a9cb172bf224ffc2
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Jul 28 18:44:58 2024 -0400
+
+    refactoring
+
+commit 6c5192101aa5dbd21e98ff6a83efe1234e347993
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Jul 28 18:44:37 2024 -0400
+
+    refactoring
+
+commit edbadfa9fdbcb89778def71af4cfca1fa0188c7b
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Jul 28 18:40:45 2024 -0400
+
+    user `user` with empty password by default. (passwordless)
+    
+    This is less confusing then the previously default password `changeme`.
+
+commit 9a6316ba3d7f4c99769cdc65df5e9f7641377c45
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Apr 15 14:54:24 2024 +0000
+
+    bumped changelog version
+
 commit 7b58ec32fd68677f43681971efe7dc19aa978429
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Apr 15 10:53:06 2024 -0400
