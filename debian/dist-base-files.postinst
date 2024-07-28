@@ -16,6 +16,11 @@ true "
 "
 
 add_linux_user_account_named_user() {
+   if [ -f "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_1" ]; then
+      return 0
+   fi
+   mkdir --parents "/var/lib/dist-base-files/do_once"
+
    ## No longer in use.
    ##
    ## setting password to changeme
@@ -129,6 +134,8 @@ add_linux_user_account_named_user() {
    ## To undo:
    #sudo chage --expiredate -1 "$account_to_be_locked"
    #sudo passwd
+
+   touch "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_1"
 }
 
 zsh_yes_or_no() {
