@@ -108,6 +108,8 @@ case "$1" in
          fi
       fi
 
+      ## No longer in use.
+      ##
       ## setting password to changeme
       ##
       ## How this password was created:
@@ -115,7 +117,7 @@ case "$1" in
       ## mkpasswd
       ## changeme
       ## Resulted in: aTayYxVyw5kDo
-      password="aTayYxVyw5kDo"
+      #password="aTayYxVyw5kDo"
 
       ## Qubes-Whonix build process: user "user" already exists.
       if id "$user_to_be_created" &>/dev/null ; then
@@ -157,8 +159,18 @@ case "$1" in
             ## (for example using SSH keys or through PAM) for reasons that are beyond adduser's scope.
             adduser --no-create-home --disabled-password --comment "" "$user_to_be_created"
 
+            ## No longer in use.
             ## Use --encrypted to be able to use a static, precalculated hash for reproducible builds.
-            echo "${user_to_be_created}:${password}" | chpasswd --encrypted
+            #echo "${user_to_be_created}:${password}" | chpasswd --encrypted
+
+            ## adduser '--disabled-password' is not the same as 'passwd --delete user'.
+            ## /etc/shadow:
+            #user:!:19932:0:99999:7:::
+
+            ## Set empty password for user.
+            passwd --delete user
+            ## /etc/shadow:
+            #user::19932:0:99999:7:::
 
             ## security-misc: Console Lockdown.
             ## Make sure this group exists. Might not exist if security-misc is not (yet) installed.
