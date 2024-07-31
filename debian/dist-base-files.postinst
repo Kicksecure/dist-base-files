@@ -18,7 +18,7 @@ true "
 check_linux_account_specific() {
    if command -v qubesdb-read >/dev/null 2>&1 ; then
       ## Leave user 'user' creation to Qubes.
-      true "INFO: Not creating user '$user_to_be_created' since Qubes detected."
+      true "INFO: Skipping because Qubes detected."
       return 1
    fi
 
