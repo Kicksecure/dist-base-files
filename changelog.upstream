@@ -1,3 +1,47 @@
+commit de44098894f94ae440c8632777c9badc5e41be36
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Jul 31 08:48:43 2024 -0400
+
+    fix
+
+commit e204a61286a27d4c4add804e54205622e38d23e5
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Jul 31 08:44:54 2024 -0400
+
+    output
+
+commit c2c702e800e7dc8cc4c1ba905305e2f3395a12b5
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Jul 31 08:41:17 2024 -0400
+
+    only perform the following actions when run by derivative-maker:
+    
+    - creation of user `user`
+    - set empty password (passwordless) for user `user`
+    - adding default groups to user `user`
+    - enable console-lockdown
+    - locking of root account
+    
+    fix: skip creation of user `user` when using distribution morphing
+
+commit e3a50f306a4456a2daf5b1b0487d088c1daa76cb
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Jul 31 08:38:25 2024 -0400
+
+    fix
+
+commit 02190b8b05d1892bf28c18f9ce6061726bd7ec1c
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Jul 31 08:36:23 2024 -0400
+
+    refactoring
+
+commit f47bdff554c7e475a1e140ed8470c855d77ac0ce
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Jul 28 23:19:14 2024 +0000
+
+    bumped changelog version
+
 commit a50d4f49acd9cfe5b62cfdd86855649f6d44bc82
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sun Jul 28 19:14:00 2024 -0400
