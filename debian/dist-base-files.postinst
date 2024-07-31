@@ -16,12 +16,6 @@ true "
 "
 
 check_linux_account_specific() {
-   ## Qubes-Whonix build process: user "user" already exists.
-   if id "$user_to_be_created" &>/dev/null ; then
-      true "INFO: User '$user_to_be_created' already exists, skip creation."
-      return 1
-   fi
-
    if command -v qubesdb-read >/dev/null 2>&1 ; then
       ## Leave user 'user' creation to Qubes.
       true "INFO: Not creating user '$user_to_be_created' since Qubes detected."
@@ -41,6 +35,12 @@ add_linux_user_account_named_user() {
    if ! check_linux_account_specific ; then
       true "INFO: Skipping ${FUNCNAME}."
       return 0
+   fi
+
+   ## Qubes-Whonix build process: user "user" already exists.
+   if id "$user_to_be_created" &>/dev/null ; then
+      true "INFO: User '$user_to_be_created' already exists, skip creation."
+      return 1
    fi
 
    ## adduser and addgroup
