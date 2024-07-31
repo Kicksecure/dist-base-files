@@ -15,39 +15,33 @@ true "
 #####################################################################
 "
 
+check_linux_account_specific() {
+   ## Qubes-Whonix build process: user "user" already exists.
+   if id "$user_to_be_created" &>/dev/null ; then
+      true "INFO: User '$user_to_be_created' already exists, skip creation."
+      return 1
+   fi
+
+   if command -v qubesdb-read >/dev/null 2>&1 ; then
+      ## Leave user 'user' creation to Qubes.
+      true "INFO: Not creating user '$user_to_be_created' since Qubes detected."
+      return 1
+   fi
+
+   true "INFO: Continuing..."
+   return 0
+}
+
 add_linux_user_account_named_user() {
    if [ -f "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_1" ]; then
       return 0
    fi
    mkdir --parents "/var/lib/dist-base-files/do_once"
 
-   ## No longer in use.
-   ##
-   ## setting password to changeme
-   ##
-   ## How this password was created:
-   ## sudo apt-get install whois
-   ## mkpasswd
-   ## changeme
-   ## Resulted in: aTayYxVyw5kDo
-   #password="aTayYxVyw5kDo"
-
-   ## Qubes-Whonix build process: user "user" already exists.
-   if id "$user_to_be_created" &>/dev/null ; then
-      true "INFO: User '$user_to_be_created' already exists, skip creation."
+   if ! check_linux_account_specific ; then
+      true "INFO: Skipping ${FUNCNAME}."
       return 0
    fi
-
-   if command -v qubesdb-read >/dev/null 2>&1 ; then
-      ## Leave user 'user' creation to Qubes.
-      true "INFO: Not creating user '$user_to_be_created' since Qubes detected."
-      return 0
-   fi
-
-   ## No longer enable pam mkhomedir here.
-   ## This is done by the security-misc package. File:
-   ## /usr/share/pam-configs/mkhomedir-security-misc
-   ## pam-auth-update --enable mkhomedir
 
    ## adduser and addgroup
    ##
@@ -76,6 +70,31 @@ add_linux_user_account_named_user() {
    ## (for example using SSH keys or through PAM) for reasons that are beyond adduser's scope.
    adduser --no-create-home --disabled-password --comment "" "$user_to_be_created"
 
+   touch "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_1"
+}
+
+password_empty_for_user_account_named_user() {
+   if [ -f "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_1" ]; then
+      return 0
+   fi
+   mkdir --parents "/var/lib/dist-base-files/do_once"
+
+   if ! check_linux_account_specific ; then
+      true "INFO: Skipping ${FUNCNAME}."
+      return 0
+   fi
+
+   ## No longer in use.
+   ##
+   ## setting password to changeme
+   ##
+   ## How this password was created:
+   ## sudo apt-get install whois
+   ## mkpasswd
+   ## changeme
+   ## Resulted in: aTayYxVyw5kDo
+   #password="aTayYxVyw5kDo"
+
    ## No longer in use.
    ## Use --encrypted to be able to use a static, precalculated hash for reproducible builds.
    #echo "${user_to_be_created}:${password}" | chpasswd --encrypted
@@ -88,6 +107,20 @@ add_linux_user_account_named_user() {
    passwd --delete user
    ## /etc/shadow:
    #user::19932:0:99999:7:::
+
+   touch "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_1"
+}
+
+add_groups_to_linux_user_account_named_user() {
+   if [ -f "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_1" ]; then
+      return 0
+   fi
+   mkdir --parents "/var/lib/dist-base-files/do_once"
+
+   if ! check_linux_account_specific ; then
+      true "INFO: Skipping ${FUNCNAME}."
+      return 0
+   fi
 
    ## security-misc: Console Lockdown.
    ## Make sure this group exists. Might not exist if security-misc is not (yet) installed.
@@ -110,11 +143,44 @@ add_linux_user_account_named_user() {
    adduser "$user_to_be_created" console
    adduser "$user_to_be_created" ssh
 
+   touch "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_1"
+}
+
+console_lockdown() {
+   if [ -f "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_1" ]; then
+      return 0
+   fi
+   mkdir --parents "/var/lib/dist-base-files/do_once"
+
+   if ! check_linux_account_specific ; then
+      true "INFO: Skipping ${FUNCNAME}."
+      return 0
+   fi
+
+   ## No longer enable pam mkhomedir here.
+   ## This is done by the security-misc package. File:
+   ## /usr/share/pam-configs/mkhomedir-security-misc
+   ## pam-auth-update --enable mkhomedir
+
    ## By package security-misc.
    pam-auth-update --enable console-lockdown-security-misc
 
    ## In Qubes and for existing installations Console Lockdown is
    ## is handled by legacy-dist package.
+
+   touch "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_1"
+}
+
+lock_root_account() {
+   if [ -f "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_1" ]; then
+      return 0
+   fi
+   mkdir --parents "/var/lib/dist-base-files/do_once"
+
+   if ! check_linux_account_specific ; then
+      true "INFO: Skipping ${FUNCNAME}."
+      return 0
+   fi
 
    ## https://www.whonix.org/wiki/Root
    ## https://www.whonix.org/wiki/Dev/Strong_Linux_User_Account_Isolation
@@ -232,6 +298,10 @@ case "$1" in
       fi
 
       add_linux_user_account_named_user
+      password_empty_for_user_account_named_user
+      add_groups_to_linux_user_account_named_user
+      console_lockdown
+      lock_root_account
 
       zsh_yes_or_no
       true "zsh_enable: $zsh_enable"
