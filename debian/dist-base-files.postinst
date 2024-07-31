@@ -22,6 +22,11 @@ check_linux_account_specific() {
       return 1
    fi
 
+   if [ ! "$derivative_maker" = "true" ]; then
+      true "INFO: Skipping since not running under derivative-maker (during the build process)."
+      return 1
+   fi
+
    true "INFO: Continuing..."
    return 0
 }
