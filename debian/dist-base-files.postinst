@@ -45,7 +45,7 @@ add_linux_user_account_named_user() {
    ## Qubes-Whonix build process: user "user" already exists.
    if id "$user_to_be_created" &>/dev/null ; then
       true "INFO: User '$user_to_be_created' already exists, skip creation."
-      return 1
+      return 0
    fi
 
    ## adduser and addgroup
