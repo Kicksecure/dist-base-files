@@ -22,8 +22,8 @@ check_linux_account_specific() {
       return 1
    fi
 
-   if [ ! "$derivative_maker" = "true" ]; then
-      true "INFO: Skipping since not running under derivative-maker (during the build process)."
+   if [ ! "$derivative_maker" = "true" ] && ! [ -f '/var/lib/dist-base-files/live_build' ]; then
+      true "INFO: Skipping since not running under derivative-maker and /var/lib/dist-base-files/live_build does not exist (during the build process)."
       return 1
    fi
 
@@ -74,6 +74,7 @@ add_linux_user_account_named_user() {
    ## Do not run passwd(1) to set a password. In most situations, logins are still possible though
    ## (for example using SSH keys or through PAM) for reasons that are beyond adduser's scope.
    adduser --no-create-home --disabled-password --comment "" "$user_to_be_created"
+   true "INFO: User created."
 
    touch "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_1"
 }
