@@ -1,3 +1,22 @@
+commit 85128092564c50eb9216cd6970b96c2b82c0a55e
+Merge: 51a23a3 101dc6b
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Nov 10 07:28:29 2024 -0500
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/live-build'
+
+commit 101dc6be87149346212c066454f8653dd280e3ee
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Fri Oct 25 12:20:07 2024 -0500
+
+    Allow using a drop file to inform dist-base-files of derivative-maker usage
+
+commit 51a23a370d466b1e8caa365c9a38ccfa70425faf
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Sep 2 21:21:02 2024 +0000
+
+    bumped changelog version
+
 commit 29214212b6a99e12aed80ffb21f1dd535230f09b
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Sep 2 17:12:43 2024 -0400
