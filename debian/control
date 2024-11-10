@@ -5,7 +5,7 @@ Source: dist-base-files
 Section: misc
 Priority: optional
 Maintainer: Patrick Schleizer <adrelanos@kicksecure.com>
-Build-Depends: debhelper (>= 13.11.6), debhelper-compat (= 13), config-package-dev
+Build-Depends: debhelper (>= 13.11.6), debhelper-compat (= 13), config-package-dev, fonts-inter, fonts-terminus-otb, grub-common
 Homepage: https://github.com/Kicksecure/dist-base-files
 Vcs-Browser: https://github.com/Kicksecure/dist-base-files
 Vcs-Git: https://github.com/Kicksecure/dist-base-files.git
@@ -42,5 +42,7 @@ Description: base files for distributions
  Default shell: Sets default shell for user `user` to `zsh`.
  (Unless file `/etc/no-shell-change` exists.)
  `debian/dist-base-files.postinst`
+ .
+ Provides common files for derivative GRUB themes.
  .
  This package gets installed by default in both, Kicksecure and Whonix.
