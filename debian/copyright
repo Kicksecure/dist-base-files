@@ -11,7 +11,8 @@ Comment:
  Generated at package build time from the original Terminus Font
  using grub-mkfont. Renamed to Terminus-grub.
 
-Files: boot/grub/themes/dist-common/inter-grub_regular_*
+Files: boot/grub/themes/dist-common/inter-grub_regular_17.pf2
+ boot/grub/themes/dist-common/inter-grub_regular_20.pf2
 Copyright: 2016 - 2022 The Inter Project Authors <rasmus@notion.se>
 License: OFL-1.1
 Comment:
