@@ -1,3 +1,40 @@
+commit cfb7d6562cf9e4a009c4df900a067267981381a5
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Nov 11 09:55:37 2024 -0500
+
+    comment
+
+commit c4666302cd371bee9a75ab06c02150cc86708b0f
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Nov 11 09:55:19 2024 -0500
+
+    lintian
+
+commit 12c2589d98074f4349901030836bcad902931334
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Nov 11 09:53:12 2024 -0500
+
+    copyright wildcard does not match for some reason
+
+commit d22ad09c7d5d1a133e9019bfa16fad548d026dbe
+Merge: 0458f62 30759b8
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Nov 11 09:30:32 2024 -0500
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/grub-theme'
+
+commit 30759b8a1688af37e1cc39e93624a1ae5dea8396
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Sun Nov 10 14:49:42 2024 -0600
+
+    Add common GRUB theme elements
+
+commit 0458f62acab4a6817a53829ba9f176ddb57a7018
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Nov 10 12:37:07 2024 +0000
+
+    bumped changelog version
+
 commit 85128092564c50eb9216cd6970b96c2b82c0a55e
 Merge: 51a23a3 101dc6b
 Author: Patrick Schleizer <adrelanos@whonix.org>
