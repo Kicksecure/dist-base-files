@@ -1,3 +1,15 @@
+commit e4ba4e8ffc43f5ec3326c742bf86d56c34f23d79
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Dec 12 14:43:25 2024 -0500
+
+    set default shell to `zsh` also for `root` user
+
+commit fa6eda89b25d5ea5804b81283cad930e711cbaec
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Nov 11 14:55:47 2024 +0000
+
+    bumped changelog version
+
 commit cfb7d6562cf9e4a009c4df900a067267981381a5
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Nov 11 09:55:37 2024 -0500
