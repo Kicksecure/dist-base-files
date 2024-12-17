@@ -109,8 +109,8 @@ password_empty_for_user_account_named_user() {
    ## /etc/shadow:
    #user:!:19932:0:99999:7:::
 
-   ## Set empty password for user.
-   passwd --delete user
+   ## Set empty password for user "user".
+   passwd --delete "$user_to_be_created"
    ## /etc/shadow:
    #user::19932:0:99999:7:::
 
@@ -142,7 +142,10 @@ add_groups_to_linux_user_account_named_user() {
    adduser "$user_to_be_created" dip
    adduser "$user_to_be_created" plugdev
 
-   ## Required by security-misc preinst.
+   ## TODO: No longer add user to group "sudo" by default.
+   ## https://www.kicksecure.com/wiki/Dev/user-admin-split
+   ##
+   ## Required by 'debian/security-misc.preinst' function 'sudo_users_check'.
    adduser "$user_to_be_created" sudo
 
    ## security-misc: Console Lockdown.
