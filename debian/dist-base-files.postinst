@@ -138,10 +138,10 @@ add_groups_to_linux_user_account_named_user() {
    #usermod --append --groups cdrom,audio,dip,sudo,plugdev "$user_to_be_created"
    ##
    ## Prefer adduser over usermod.
-   adduser "$user_to_be_created" cdrom
-   adduser "$user_to_be_created" audio
-   adduser "$user_to_be_created" dip
-   adduser "$user_to_be_created" plugdev
+   #adduser "$user_to_be_created" cdrom
+   #adduser "$user_to_be_created" audio
+   #adduser "$user_to_be_created" dip
+   #adduser "$user_to_be_created" plugdev
 
    ## TODO: No longer add user to group "sudo" by default.
    ## https://www.kicksecure.com/wiki/Dev/user-admin-split
