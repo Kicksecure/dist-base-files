@@ -22,7 +22,7 @@ check_linux_account_specific() {
       return 1
    fi
 
-   ## Don't create a new user during distro morphing, only do it when building an ISO or VM image.
+   ## Don't create a new user during distribution morphing, only do it when building an ISO or VM image.
    if [ ! "$derivative_maker" = "true" ] && ! [ -f '/var/lib/dist-base-files/live_build' ]; then
       true "INFO: Skipping since not running under derivative-maker and /var/lib/dist-base-files/live_build does not exist (during the build process)."
       return 1
