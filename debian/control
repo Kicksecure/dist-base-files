@@ -26,6 +26,11 @@ Conflicts: anon-base-files,
  ${diverted-files}
 Replaces: anon-base-files
 Description: base files for distributions
+ Grub config for more organized boot menu.
+ "Normal" boot options are on top.
+ "Advanced" boot options (for older kernel versions) have been moved to the
+ bottom.
+ .
  Creates user `user` with empty password (passwordless) (not in Qubes).
  That is if user `user` is not existing yet.
  And if it does create user `user` it also locks the root account.
