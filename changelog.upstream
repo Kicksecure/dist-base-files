@@ -1,3 +1,40 @@
+commit 285ea80abfce227e53eaf8c297f634b6798cc233
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Dec 30 05:08:54 2024 -0500
+
+    copyright
+
+commit 2ac7df2cce65f54d323d79ebc019c19b29c0019e
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Dec 30 05:04:06 2024 -0500
+
+    cleanup
+
+commit 0c4768152ba4fddaf2557b40f43d963b2a5619be
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Dec 30 05:02:56 2024 -0500
+
+    description
+
+commit a8d9d38aff2747056f8433df6546ef66e1ecac8f
+Merge: 484e2be fecc372
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Dec 30 04:51:05 2024 -0500
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/grub-cfg'
+
+commit fecc372a01dbe5cfbeee7eaa441fb7d986eefa25
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Mon Dec 30 02:07:44 2024 -0600
+
+    Add grub config for more organized boot menu, fix copyright file
+
+commit 484e2be56f12b299e6ca2562eab95e1c6224f56c
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Dec 30 06:36:13 2024 +0000
+
+    bumped changelog version
+
 commit d4da58f1fe2417589a7cdc51ad52a3125d89ea48
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Dec 30 01:35:41 2024 -0500
