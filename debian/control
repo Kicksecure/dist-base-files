@@ -14,8 +14,11 @@ Rules-Requires-Root: no
 
 Package: dist-base-files
 Architecture: all
+## debian/dist-base-files.postinst uses 'chsh --shell /usr/bin/zsh'.
+## chsh requires the shell already available.
+Pre-Depends: zsh
 Depends: sudo, dpkg-dev, helper-scripts, adduser,
- zsh, zsh-syntax-highlighting, zsh-autosuggestions,
+ zsh-syntax-highlighting, zsh-autosuggestions,
  ${misc:Depends}
 Provides: anon-base-files,
  ${diverted-files}
