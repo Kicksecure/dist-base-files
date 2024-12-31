@@ -143,13 +143,10 @@ add_groups_to_linux_user_account_named_user() {
    #adduser "$user_to_be_created" dip
    #adduser "$user_to_be_created" plugdev
 
-   ## TODO: No longer add user to group "sudo" by default.
-   ## https://www.kicksecure.com/wiki/Dev/user-admin-split
-   ## NOTE: Would be cleaner, but actually not important, because limited users
-   ##       such as user "user" will not be able to access 'sudo' anymore
-   ##       anyhow because 'sudo' will be no longer executable by limited users.
-   ##       This also applies to other Priviledge Escalation Tools such as 'pkexec'.
-   ##       This simplifies migration, testing of the user-admin-split package.
+   ## This is OK even when using user-sysmaint-split, because limited accounts
+   ## can no longer execute priviledge escalation tools when user-sysmaint-split
+   ## is installed. See also:
+   ## https://www.kicksecure.com/wiki/Dev/user-sysmaint-split#No_Access_to_Privilege_Escalation_Tools_for_Limited_Accounts
    ##
    ## Required by 'debian/security-misc.preinst' function 'sudo_users_check'.
    adduser "$user_to_be_created" sudo
