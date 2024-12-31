@@ -282,7 +282,12 @@ user_shell_to_zsh() {
       echo "$0: INFO: Setting shell for user '$user_item' to zsh."
       ## Use timeout to prevent unexplained bug password prompt caused by chsh.
       if ! timeout --kill-after 5 5 chsh --shell /usr/bin/zsh "$user_item" ; then
-         echo "$0: ERROR: Command 'chsh --shell /usr/bin/zsh $user_item' failed. This is only a minor issue."
+         if [ ! "$derivative_maker" = "true" ] && ! [ -f '/var/lib/dist-base-files/live_build' ]; then
+            echo "$0: ERROR: Command 'chsh --shell /usr/bin/zsh $user_item' failed during the build process."
+            exit 1
+         else
+            echo "$0: ERROR: Command 'chsh --shell /usr/bin/zsh $user_item' failed. This is only a minor issue."
+         fi
       fi
       echo "$0: INFO: For more information, see: https://www.kicksecure.com/shell#default"
 
