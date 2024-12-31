@@ -329,10 +329,6 @@ case "$1" in
       console_lockdown
       lock_root_account
 
-      ## Debugging.
-      ## TODO: disable
-      set -x
-
       zsh_yes_or_no
       true "zsh_enable: $zsh_enable"
 
