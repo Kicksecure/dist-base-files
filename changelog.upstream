@@ -1,3 +1,27 @@
+commit dd16c5ee97c1e2b2a11572b0c34cb20ef4ff7ad3
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Dec 31 02:13:27 2024 -0500
+
+    copyright
+
+commit c122c48399fca67a65cb4dad07d8b1f374af049e
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Dec 31 02:13:05 2024 -0500
+
+    comment
+
+commit 46254d802b331cc7b3193e9b4b066898ba5f26a2
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Dec 31 02:12:20 2024 -0500
+
+    fix lintian warnings
+
+commit a88d640767902dfb1cb9b7a0f3685cf42456a178
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Dec 30 12:24:27 2024 +0000
+
+    bumped changelog version
+
 commit 285ea80abfce227e53eaf8c297f634b6798cc233
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Dec 30 05:08:54 2024 -0500
