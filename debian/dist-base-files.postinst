@@ -259,6 +259,8 @@ user_shell_to_zsh() {
    local user_list user_list
    user_list="$user_to_be_created root"
 
+   echo "$0: INFO: For more information, see: https://www.kicksecure.com/shell#default"
+
    for user_item in $user_list ; do
       if ! id "$user_item" &>/dev/null ; then
          echo "$0: INFO: user '$user_item' does not exist. Not setting shell to zsh."
@@ -286,7 +288,6 @@ user_shell_to_zsh() {
             echo "$0: ERROR: Command 'chsh --shell /usr/bin/zsh $user_item' failed. This is only a minor issue."
          fi
       fi
-      echo "$0: INFO: For more information, see: https://www.kicksecure.com/shell#default"
 
       touch "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_3"
    done
