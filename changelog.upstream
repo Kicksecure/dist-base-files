@@ -1,3 +1,45 @@
+commit 101414af5f8024f2e120f0389089aece2ef287d5
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Dec 31 09:08:31 2024 -0500
+
+    fail closed if changing shell to zsh fails during build process
+
+commit 327019b2eb47f581856228d1e8a35713c03f50ef
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Dec 31 09:04:19 2024 -0500
+
+    debugging
+
+commit b4a5903732a65638da21b2b4b9ec6162bbfaa536
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Dec 31 09:03:34 2024 -0500
+
+    debugging
+
+commit fef0b0d1eb3682007ffa7db74b00fc138d569e29
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Dec 31 09:02:07 2024 -0500
+
+    debugging
+
+commit 0c1ae9bdff54360b30056b81bfbb9e8a4a5a7d1b
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Dec 31 09:01:33 2024 -0500
+
+    shuffle
+
+commit 2896693ce048dcfd58f0b8ea552cd2d8f23d8253
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Dec 31 08:59:54 2024 -0500
+
+    Use timeout to prevent unexplained bug password prompt caused by chsh.
+
+commit bd27bc99dea8c2f561c52381f982ce683ad2bb1f
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Dec 31 07:14:01 2024 +0000
+
+    bumped changelog version
+
 commit dd16c5ee97c1e2b2a11572b0c34cb20ef4ff7ad3
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Tue Dec 31 02:13:27 2024 -0500
