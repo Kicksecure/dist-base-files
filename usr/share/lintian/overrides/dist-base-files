@@ -1,1 +1,8 @@
 package-contains-documentation-outside-usr-share-doc [usr/share/distro-info/kicksecure.csv.readme]
+
+## It's a inline grub snippet. Not part of she sh script.
+## Fork of /etc/grub.d/10_linux with minimal modifications.
+dist-base-files: bash-term-in-posix-shell 'function gfxmode' [etc/grub.d/10_00_linux_dist:245]
+
+## config-package-dev creates that folder.
+dist-base-files: package-contains-empty-directory [usr/share/dist-base-files/]
