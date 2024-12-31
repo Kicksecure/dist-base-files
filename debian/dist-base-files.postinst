@@ -244,6 +244,8 @@ zsh_yes_or_no() {
       return 0
    fi
 
+   true "$0: INFO: /usr/bin/zsh is executable."
+
    zsh_enable=yes
 }
 
