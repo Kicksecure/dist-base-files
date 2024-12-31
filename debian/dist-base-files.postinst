@@ -258,7 +258,7 @@ user_shell_to_zsh() {
    fi
 
    local user_list user_list
-   user_list="root $user_to_be_created"
+   user_list="$user_to_be_created root"
 
    for user_item in $user_list ; do
       if ! id "$user_item" &>/dev/null ; then
