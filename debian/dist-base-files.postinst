@@ -253,6 +253,10 @@ user_shell_to_zsh() {
    fi
    mkdir --parents "/var/lib/dist-base-files/do_once"
 
+   ## Debugging.
+   ## TODO: disable
+   set -x
+
    if [ ! "$zsh_enable" = "yes" ]; then
       return 0
    fi
