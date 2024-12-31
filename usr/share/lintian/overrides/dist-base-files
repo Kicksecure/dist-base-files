@@ -1,3 +1,4 @@
+## Not documentation.
 package-contains-documentation-outside-usr-share-doc [usr/share/distro-info/kicksecure.csv.readme]
 
 ## It's a inline grub snippet. Not part of she sh script.
