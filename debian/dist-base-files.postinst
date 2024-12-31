@@ -319,7 +319,7 @@ case "$1" in
             ## Debugging.
             touch "$build_version_file"
             ## Logging.
-            echo "$dist_build_version" | tee "$build_version_file" >/dev/null
+            echo "$dist_build_version" | sponge -- "$build_version_file"
             ## Debugging.
             cat "$build_version_file"
          fi

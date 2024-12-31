@@ -17,7 +17,7 @@ Architecture: all
 ## debian/dist-base-files.postinst uses 'chsh --shell /usr/bin/zsh'.
 ## chsh requires the shell already available.
 Pre-Depends: zsh
-Depends: sudo, dpkg-dev, helper-scripts, adduser,
+Depends: sudo, dpkg-dev, helper-scripts, adduser, moreutils,
  zsh-syntax-highlighting, zsh-autosuggestions,
  ${misc:Depends}
 Provides: anon-base-files,
