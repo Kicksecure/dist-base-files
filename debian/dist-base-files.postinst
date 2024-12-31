@@ -278,7 +278,8 @@ user_shell_to_zsh() {
       fi
 
       echo "$0: INFO: Setting shell for user '$user_item' to zsh."
-      if ! chsh --shell /usr/bin/zsh "$user_item" ; then
+      ## Use timeout to prevent unexplained bug password prompt caused by chsh.
+      if ! timeout --kill-after 5 5 chsh --shell /usr/bin/zsh "$user_item" ; then
          echo "$0: ERROR: Command 'chsh --shell /usr/bin/zsh $user_item' failed. This is only a minor issue."
       fi
       echo "$0: INFO: For more information, see: https://www.kicksecure.com/shell#default"
