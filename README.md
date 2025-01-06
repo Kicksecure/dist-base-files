@@ -1,12 +1,19 @@
 # base files for distributions #
 
-Creates user `user` with password `changeme` (not in Qubes).
+Grub config for more organized boot menu.
+"Normal" boot options are on top.
+"Advanced" boot options (for older kernel versions) have been moved to the
+bottom.
+
+Creates user `user` with empty password (passwordless) (not in Qubes).
 That is if user `user` is not existing yet.
 And if it does create user `user` it also locks the root account.
 Therefore root account locking effectively only happens in new
 builds not having user `user` already created.
 
-Adds user `user` to groups `cdrom`, `audio`, `dip`, `sudo`, `plugdev`.
+Creates system groups:
+* console
+* ssh
 
 Ships a systemd unit file dist-skel-first-boot.service
 which runs `/usr/libexec/helper-scripts/first-boot-skel`
@@ -19,6 +26,8 @@ Creates version file `/var/lib/dist-base-files/build_version`.
 Default shell: Sets default shell for user `user` to `zsh`.
 (Unless file `/etc/no-shell-change` exists.)
 `debian/dist-base-files.postinst`
+
+Provides common files for derivative GRUB themes.
 
 This package gets installed by default in both, Kicksecure and Whonix.
 
