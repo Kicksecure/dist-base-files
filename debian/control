@@ -37,6 +37,10 @@ Description: base files for distributions
  Therefore root account locking effectively only happens in new
  builds not having user `user` already created.
  .
+ Creates system groups:
+ * console
+ * ssh
+ .
  Ships a systemd unit file dist-skel-first-boot.service
  which runs `/usr/libexec/helper-scripts/first-boot-skel`
  (part of helper-scripts) package.
