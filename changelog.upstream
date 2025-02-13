@@ -1,3 +1,22 @@
+commit 86fc264143a545c7d88593201ce2dc079c71a804
+Merge: ad644c1 b181294
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Feb 13 17:09:06 2025 -0500
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/sysmaint-privleap'
+
+commit b1812947db0ea679978865f7f4c37849636928c4
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Wed Feb 12 01:04:22 2025 -0600
+
+    Allow sysmaint user to use privleap
+
+commit ad644c1ba5095e394e05f3352af0e49d8b6864cd
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Feb 10 11:18:33 2025 +0000
+
+    bumped changelog version
+
 commit 6208f0af2c40b035115b3df21d9759a4aa05bcb7
 Merge: 76d1439 588770e
 Author: Patrick Schleizer <adrelanos@whonix.org>
