@@ -1,3 +1,19 @@
+commit 748a2d03c76b12eed0cc4fc6d4855e1c66c7e1b1
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Mar 19 06:31:05 2025 -0400
+
+    add `/usr/share/derivative-base-files/20_dist-base-files.cfg`
+    
+    (`/etc/default/grub.d/20_dist-base-files.cfg`)
+    
+    https://www.kicksecure.com/wiki/Dev/boot#/etc/default/grub.d/20_dist-base-files.cfg
+
+commit 8f3a87c2ee9098956e877e01c84f4dda0848d589
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Mar 15 10:50:42 2025 +0000
+
+    bumped changelog version
+
 commit c2e59c9c18f10f6e4db0633d33b6fcece0f3a673
 Merge: 1a96700 6b13851
 Author: Patrick Schleizer <adrelanos@whonix.org>
