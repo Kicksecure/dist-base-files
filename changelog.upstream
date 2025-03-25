@@ -1,3 +1,22 @@
+commit 6f6f4b90a9be3ac272e5892060cf62fe82bdf5d5
+Merge: 69f8dd4 15d2f55
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Mar 25 09:10:14 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/qubes-sysmaint'
+
+commit 15d2f55750e56c0b9e1ac2872a088f93ab3e6a46
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Thu Mar 20 22:59:56 2025 -0500
+
+    Add PERSISTENT mode USER boot mode for Qubes OS
+
+commit 69f8dd4d73d938381bc59bb109c1970fcddef9c8
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Mar 19 10:34:29 2025 +0000
+
+    bumped changelog version
+
 commit 748a2d03c76b12eed0cc4fc6d4855e1c66c7e1b1
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed Mar 19 06:31:05 2025 -0400
