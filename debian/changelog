@@ -1,3 +1,9 @@
+dist-base-files (3:12.9-1) unstable; urgency=medium
+
+  * New upstream version (local package).
+
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 26 Mar 2025 09:15:12 +0000
+
 dist-base-files (3:12.8-1) unstable; urgency=medium
 
   * New upstream version (local package).

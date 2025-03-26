@@ -1,9 +1,60 @@
+commit b9be2ed3c6d4679e4ab949c9e1345728be7e2eb3
+Merge: 2b7ccb2 772bee6
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Mar 26 05:14:10 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/fix-grub'
+
+commit 2b7ccb21016dab32d6668f6ba0930137c3111382
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Mar 26 05:08:25 2025 -0400
+
+    future-proof for later Qubes versions
+
+commit f740f3d2dfd34c189325c753fe791d481b549d57
+Merge: a7645ff 252eb97
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Mar 26 05:07:11 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/qubes-sysmaint-fix'
+
+commit 772bee615b9de3637e0cb0cf78c5978ffb7817d0
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Tue Mar 25 17:41:55 2025 -0500
+
+    Nullify both GRUB_TERMINAL and GRUB_TERMINAL_OUTPUT on VM images
+
+commit f8975eb7adeb09859e6772d1436746a7a735ffb4
+Merge: 9d62e64 a7645ff
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Tue Mar 25 17:41:12 2025 -0500
+
+    Merge branch 'master' into arraybolt3/fix-grub
+
+commit 252eb9731720e22941a3c6cb19275962f9893a30
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Tue Mar 25 17:36:36 2025 -0500
+
+    Only request boot mode features on Qubes R4.3
+
+commit a7645ffa3ddd45fca054bf24729e6778e8f9f7ae
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Mar 25 13:31:51 2025 +0000
+
+    bumped changelog version
+
 commit 6f6f4b90a9be3ac272e5892060cf62fe82bdf5d5
 Merge: 69f8dd4 15d2f55
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Tue Mar 25 09:10:14 2025 -0400
 
     Merge remote-tracking branch 'ArrayBolt3/arraybolt3/qubes-sysmaint'
+
+commit 9d62e648c392b85643792111e13a006501ade23b
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Mon Mar 24 19:27:54 2025 -0500
+
+    Fix mistyped variable name in VM GRUB configuration
 
 commit 15d2f55750e56c0b9e1ac2872a088f93ab3e6a46
 Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
