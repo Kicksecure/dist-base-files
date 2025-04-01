@@ -1,3 +1,19 @@
+commit e14ebfd5e3995aa8f2bd6551d5756865e3110dde
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Apr 1 10:12:39 2025 -0400
+
+    no longer inject `GNU/Linux` from grub boot menu
+    
+    due to lack for space for multiple boot modes
+    
+    https://forums.whonix.org/t/remove-gnu-linux-string-from-boot-grub-menu/8623
+
+commit 4ba41561fc632a1fccd98db32b55efd7129f0df2
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Mar 26 09:15:12 2025 +0000
+
+    bumped changelog version
+
 commit b9be2ed3c6d4679e4ab949c9e1345728be7e2eb3
 Merge: 2b7ccb2 772bee6
 Author: Patrick Schleizer <adrelanos@whonix.org>
