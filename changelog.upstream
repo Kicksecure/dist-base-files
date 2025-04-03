@@ -1,3 +1,22 @@
+commit 12fc5732e7300aeb7647d36fbba38f354809eb1c
+Merge: aec9c4b 9d17872
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Apr 3 12:25:28 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/expected-disallowed-users'
+
+commit 9d17872c3597ffd9d609a76ecfa822f059dbdf54
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Wed Apr 2 20:10:49 2025 -0500
+
+    Add display manager users to expected disallowed users in privleap config
+
+commit aec9c4b14ab2b3a16c1a7d6530c8285ec2fec6ec
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Apr 1 14:14:22 2025 +0000
+
+    bumped changelog version
+
 commit e14ebfd5e3995aa8f2bd6551d5756865e3110dde
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Tue Apr 1 10:12:39 2025 -0400
