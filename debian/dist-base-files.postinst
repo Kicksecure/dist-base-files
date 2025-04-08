@@ -162,7 +162,7 @@ user_shell_to_zsh() {
    linux_user_account_shell_to_zsh
    USER_CREATE_USERNAME='root'
    linux_user_account_shell_to_zsh
-   
+
    touch "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_3"
 }
 
