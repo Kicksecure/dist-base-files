@@ -9,7 +9,7 @@
 qubes_version="$(cat /usr/share/qubes/marker-vm | grep -v '^#')"
 if printf "%s\n" "${qubes_version}" | grep -q -e '^4.3' -e '^4.4' -e '^4.5' -e '^4.6' ; then
    qvm-features-request boot-mode.kernelopts.user=''
-   qvm-features-request boot-mode.name.user='PERSISTENT mode USER'
+   qvm-features-request boot-mode.name.user='PERSISTENT Mode - USER Session'
    qvm-features-request boot-mode.active='user'
    qvm-features-request boot-mode.appvm-default='user'
 fi
