@@ -1,3 +1,22 @@
+commit f9316d35c8d040f7b1d9721c4cc5e1b0f20fa635
+Merge: 09ab846 107be6a
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Apr 15 16:48:50 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/repart'
+
+commit 107be6ac313c1d173459e486d55b11502cfe5617
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Thu Apr 10 21:04:36 2025 -0500
+
+    Add systemd-repart support
+
+commit 09ab8467db4f4e3ca99f2a9fda75d2081c34c0a1
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Apr 10 11:36:55 2025 +0000
+
+    bumped changelog version
+
 commit 1b925194a7d8d6d90b94022edd84aa45388458a4
 Merge: d50b4cd 1cc518b
 Author: Patrick Schleizer <adrelanos@whonix.org>
