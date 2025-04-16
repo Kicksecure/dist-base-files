@@ -16,6 +16,22 @@ true "
 #####################################################################
 "
 
+enable_systemd_repart_maybe() {
+  ## systemd-repart is disabled for live-build builds, because it does not
+  ## work on ISO-based installations. This is because the Kicksecure ISO uses
+  #an MBR partition table on BIOS systems; the version of Calamares in
+  ## bookworm-backports is not capable enough to use GPT on BIOS systems as we
+  ## would like. systemd-repart requires a GPT partition table, it does not
+  ## work on MBR systems. Thus we do not install the systemd-repart
+  ## configuration files in this scenario.
+  if ! [ -f /var/lib/dist-base-files/build_version ] && ! [ -f '/var/lib/dist-base-files/live_build' ]; then
+    mkdir --parents -- /usr/lib/repart.d
+    cp --verbose -- /usr/share/derivative-base-files/repart-d_50-root.conf /usr/lib/repart.d/50-root.conf
+    mkdir --parents -- /etc/dracut.conf.d
+    cp --verbose -- /usr/share/derivative-base-files/dracut-conf-d_30-repart.conf /etc/dracut.conf.d/30-repart.conf
+  fi
+}
+
 check_linux_account_specific() {
    if command -v qubesdb-read >/dev/null 2>&1 ; then
       ## Leave user 'user' creation to Qubes.
@@ -173,6 +189,8 @@ account_to_be_locked="root"
 case "$1" in
    configure)
       true "INFO: Configuring $DPKG_MAINTSCRIPT_PACKAGE..."
+
+      enable_systemd_repart_maybe
 
       build_version_file="/var/lib/dist-base-files/build_version"
       if [ ! -f "$build_version_file" ]; then
