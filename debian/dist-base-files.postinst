@@ -17,19 +17,6 @@ true "
 "
 
 enable_systemd_repart_maybe() {
-   ## systemd-repart is disabled for live-build builds, because it does not
-   ## work on ISO-based installations. This is because the Kicksecure ISO uses
-   ## an MBR partition table on BIOS systems; the version of Calamares in
-   ## bookworm-backports is not capable enough to use GPT on BIOS systems as we
-   ## would like. systemd-repart requires a GPT partition table, it does not
-   ## work on MBR systems. Thus we do not install the systemd-repart
-   ## configuration files in this scenario.
-   ##
-   ## We also don't enable systemd-repart on Qubes OS templates, since Qubes
-   ## has its own partition resize tooling. Finally, we don't enable it on
-   ## already-installed systems of any kind, because it requires partition
-   ## table tweaks to actually work and we don't want to do those to people's
-   ## existing systems.
    if [ -f "$build_version_file" ]; then
       true "INFO: Skipping $FUNCNAME because build_version_file $build_version_file already exists."
       return 0
