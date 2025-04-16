@@ -18,7 +18,7 @@ true "
 
 enable_systemd_repart_maybe() {
    if ! [ -f "/var/lib/kicksecure/status-files/repart-version-1" ]; then
-      true "INFO: Skipping $FUNCNAME because file /var/lib/kicksecure/status-files/repart-version-1 does not exist."
+      true "INFO: Skipping $FUNCNAME because file /var/lib/kicksecure/status-files/repart-version-1 does not exist. (This is expected during the initial build process. A chroot-script will later run the /usr/libexec/derivative-base-files/repart-enable script.)"
       return 0
    fi
 
