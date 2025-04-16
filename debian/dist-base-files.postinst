@@ -17,25 +17,36 @@ true "
 "
 
 enable_systemd_repart_maybe() {
-  ## systemd-repart is disabled for live-build builds, because it does not
-  ## work on ISO-based installations. This is because the Kicksecure ISO uses
-  #an MBR partition table on BIOS systems; the version of Calamares in
-  ## bookworm-backports is not capable enough to use GPT on BIOS systems as we
-  ## would like. systemd-repart requires a GPT partition table, it does not
-  ## work on MBR systems. Thus we do not install the systemd-repart
-  ## configuration files in this scenario.
-  ##
-  ## We also don't enable systemd-repart on Qubes OS templates, since Qubes
-  ## has its own partition resize tooling. Finally, we don't enable it on
-  ## already-installed systems of any kind, because it requires partition
-  ## table tweaks to actually work and we don't want to do those to people's
-  ## existing systems.
-  if ! [ -f /var/lib/dist-base-files/build_version ] && ! [ -f '/var/lib/dist-base-files/live_build' ] && ! [ -f '/usr/share/qubes/marker-vm' ]; then
-    mkdir --parents -- /usr/lib/repart.d
-    cp --verbose -- /usr/share/derivative-base-files/repart-d_50-root.conf /usr/lib/repart.d/50-root.conf
-    mkdir --parents -- /etc/dracut.conf.d
-    cp --verbose -- /usr/share/derivative-base-files/dracut-conf-d_30-repart.conf /etc/dracut.conf.d/30-repart.conf
-  fi
+   ## systemd-repart is disabled for live-build builds, because it does not
+   ## work on ISO-based installations. This is because the Kicksecure ISO uses
+   #an MBR partition table on BIOS systems; the version of Calamares in
+   ## bookworm-backports is not capable enough to use GPT on BIOS systems as we
+   ## would like. systemd-repart requires a GPT partition table, it does not
+   ## work on MBR systems. Thus we do not install the systemd-repart
+   ## configuration files in this scenario.
+   ##
+   ## We also don't enable systemd-repart on Qubes OS templates, since Qubes
+   ## has its own partition resize tooling. Finally, we don't enable it on
+   ## already-installed systems of any kind, because it requires partition
+   ## table tweaks to actually work and we don't want to do those to people's
+   ## existing systems.
+   if [ -f "$build_version_file" ]; then
+      true "INFO: Skipping $FUNCNAME because build_version_file $build_version_file already exists."
+      return 0
+   fi
+   if [ -f '/var/lib/dist-base-files/live_build' ]; then
+      true "INFO: Skipping $FUNCNAME because file /var/lib/dist-base-files/live_build exists."
+      return 0
+   fi
+   if [ -f '/usr/share/qubes/marker-vm' ]; then
+      true "INFO: Skipping $FUNCNAME because Qubes has been detected."
+      return 0
+   fi
+
+   mkdir --parents -- /usr/lib/repart.d
+   cp --verbose -- /usr/share/derivative-base-files/repart-d_50-root.conf /usr/lib/repart.d/50-root.conf
+   mkdir --parents -- /etc/dracut.conf.d
+   cp --verbose -- /usr/share/derivative-base-files/dracut-conf-d_30-repart.conf /etc/dracut.conf.d/30-repart.conf
 }
 
 check_linux_account_specific() {
@@ -191,6 +202,7 @@ user_shell_to_zsh() {
 ## Define variables here to make this easier to software fork.
 user_to_be_created="user"
 account_to_be_locked="root"
+build_version_file="/var/lib/dist-base-files/build_version"
 
 case "$1" in
    configure)
@@ -198,7 +210,6 @@ case "$1" in
 
       enable_systemd_repart_maybe
 
-      build_version_file="/var/lib/dist-base-files/build_version"
       if [ ! -f "$build_version_file" ]; then
          ## Sanity test.
          if [ "$dist_build_version" = "" ]; then
