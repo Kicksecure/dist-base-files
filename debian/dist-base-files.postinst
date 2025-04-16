@@ -23,6 +23,7 @@ enable_systemd_repart_maybe() {
    fi
 
    ## NOTE: This is also done in initializer-dist chroot-scripts.
+   ## This is also done in dist-base-files postinst for the purpose of updates.
    /usr/libexec/derivative-base-files/repart-enable
    true "INFO: $FUNCNAME OK."
 }
