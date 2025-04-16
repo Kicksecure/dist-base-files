@@ -1,3 +1,70 @@
+commit ad96c3ebe8e65b36f8854ae489b25b13bf5fc03b
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Apr 16 18:25:28 2025 -0400
+
+    output
+
+commit e52c7325227c5fb532a7663bbced021f24053ebe
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Apr 16 18:24:16 2025 -0400
+
+    comment
+
+commit 995d86c67ca3cf305cdbe603115cce996e4040a3
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Apr 16 18:22:45 2025 -0400
+
+    refactoring
+
+commit 9172400cea49b493a56af1797da08afad2b33be1
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Apr 16 18:19:19 2025 -0400
+
+    fix
+
+commit 1f82196585d9604415c2565d4d6cfcc5f920426d
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Apr 16 18:16:45 2025 -0400
+
+    move comment to chroot-scripts
+
+commit 74e6faa3e731f1874fc1c297ceb7119bfdaa4e3e
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Apr 16 18:01:24 2025 -0400
+
+    comment
+
+commit 7c327de527799184938fda1bcfc1fa69d794a423
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Apr 16 17:59:59 2025 -0400
+
+    refactoring
+
+commit 9a5d6fdf729b7d64d1b4c98fe63d86e577bef209
+Merge: 8492725 237ee2b
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Apr 16 17:53:11 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/repart'
+
+commit 237ee2bc8562efe6346cea78992cce9f8dde1cc5
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Tue Apr 15 23:20:07 2025 -0500
+
+    Don't enable systemd-repart on existing systems, ISOs, or Qubes OS
+
+commit 7ed909ec68217d09ce23e78023465527e00bc4de
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Tue Apr 15 21:23:26 2025 -0500
+
+    Don't enable systemd-repart on existing systems
+
+commit 84927250a3860261989db99be56596e9b6e5834a
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Apr 15 20:58:24 2025 +0000
+
+    bumped changelog version
+
 commit f9316d35c8d040f7b1d9721c4cc5e1b0f20fa635
 Merge: 09ab846 107be6a
 Author: Patrick Schleizer <adrelanos@whonix.org>
