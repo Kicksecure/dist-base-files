@@ -17,16 +17,8 @@ true "
 "
 
 enable_systemd_repart_maybe() {
-   if [ -f "$build_version_file" ]; then
-      true "INFO: Skipping $FUNCNAME because build_version_file $build_version_file already exists."
-      return 0
-   fi
-   if [ -f '/var/lib/dist-base-files/live_build' ]; then
-      true "INFO: Skipping $FUNCNAME because file /var/lib/dist-base-files/live_build exists."
-      return 0
-   fi
-   if [ -f '/usr/share/qubes/marker-vm' ]; then
-      true "INFO: Skipping $FUNCNAME because Qubes has been detected."
+   if ! [ -f "/var/lib/kicksecure/status-files/repart-version-1" ]; then
+      true "INFO: Skipping $FUNCNAME because file /var/lib/kicksecure/status-files/repart-version-1 does not exist."
       return 0
    fi
 
