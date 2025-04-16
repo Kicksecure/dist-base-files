@@ -24,7 +24,13 @@ enable_systemd_repart_maybe() {
   ## would like. systemd-repart requires a GPT partition table, it does not
   ## work on MBR systems. Thus we do not install the systemd-repart
   ## configuration files in this scenario.
-  if ! [ -f /var/lib/dist-base-files/build_version ] && ! [ -f '/var/lib/dist-base-files/live_build' ]; then
+  ##
+  ## We also don't enable systemd-repart on Qubes OS templates, since Qubes
+  ## has its own partition resize tooling. Finally, we don't enable it on
+  ## already-installed systems of any kind, because it requires partition
+  ## table tweaks to actually work and we don't want to do those to people's
+  ## existing systems.
+  if ! [ -f /var/lib/dist-base-files/build_version ] && ! [ -f '/var/lib/dist-base-files/live_build' ] && ! [ -f '/usr/share/qubes/marker-vm' ]; then
     mkdir --parents -- /usr/lib/repart.d
     cp --verbose -- /usr/share/derivative-base-files/repart-d_50-root.conf /usr/lib/repart.d/50-root.conf
     mkdir --parents -- /etc/dracut.conf.d
