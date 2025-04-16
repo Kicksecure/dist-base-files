@@ -19,7 +19,7 @@ true "
 enable_systemd_repart_maybe() {
    ## systemd-repart is disabled for live-build builds, because it does not
    ## work on ISO-based installations. This is because the Kicksecure ISO uses
-   #an MBR partition table on BIOS systems; the version of Calamares in
+   ## an MBR partition table on BIOS systems; the version of Calamares in
    ## bookworm-backports is not capable enough to use GPT on BIOS systems as we
    ## would like. systemd-repart requires a GPT partition table, it does not
    ## work on MBR systems. Thus we do not install the systemd-repart
