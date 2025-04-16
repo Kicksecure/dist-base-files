@@ -1,0 +1,13 @@
+#!/bin/bash
+
+## Copyright (C) 2025 - 2025 ENCRYPTED SUPPORT LLC <adrelanos@whonix.org>
+## See the file COPYING for copying conditions.
+
+set -x
+set -e
+set -o pipefail
+
+mkdir --parents -- /usr/lib/repart.d
+cp --verbose -- /usr/share/derivative-base-files/repart-d_50-root.conf /usr/lib/repart.d/50-root.conf
+mkdir --parents -- /etc/dracut.conf.d
+cp --verbose -- /usr/share/derivative-base-files/dracut-conf-d_30-repart.conf /etc/dracut.conf.d/30-repart.conf
