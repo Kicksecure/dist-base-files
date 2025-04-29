@@ -1,3 +1,15 @@
+commit e08ec639a771730b13adbd39149a4fc3e6817813
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Apr 29 05:12:04 2025 -0400
+
+    create GRUB fonts using `make`
+
+commit 0ddfff89ef797b02b17c22528ca81587fa6e7926
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Apr 29 03:53:05 2025 +0000
+
+    bumped changelog version
+
 commit cb06e8d57c1018925aac87a715bc48be0814a38b
 Merge: b0d05ae 13bc73c
 Author: Patrick Schleizer <adrelanos@whonix.org>
