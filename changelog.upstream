@@ -1,3 +1,22 @@
+commit cb06e8d57c1018925aac87a715bc48be0814a38b
+Merge: b0d05ae 13bc73c
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Apr 28 23:48:22 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/grub-menu'
+
+commit 13bc73c8169cf10bb0147259f3caae28ef8e97f8
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Mon Apr 28 17:17:04 2025 -0500
+
+    Add additional GRUB font for themes, add bullet selector for GRUB boot menu
+
+commit b0d05aeaa6e5110927db2b51f1f0b0e2cc11b71f
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Apr 16 22:46:26 2025 +0000
+
+    bumped changelog version
+
 commit ad96c3ebe8e65b36f8854ae489b25b13bf5fc03b
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed Apr 16 18:25:28 2025 -0400
