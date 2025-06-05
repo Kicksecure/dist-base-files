@@ -17,6 +17,8 @@ set -e
 # You should have received a copy of the GNU General Public License
 # along with GRUB.  If not, see <http://www.gnu.org/licenses/>.
 
+[ "${make_boot_entry}" != 'true' ] && exit 0
+
 prefix="/usr"
 exec_prefix="/usr"
 datarootdir="/usr/share"

@@ -1,0 +1,41 @@
+#!/bin/sh
+
+## Copyright (C) 2019 - 2025 ENCRYPTED SUPPORT LLC <adrelanos@whonix.org>
+## See the file COPYING for copying conditions.
+
+#set -x
+
+true "dist-base-files $0: START"
+
+set -e
+set -o allexport
+
+make_boot_entry='true'
+
+if [ -n "${GRUB_DEVICE_UUID}" ]; then
+  GRUB_DEVICE="/dev/disk/by-uuid/${GRUB_DEVICE_UUID}"
+  unset GRUB_DEVICE_UUID
+fi
+
+: "${persistence_type:="PERSISTENT"}"
+: "${session_detail:="daily activities"}"
+
+grub_distributor_appendix="$persistence_type Mode | SYSMAINT Session | $session_detail"
+if [ -e '/usr/share/kicksecure/marker' ]; then
+   GRUB_DISTRIBUTOR="$grub_distributor_appendix"
+elif [ -e '/usr/share/anon-ws-base-files/workstation' ]; then
+   GRUB_DISTRIBUTOR="$grub_distributor_appendix"
+elif [ -e '/usr/share/anon-gw-base-files/gateway' ]; then
+   GRUB_DISTRIBUTOR="$grub_distributor_appendix"
+else
+   GRUB_DISTRIBUTOR="$grub_distributor_appendix"
+fi
+
+GRUB_DISABLE_RECOVERY="true"
+GRUB_DISABLE_LINUX_UUID="true"
+
+if test -x /etc/grub.d/10_50_linux_dist_advanced ; then
+	/etc/grub.d/10_50_linux_dist_advanced
+fi
+
+true "dist-base-files $0: OK: END"
