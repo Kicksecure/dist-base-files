@@ -1,3 +1,22 @@
+commit 0d099b975ecf4207ef140982e8d2d3e0b992511b
+Merge: ee6bfdc d59fb10
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Jun 6 15:11:41 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/grub-menu'
+
+commit d59fb10fe88932231cab17e5a6604e34bf98aada
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Thu Jun 5 17:53:25 2025 -0500
+
+    Avoid creating a boot menu entry named "Kicksecure" or "Whonix"
+
+commit ee6bfdc2ebab88662c9fd5c687c223a3239c5ae6
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Apr 29 09:12:38 2025 +0000
+
+    bumped changelog version
+
 commit e08ec639a771730b13adbd39149a4fc3e6817813
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Tue Apr 29 05:12:04 2025 -0400
