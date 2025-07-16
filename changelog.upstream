@@ -1,3 +1,22 @@
+commit 939af70a0571c17a733ecbe0a2b87198f3ff5090
+Merge: 03e561e 41b8cf0
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Jul 16 03:09:35 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/initrd-compress'
+
+commit 41b8cf061885883b8ccaffd2df0dbe5246556185
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Mon Jul 14 16:15:55 2025 -0500
+
+    Switch to xz compression for initramfs
+
+commit 03e561ef3f8a9d4fdc6b4bdc3b188fc26f027ea3
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Jun 11 19:13:33 2025 +0000
+
+    bumped changelog version
+
 commit 195b8355809663b29fbc3cbba70502bb1244b7d5
 Merge: 494ad2e 1158d3c
 Author: Patrick Schleizer <adrelanos@whonix.org>
