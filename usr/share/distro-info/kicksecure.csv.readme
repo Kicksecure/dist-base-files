@@ -1,7 +1,7 @@
 example file format with 'eol' set
 
 version,codename,series,created,release,eol,eol-lts,eol-elts
-17,,,,,2026-06-10,,
+18,,,,,2028-06-10,,
 
 discussion:
 https://github.com/QubesOS/qubes-core-agent-linux/pull/481
