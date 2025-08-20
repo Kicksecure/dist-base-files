@@ -5,6 +5,8 @@
 
 #set -x
 
+source /usr/libexec/helper-scripts/package_installed_check.bsh
+
 true "dist-base-files $0: START"
 
 set -e
@@ -12,9 +14,11 @@ set -o allexport
 
 make_boot_entry='true'
 
-if [ -n "${GRUB_DEVICE_UUID}" ]; then
-  GRUB_DEVICE="/dev/disk/by-uuid/${GRUB_DEVICE_UUID}"
-  unset GRUB_DEVICE_UUID
+if pkg_installed initramfs-tools; then
+  if [ -n "${GRUB_DEVICE_UUID}" ]; then
+    GRUB_DEVICE="/dev/disk/by-uuid/${GRUB_DEVICE_UUID}"
+    unset GRUB_DEVICE_UUID
+  fi
 fi
 
 : "${persistence_type:="PERSISTENT"}"
