@@ -5,7 +5,8 @@
 
 #set -x
 
-source /usr/libexec/helper-scripts/package_installed_check.bsh
+## NOTE: 'source' is a bashism.
+. /usr/libexec/helper-scripts/package_installed_check.bsh
 
 true "dist-base-files $0: START"
 
