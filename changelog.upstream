@@ -1,3 +1,64 @@
+commit 50d7bedef01248e397f041c9be2a497efd453275
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Aug 26 04:53:44 2025 -0400
+
+    re-generate man pages (generated using "genmkfile manpages")
+
+commit ca82c4c794e456cec9772c7c1cc03e2246dcd153
+Merge: 96f8853 7b4e515
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 20 07:18:33 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit 96f88532eb97d4c0b7e7eee43fa9592ff5417c23
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 20 06:57:25 2025 -0400
+
+    bumped Standards-Version
+
+commit 29283d7d1af2379f3fa1b820e85220b5c7b35285
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 20 06:25:31 2025 -0400
+
+    readme
+
+commit 7b4e515cea726ad6fa3941b467be707283c5e6c3
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Sat Aug 16 21:41:41 2025 -0500
+
+    Don't unset GRUB_DEVICE_UUID unless using initramfs-tools
+
+commit 1b485087f33b9f4131bf89473144e7fbef77dc0a
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Sat Aug 16 21:35:14 2025 -0500
+
+    Enable Dracut hostonly sloppy mode
+
+commit e8e762e8fb24b022140285e6c69d98ef689f7110
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Sun Aug 10 20:05:15 2025 -0500
+
+    Bump Kicksecure version
+
+commit efa23c33628d7d6534e707d8db836157e08930c6
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Sun Aug 10 16:22:52 2025 -0500
+
+    Update core GRUB config generator scripts for Trixie.
+
+commit 37b61994473c040bc453151c912a1fb9e4835139
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Tue Aug 5 22:57:59 2025 -0500
+
+    Port to Trixie.
+
+commit 575769b7ee6368d3486cddacdb800cf554ec0389
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Jul 16 07:50:26 2025 +0000
+
+    bumped changelog version
+
 commit 939af70a0571c17a733ecbe0a2b87198f3ff5090
 Merge: 03e561e 41b8cf0
 Author: Patrick Schleizer <adrelanos@whonix.org>
