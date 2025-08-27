@@ -1,3 +1,23 @@
+commit 4ac50c142b1a9d449b38a734f7f73c4d0d66e45a
+Merge: 1936465 251ecb8
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 27 05:44:03 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit 251ecb8182e94a25dc61e6932c40f67f2fd505ef
+Merge: aed1423 1936465
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Tue Aug 26 19:16:37 2025 -0500
+
+    Merge branch 'master' into arraybolt3/trixie
+
+commit 193646585cd06a684aca706e665cd00f6e142e19
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Aug 26 09:03:54 2025 +0000
+
+    bumped changelog version
+
 commit ec250c95dc877036815855235ed0f32e0f34a03d
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Tue Aug 26 05:02:58 2025 -0400
@@ -15,6 +35,25 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Tue Aug 26 04:53:44 2025 -0400
 
     re-generate man pages (generated using "genmkfile manpages")
+
+commit aed1423b42c85c41cae9d6ff5323f9b22da5d81e
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Fri Aug 22 19:40:40 2025 -0500
+
+    Remove support for initramfs-tools
+
+commit 3ed89631f821ef70cf96b860573b3a9ce27a83a1
+Merge: c5bfa2e ca82c4c
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Thu Aug 21 19:46:19 2025 -0500
+
+    Merge branch 'master' into arraybolt3/trixie
+
+commit c5bfa2e6014160885dd416fb4348f59e3a98e0c2
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Thu Aug 21 18:15:18 2025 -0500
+
+    Fix leapctl error with greetd, fix GRUB boot entries
 
 commit ca82c4c794e456cec9772c7c1cc03e2246dcd153
 Merge: 96f8853 7b4e515
@@ -34,6 +73,12 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed Aug 20 06:25:31 2025 -0400
 
     readme
+
+commit 6581893500f8cfac87e59478b96ec5fd4643c71d
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Sun Aug 17 19:44:05 2025 -0500
+
+    Don't source Bash scripts in POSIX sh grub.d scripts
 
 commit 7b4e515cea726ad6fa3941b467be707283c5e6c3
 Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
