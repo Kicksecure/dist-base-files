@@ -13,7 +13,7 @@ set -o allexport
 make_boot_entry='true'
 
 : "${persistence_type:="PERSISTENT"}"
-: "${session_detail:="daily activities"}"
+: "${session_detail:="system maintenance tasks"}"
 
 grub_distributor_appendix="$persistence_type Mode | SYSMAINT Session | $session_detail"
 if [ -e '/usr/share/kicksecure/marker' ]; then
