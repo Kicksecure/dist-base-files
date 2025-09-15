@@ -1,3 +1,15 @@
+commit adeb9954ace201378ea479404a0868033497b343
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Sep 14 03:19:21 2025 -0400
+
+    fix: avoid stating `daily activities` for `SYSMAINT Session`. Changed to `system maintenance tasks` instead.
+
+commit 940ba4e7f63b83aeaa16220bcaea45077b58def3
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Sep 2 15:14:03 2025 +0000
+
+    bumped changelog version
+
 commit bd40d941a0441bc226088b6d941e9d3ced65bd3c
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed Aug 27 19:20:33 2025 +0000
