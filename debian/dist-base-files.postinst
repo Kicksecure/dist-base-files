@@ -30,7 +30,7 @@ enable_systemd_repart_maybe() {
 
 check_linux_account_specific() {
    if command -v qubesdb-read >/dev/null 2>&1 ; then
-      ## Leave user 'user' creation to Qubes.
+      ## Leave account 'user' creation to Qubes.
       true "INFO: Skipping because Qubes detected."
       return 1
    fi
