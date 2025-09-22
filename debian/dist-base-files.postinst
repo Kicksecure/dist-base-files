@@ -91,15 +91,15 @@ add_groups_to_linux_user_account_named_user() {
    fi
 
    USER_CREATE_USERNAME="$user_to_be_created"
-   ## security-misc: Console Lockdown.
-   ## Make sure group 'console' exists. Might not exist if security-misc is not (yet) installed.
+   ## security-misc-shared: Console Lockdown.
+   ## Make sure group 'console' exists. Might not exist if security-misc-shared is not (yet) installed.
    ##
    ## Adding group 'sudo' is OK even when using user-sysmaint-split, because
    ## limited accounts can no longer execute privilege escalation tools when
    ## user-sysmaint-split is installed. See also:
    ## https://www.kicksecure.com/wiki/Dev/user-sysmaint-split#No_Access_to_Privilege_Escalation_Tools_for_Limited_Accounts
    ##
-   ## Required by 'debian/security-misc.preinst' function 'sudo_users_check'.
+   ## Required by 'debian/security-misc-shared.preinst' function 'sudo_users_check'.
    USER_CREATE_GROUP_ADD_LIST=( 'sudo' 'console' 'ssh' )
    add_groups_to_linux_user_account
 
@@ -118,11 +118,11 @@ console_lockdown() {
    fi
 
    ## No longer enable pam mkhomedir here.
-   ## This is done by the security-misc package. File:
+   ## This is done by the security-misc-shared package. File:
    ## /usr/share/pam-configs/mkhomedir-security-misc
    ## pam-auth-update --enable mkhomedir
 
-   ## By package security-misc.
+   ## By package security-misc-shared.
    pam-auth-update --enable console-lockdown-security-misc
 
    ## In Qubes and for existing installations Console Lockdown is
