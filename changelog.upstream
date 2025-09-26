@@ -1,3 +1,22 @@
+commit 0ee509927c7a1ec672566c67270cc681390a883e
+Merge: 6c37fd4 5040585
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Sep 26 04:24:48 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit 50405851087c08a5ec60fe83944fa1298266613b
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Wed Sep 24 22:47:26 2025 -0500
+
+    Stop disabling UUIDs in grub.cfg
+
+commit 6c37fd4640b4dec4a6891f70830d30bb0ea6d66e
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Sep 22 17:13:00 2025 +0000
+
+    bumped changelog version
+
 commit 6f1d8138c7192e369eb88d2565f155f1b8b671d3
 Merge: 24570d8 613a96d
 Author: Patrick Schleizer <adrelanos@whonix.org>
