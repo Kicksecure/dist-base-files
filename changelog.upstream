@@ -1,3 +1,15 @@
+commit 3cdec3e62c0d269a4a8bb818bac99becf9ceda60
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Nov 1 03:35:16 2025 -0400
+
+    no longer depend on sudo
+
+commit 2e364c4d12bd6ab2f916d1acdfeab5b8eaaea168
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Sep 26 08:37:26 2025 +0000
+
+    bumped changelog version
+
 commit 0ee509927c7a1ec672566c67270cc681390a883e
 Merge: 6c37fd4 5040585
 Author: Patrick Schleizer <adrelanos@whonix.org>
