@@ -1,5 +1,6 @@
 ## Copyright (C) 2012 - 2025 ENCRYPTED SUPPORT LLC <adrelanos@whonix.org>
 ## See the file COPYING for copying conditions.
 
-/etc/hosts.anondist
-/etc/hostname.anondist
+## https://forums.whonix.org/t/setting-up-anon-base-files-shows-machine-id-prompt-followed-by-ominous-warning-ominous-warning-etc-hosts-is-not-linked-to-either-hosts-whonix-or-hosts-whonix-orig/8045/14
+#/etc/hosts.anondist
+#/etc/hostname.anondist
