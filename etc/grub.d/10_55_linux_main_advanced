@@ -13,9 +13,9 @@ set -o allexport
 make_boot_entry='true'
 
 : "${persistence_type:="PERSISTENT"}"
-: "${session_detail:="system maintenance tasks"}"
+: "${session_detail:="daily activities"}"
 
-grub_distributor_appendix="$persistence_type Mode | SYSMAINT Session | $session_detail"
+grub_distributor_appendix="$persistence_type Mode | USER Session | $session_detail"
 if [ -e '/usr/share/kicksecure/marker' ]; then
    GRUB_DISTRIBUTOR="$grub_distributor_appendix"
 elif [ -e '/usr/share/anon-ws-base-files/workstation' ]; then
