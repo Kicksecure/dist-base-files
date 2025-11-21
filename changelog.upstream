@@ -1,3 +1,22 @@
+commit 8a01c0376fbb48b7dc109e88fd29a4b9aa560680
+Merge: 42216d8 8750080
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Nov 21 02:20:01 2025 -0500
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit 87500807e276c4204408cca99d2e11e0c24f111b
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Thu Nov 13 11:02:12 2025 -0600
+
+    Fix strings in GRUB menu for user session advanced settings
+
+commit 42216d8f950a94b28cfe5f737c4a6f6deab4a7fd
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Nov 5 11:26:43 2025 +0000
+
+    bumped changelog version
+
 commit ab9a6881df958059fa7bc95bb13a9132b1ac0775
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Nov 3 08:18:56 2025 -0500
