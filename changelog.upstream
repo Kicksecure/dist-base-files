@@ -1,3 +1,28 @@
+commit 6fab23ce69bfc9a6d094df3fafec32cce0583292
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Jan 22 04:02:53 2026 -0500
+
+    comment
+
+commit 13e26cbac62b61b638bdbf78e625663365e28048
+Merge: bf42a31 5f1c22a
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Jan 22 03:59:04 2026 -0500
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit 5f1c22a06f7ceb0b12847949b89854558a92b934
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Wed Jan 21 19:26:52 2026 -0600
+
+    Increase priority of 60-dist-base-files.conf to override dracut-config-generic's 50-generic.conf file
+
+commit bf42a31ddd57f3d26f54fb44c2adf255e26abfd6
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Nov 21 09:17:04 2025 +0000
+
+    bumped changelog version
+
 commit 8a01c0376fbb48b7dc109e88fd29a4b9aa560680
 Merge: 42216d8 8750080
 Author: Patrick Schleizer <adrelanos@whonix.org>
