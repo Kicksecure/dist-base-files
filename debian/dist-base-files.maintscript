@@ -1,0 +1,6 @@
+## Copyright (C) 2026 - 2026 ENCRYPTED SUPPORT LLC <adrelanos@whonix.org>
+## See the file COPYING for copying conditions.
+
+## Renamed to '60-dist-base-files.conf' to override dracut-config-generic's
+## '50-generic.conf'.
+rm_conffile /etc/dracut.conf.d/30-dist-base-files.conf
