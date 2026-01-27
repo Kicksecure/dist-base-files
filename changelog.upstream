@@ -1,3 +1,28 @@
+commit 2b5f5d60464a60bef17cd11019de8883f4b64c46
+Merge: 856c5ed bdfb15f
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Jan 27 11:14:42 2026 -0500
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit bdfb15fb9ab907e7e44f197e4707e69b3ccd5310
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Sun Jan 25 18:31:54 2026 -0600
+
+    Move PROFILE_SCRIPTS_WERE_SOURCED variable to dist-base-files
+
+commit e7d580c0a28e625dae5f8e4952b81595d629cf2e
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Sun Jan 25 13:04:04 2026 -0600
+
+    Remove old dracut 30-dist-base-files.conf conffile
+
+commit 856c5edfc45afd72d16104c4a094a6a6aee62f5a
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Jan 22 10:57:32 2026 +0000
+
+    bumped changelog version
+
 commit 6fab23ce69bfc9a6d094df3fafec32cce0583292
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Thu Jan 22 04:02:53 2026 -0500
