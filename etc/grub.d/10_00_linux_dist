@@ -43,6 +43,10 @@ else
       OS="${GRUB_DISTRIBUTOR}"
       ;;
     *)
+      ## Kicksecure patch - 'GNU/Linux' has been removed from the end of this
+      ## string because it is confusing when displayed at the end of our boot
+      ## mode entries.
+      #OS="${GRUB_DISTRIBUTOR} GNU/Linux"
       OS="${GRUB_DISTRIBUTOR}"
       ;;
   esac
@@ -391,20 +395,26 @@ for linux in ${reverse_sorted_list}; do
 	boot_device_id="$(grub_get_device_id "${GRUB_DEVICE}")"
     fi
     # TRANSLATORS: %s is replaced with an OS name
-#    echo "submenu '$(gettext_printf "Advanced options for %s" "${OS}" | grub_quote)' \$menuentry_id_option 'gnulinux-advanced-$boot_device_id' {"
+    ## Kicksecure patch - this file is not supposed to write the "advanced
+    ## options" boot entries.
+    #echo "submenu '$(gettext_printf "Advanced options for %s" "${OS}" | grub_quote)' \$menuentry_id_option 'gnulinux-advanced-$boot_device_id' {"
     is_top_level=false
   fi
 
-#  linux_entry "${OS}" "${version}" advanced \
-#              "${GRUB_CMDLINE_LINUX} ${GRUB_CMDLINE_LINUX_DEFAULT}"
-#  if [ "x${GRUB_DISABLE_RECOVERY}" != "xtrue" ]; then
-#    linux_entry "${OS}" "${version}" recovery \
-#                "${GRUB_CMDLINE_LINUX_RECOVERY} ${GRUB_CMDLINE_LINUX}"
-#  fi
+  ## Kicksecure patch - this file is not supposed to write the "advanced
+  ## options" boot entries.
+  #linux_entry "${OS}" "${version}" advanced \
+  #            "${GRUB_CMDLINE_LINUX} ${GRUB_CMDLINE_LINUX_DEFAULT}"
+  #if [ "x${GRUB_DISABLE_RECOVERY}" != "xtrue" ]; then
+  #  linux_entry "${OS}" "${version}" recovery \
+  #              "${GRUB_CMDLINE_LINUX_RECOVERY} ${GRUB_CMDLINE_LINUX}"
+  #fi
 done
 
 # If at least one kernel was found, then we need to
 # add a closing '}' for the submenu command.
+## Kicksecure patch - this file is not supposed to write the "advanced
+## options" boot entries.
 #if [ x"$is_top_level" != xtrue ]; then
 #  echo '}'
 #fi
