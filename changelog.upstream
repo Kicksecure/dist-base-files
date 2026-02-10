@@ -1,3 +1,28 @@
+commit f868f17e41e2b0b56224165f1350cbfee161d4b4
+Merge: bb90948 84c3894
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Feb 10 07:08:10 2026 -0500
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit 84c38941745d2db57847e0a9f31140f192a3adaa
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Mon Feb 9 22:01:53 2026 -0600
+
+    Let zsh pick up the PROFILE_SCRIPTS_WERE_SOURCED variable
+
+commit bda073fe3a514ea23fdba75110f23de382b6779d
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Sun Feb 8 20:28:30 2026 -0600
+
+    Document differences between our core boot menu generation scripts and Debian's original versions
+
+commit bb90948fa68f1e2050085f1ec44a14dc392e7ded
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Jan 27 17:17:53 2026 +0000
+
+    bumped changelog version
+
 commit 2b5f5d60464a60bef17cd11019de8883f4b64c46
 Merge: 856c5ed bdfb15f
 Author: Patrick Schleizer <adrelanos@whonix.org>
