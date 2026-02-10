@@ -3,3 +3,5 @@
 
 ## https://github.com/QubesOS/qubes-core-agent-linux/pull/481
 /usr/share/distro-info/kicksecure.csv /usr/share/distro-info/derivative.csv
+
+/etc/profile.d/10_dist-base-files.sh /etc/zprofile.d/10_dist-base-files.zsh
