@@ -100,7 +100,9 @@ add_groups_to_linux_user_account_named_user() {
    ## https://www.kicksecure.com/wiki/Dev/user-sysmaint-split#No_Access_to_Privilege_Escalation_Tools_for_Limited_Accounts
    ##
    ## Required by 'debian/security-misc-shared.preinst' function 'sudo_users_check'.
-   USER_CREATE_GROUP_ADD_LIST=( 'sudo' 'console' 'ssh' )
+   ##
+   ## Adding group 'privleap' to keep systemcheck from displaying a warning.
+   USER_CREATE_GROUP_ADD_LIST=( 'sudo' 'console' 'ssh' 'privleap' )
    add_groups_to_linux_user_account
 
    touch "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_1"
