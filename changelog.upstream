@@ -1,3 +1,22 @@
+commit 729b1daab93563af0aef315189d85762a648337b
+Merge: 0c9cddf ab338d5
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Feb 16 05:06:03 2026 -0500
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit ab338d51557243647fc5ddf75786dd56b11159ed
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Sun Feb 15 11:10:38 2026 -0600
+
+    Add account 'user' to group 'privleap' during initial installation
+
+commit 0c9cddfb01d8f45140f0274626953e8699696fa7
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Feb 10 12:13:58 2026 +0000
+
+    bumped changelog version
+
 commit f868f17e41e2b0b56224165f1350cbfee161d4b4
 Merge: bb90948 84c3894
 Author: Patrick Schleizer <adrelanos@whonix.org>
