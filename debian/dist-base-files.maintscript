@@ -4,3 +4,5 @@
 ## Renamed to '60-dist-base-files.conf' to override dracut-config-generic's
 ## '50-generic.conf'.
 rm_conffile /etc/dracut.conf.d/30-dist-base-files.conf
+
+rm_conffile /etc/privleap/conf.d/dist-base-files.conf
