@@ -7,37 +7,45 @@ if [ -f /usr/libexec/helper-scripts/pre.bsh ]; then
    source /usr/libexec/helper-scripts/pre.bsh
 fi
 source /usr/libexec/helper-scripts/user_create.bsh
+source /usr/libexec/helper-scripts/has.bsh
 
-set -e
+set -o errexit
+set -o nounset
+set -o pipefail
+set -o errtrace
+shopt -s inherit_errexit
+shopt -s shift_verbose
+export LC_ALL=C
 
 true "
 #####################################################################
-## INFO: BEGIN: $DPKG_MAINTSCRIPT_PACKAGE $DPKG_MAINTSCRIPT_NAME $@
+## INFO: BEGIN: ${DPKG_MAINTSCRIPT_PACKAGE:-} ${DPKG_MAINTSCRIPT_NAME:-} $*
 #####################################################################
 "
 
 enable_systemd_repart_maybe() {
    if ! [ -f "/var/lib/kicksecure/status-files/repart-version-1" ]; then
-      true "INFO: Skipping $FUNCNAME because file /var/lib/kicksecure/status-files/repart-version-1 does not exist. (This is expected during the initial build process. A chroot-script will later run the /usr/libexec/derivative-base-files/repart-enable script.)"
+      true "INFO: Skipping ${FUNCNAME[0]} because file /var/lib/kicksecure/status-files/repart-version-1 does not exist. (This is expected during the initial build process. A chroot-script will later run the /usr/libexec/derivative-base-files/repart-enable script.)"
       return 0
    fi
 
    ## NOTE: This is also done in initializer-dist chroot-scripts.
    ## This is also done in dist-base-files postinst for the purpose of updates.
    /usr/libexec/derivative-base-files/repart-enable
-   true "INFO: $FUNCNAME OK."
+   true "INFO: ${FUNCNAME[0]} OK."
 }
 
 check_linux_account_specific() {
-   if command -v qubesdb-read >/dev/null 2>&1 ; then
+   if has qubesdb-read ; then
       ## Leave account 'user' creation to Qubes.
       true "INFO: Skipping because Qubes detected."
       return 1
    fi
 
    ## Don't create a new user during distribution morphing, only do it when building an ISO or VM image.
-   if [ ! "$derivative_maker" = "true" ] && ! [ -f '/var/lib/dist-base-files/live_build' ]; then
-      true "INFO: Skipping since not running under derivative-maker and /var/lib/dist-base-files/live_build does not exist (during the build process)."
+   ## 'derivative_maker=true' is set for every derivative-maker build (ISO and VM/disk alike).
+   if [ ! "${derivative_maker:-}" = "true" ]; then
+      true "INFO: Skipping since not running under derivative-maker (during the build process)."
       return 1
    fi
 
@@ -46,51 +54,51 @@ check_linux_account_specific() {
 }
 
 add_linux_user_account_named_user() {
-   if [ -f "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_1" ]; then
+   if [ -f "/var/lib/dist-base-files/do_once/${FUNCNAME[0]}_version_1" ]; then
       return 0
    fi
    mkdir --parents "/var/lib/dist-base-files/do_once"
 
    if ! check_linux_account_specific ; then
-      true "INFO: Skipping ${FUNCNAME}."
+      true "INFO: Skipping ${FUNCNAME[0]}."
       return 0
    fi
 
-   USER_CREATE_USERNAME="$user_to_be_created"
+   USER_CREATE_USERNAME="${user_to_be_created}"
    add_linux_user_account
 
-   touch "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_1"
+   touch "/var/lib/dist-base-files/do_once/${FUNCNAME[0]}_version_1"
 }
 
 password_empty_for_user_account_named_user() {
-   if [ -f "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_1" ]; then
+   if [ -f "/var/lib/dist-base-files/do_once/${FUNCNAME[0]}_version_1" ]; then
       return 0
    fi
    mkdir --parents "/var/lib/dist-base-files/do_once"
 
    if ! check_linux_account_specific ; then
-      true "INFO: Skipping ${FUNCNAME}."
+      true "INFO: Skipping ${FUNCNAME[0]}."
       return 0
    fi
 
-   USER_CREATE_USERNAME="$user_to_be_created"
+   USER_CREATE_USERNAME="${user_to_be_created}"
    password_empty_for_user_account
 
-   touch "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_1"
+   touch "/var/lib/dist-base-files/do_once/${FUNCNAME[0]}_version_1"
 }
 
 add_groups_to_linux_user_account_named_user() {
-   if [ -f "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_1" ]; then
+   if [ -f "/var/lib/dist-base-files/do_once/${FUNCNAME[0]}_version_1" ]; then
       return 0
    fi
    mkdir --parents "/var/lib/dist-base-files/do_once"
 
    if ! check_linux_account_specific ; then
-      true "INFO: Skipping ${FUNCNAME}."
+      true "INFO: Skipping ${FUNCNAME[0]}."
       return 0
    fi
 
-   USER_CREATE_USERNAME="$user_to_be_created"
+   USER_CREATE_USERNAME="${user_to_be_created}"
    ## security-misc-shared: Console Lockdown.
    ## Make sure group 'console' exists. Might not exist if security-misc-shared is not (yet) installed.
    ##
@@ -105,17 +113,17 @@ add_groups_to_linux_user_account_named_user() {
    USER_CREATE_GROUP_ADD_LIST=( 'sudo' 'console' 'ssh' 'privleap' )
    add_groups_to_linux_user_account
 
-   touch "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_1"
+   touch "/var/lib/dist-base-files/do_once/${FUNCNAME[0]}_version_1"
 }
 
 console_lockdown() {
-   if [ -f "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_1" ]; then
+   if [ -f "/var/lib/dist-base-files/do_once/${FUNCNAME[0]}_version_1" ]; then
       return 0
    fi
    mkdir --parents "/var/lib/dist-base-files/do_once"
 
    if ! check_linux_account_specific ; then
-      true "INFO: Skipping ${FUNCNAME}."
+      true "INFO: Skipping ${FUNCNAME[0]}."
       return 0
    fi
 
@@ -130,54 +138,54 @@ console_lockdown() {
    ## In Qubes and for existing installations Console Lockdown is
    ## is handled by legacy-dist package.
 
-   touch "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_1"
+   touch "/var/lib/dist-base-files/do_once/${FUNCNAME[0]}_version_1"
 }
 
 lock_root_account() {
-   if [ -f "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_1" ]; then
+   if [ -f "/var/lib/dist-base-files/do_once/${FUNCNAME[0]}_version_1" ]; then
       return 0
    fi
    mkdir --parents "/var/lib/dist-base-files/do_once"
 
    if ! check_linux_account_specific ; then
-      true "INFO: Skipping ${FUNCNAME}."
+      true "INFO: Skipping ${FUNCNAME[0]}."
       return 0
    fi
 
    ## https://www.whonix.org/wiki/Root
    ## https://www.whonix.org/wiki/Dev/Strong_Linux_User_Account_Isolation
 
-   echo "INFO: Locking account '$account_to_be_locked'..."
-   passwd --lock "$account_to_be_locked"
+   printf '%s\n' "INFO: Locking account '${account_to_be_locked}'..."
+   passwd --lock "${account_to_be_locked}"
 
    ## Disabled because it breaks `adduser`.
    ## https://forums.whonix.org/t/restrict-root-access/7658/59
    ## Expire the account to prevent SSH login.
    ## https://www.cyberciti.biz/faq/linux-locking-an-account/
-   #chage --expiredate 0 "$account_to_be_locked"
+   #chage --expiredate 0 "${account_to_be_locked}"
 
    ## Debugging.
-   #chage --list "$account_to_be_locked"
+   #chage --list "${account_to_be_locked}"
 
    ## To undo:
-   #sudo chage --expiredate -1 "$account_to_be_locked"
+   #sudo chage --expiredate -1 "${account_to_be_locked}"
    #sudo passwd
 
-   touch "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_1"
+   touch "/var/lib/dist-base-files/do_once/${FUNCNAME[0]}_version_1"
 }
 
 user_shell_to_zsh() {
-   if [ -f "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_3" ]; then
+   if [ -f "/var/lib/dist-base-files/do_once/${FUNCNAME[0]}_version_3" ]; then
       return 0
    fi
    mkdir --parents "/var/lib/dist-base-files/do_once"
 
-   USER_CREATE_USERNAME="$user_to_be_created"
+   USER_CREATE_USERNAME="${user_to_be_created}"
    linux_user_account_shell_to_zsh
    USER_CREATE_USERNAME='root'
    linux_user_account_shell_to_zsh
 
-   touch "/var/lib/dist-base-files/do_once/${FUNCNAME}_version_3"
+   touch "/var/lib/dist-base-files/do_once/${FUNCNAME[0]}_version_3"
 }
 
 ## Define variables here to make this easier to software fork.
@@ -185,30 +193,30 @@ user_to_be_created="user"
 account_to_be_locked="root"
 build_version_file="/var/lib/dist-base-files/build_version"
 
-case "$1" in
+case "${1:-}" in
    configure)
-      true "INFO: Configuring $DPKG_MAINTSCRIPT_PACKAGE..."
+      true "INFO: Configuring ${DPKG_MAINTSCRIPT_PACKAGE:-}..."
 
       enable_systemd_repart_maybe
 
-      if [ ! -f "$build_version_file" ]; then
+      if [ ! -f "${build_version_file}" ]; then
          ## Sanity test.
-         if [ "$dist_build_version" = "" ]; then
+         if [ "${dist_build_version:-}" = "" ]; then
             ## Package dpkg-dev provides dpkg-parsechangelog.
             ## If dist_build_version is empty, use the version number of the package.
-            dist_build_version="$(zless "/usr/share/doc/$DPKG_MAINTSCRIPT_PACKAGE/changelog.Debian.gz" | dpkg-parsechangelog -l- -SVersion)" || true
+            dist_build_version="$(zless "/usr/share/doc/${DPKG_MAINTSCRIPT_PACKAGE:-}/changelog.Debian.gz" | dpkg-parsechangelog -l- -SVersion)" || true
          fi
-         if [ "$dist_build_version" = "" ]; then
-            echo "ERROR: Could not determine variable 'dist_build_version'."
+         if [ "${dist_build_version:-}" = "" ]; then
+            printf '%s\n' "ERROR: Could not determine variable 'dist_build_version'."
          else
-            mkdir --parents "$(dirname "$build_version_file")"
-            echo "INFO: Logging dist_build_version '$dist_build_version' to '$build_version_file'..."
+            mkdir --parents "$(dirname "${build_version_file}")"
+            printf '%s\n' "INFO: Logging dist_build_version '${dist_build_version}' to '${build_version_file}'..."
             ## Debugging.
-            touch "$build_version_file"
+            touch "${build_version_file}"
             ## Logging.
-            echo "$dist_build_version" | sponge -- "$build_version_file"
+            printf '%s\n' "${dist_build_version}" | sponge -- "${build_version_file}"
             ## Debugging.
-            cat "$build_version_file"
+            cat "${build_version_file}"
          fi
       fi
 
@@ -219,7 +227,7 @@ case "$1" in
       lock_root_account
       user_shell_to_zsh
 
-      true "INFO: End configuring $DPKG_MAINTSCRIPT_PACKAGE."
+      true "INFO: End configuring ${DPKG_MAINTSCRIPT_PACKAGE:-}."
 
       ;;
 
@@ -235,7 +243,7 @@ true "INFO: Done with debhelper."
 
 true "
 #####################################################################
-## INFO: END  : $DPKG_MAINTSCRIPT_PACKAGE $DPKG_MAINTSCRIPT_NAME $@
+## INFO: END  : ${DPKG_MAINTSCRIPT_PACKAGE:-} ${DPKG_MAINTSCRIPT_NAME:-} $*
 #####################################################################
 "
 
