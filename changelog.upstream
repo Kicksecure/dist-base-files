@@ -1,3 +1,52 @@
+commit 524de99b154b0b75a6751d30803a1c79af5042b1
+Merge: abcb53b 200b678
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Sep 15 10:17:34 2026 -0400
+
+    Merge remote-tracking branch 'refs/remotes/org-ai-assisted/ai'
+
+commit 200b678f3218f7f015de7b6e4b913fb4bdd04a88
+Author: claude (dev556 4bdc306f-7204-4d7f-ba68-0c897dcf0291) <noreply@anthropic.com>
+Date:   Tue Sep 15 09:21:27 2026 -0400
+
+    postinst: keep the debhelper token out of the nounset comment
+
+    - the prior comment literally contained the debhelper substitution token;
+      dh_installdeb replaces that token ANYWHERE it appears, so the generated code
+      was spliced into the middle of the comment and the trailing words ran as a
+      command ("so: command not found"), failing the postinst. Reword the comment
+      so only the real substitution line carries the token.
+
+commit 88e344b1363e2f36b0dbc2b3ffee8d24c0429cfe
+Author: claude (dev556 4bdc306f-7204-4d7f-ba68-0c897dcf0291) <noreply@anthropic.com>
+Date:   Tue Sep 15 09:06:01 2026 -0400
+
+    postinst: disable nounset around #DEBHELPER# (unbound $2 on install)
+
+    - the house-style 'set -o nounset' preamble leaked into the #DEBHELPER#-generated
+      snippets, which reference $2 (empty on first install) and are not nounset-safe;
+      they aborted with "$2: unbound variable", failing the package's postinst and
+      thus 3500_install-packages in the image build. Disable nounset around
+      #DEBHELPER#, restore after. No behavior change on upgrade.
+
+commit abcb53b92a3b607dae01e5b802f6cdd3f55ab326
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Sep 15 11:51:03 2026 +0000
+
+    bumped changelog version
+
+commit 1ed532bb01a8ef87ecb034a918ae5d283c4d05b1
+Author: claude (dev556 4bdc306f-7204-4d7f-ba68-0c897dcf0291) <noreply@anthropic.com>
+Date:   Mon Sep 14 09:30:18 2026 -0400
+
+    Drop live_build check; house-style the postinst
+
+    - The derivative-maker build no longer writes the live_build marker
+      file; derivative_maker=true is set for every build (ISO and VM/disk),
+      so the file check was redundant.
+    - Modernize to dist-ai house style: strict-mode block, printf not echo,
+      has not command -v, braced + nounset-guarded variables.
+
 commit 87d693cbba132506466c631c6afd5fd533c35cb4
 Merge: 690870b ff968c0
 Author: Patrick Schleizer <adrelanos@whonix.org>
