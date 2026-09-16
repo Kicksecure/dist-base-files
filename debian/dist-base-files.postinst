@@ -237,11 +237,7 @@ esac
 
 true "INFO: debhelper beginning here."
 
-## debhelper-generated snippets (dpkg-maintscript-helper and friends) reference
-## unset positional args -- $2 is empty on first install -- and are not written
-## to be nounset-safe. Disable nounset around the debhelper block below so they
-## do not abort on an unbound variable, then restore it. (The comment must not
-## contain the literal debhelper token, which dh_installdeb substitutes anywhere.)
+## debhelper-generated snippets reference unset positional args.
 set +o nounset
 #DEBHELPER#
 set -o nounset
